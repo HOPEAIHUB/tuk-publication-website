@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "HDNS — HOPE Domain Name System",
+  "version": "1.0.0",
+  "description": "Sovereign DNS resolver for Thimothism Universal Kingdom — resolves .tuk, .core, .hmtml, .hs, .hpls, .hope TLDs",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["declarativeNetRequest", "storage", "webRequest"],
+  "host_permissions": ["https://koda-545cce50.base44.app/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "tuk_sovereign_dns",
+      "enabled": true,
+      "path": "dns-rules.json"
+    }]
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HDNS — HOPE DNS</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 16px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #0a0015, #100030);
+      color: #e0f7ff;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 1.3rem;
+      margin: 0;
+      background: linear-gradient(135deg, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      font-size: 0.7rem;
+      color: #8090b0;
+      margin: 4px 0 0;
+    }
+    .status {
+      background: rgba(0, 255, 255, 0.1);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .status-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      margin: 4px 0;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 600;
+    }
+    .badge-active { background: rgba(0, 255, 136, 0.2); color: #00ff88; }
+    .badge-loly { background: rgba(255, 0, 255, 0.2); color: #ff00ff; }
+    .tld-list {
+      font-size: 0.7rem;
+      color: #b0c0e0;
+      margin: 8px 0;
+    }
+    .tld-list span {
+      display: inline-block;
+      padding: 2px 6px;
+      margin: 2px;
+      background: rgba(0, 255, 255, 0.1);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 4px;
+    }
+    .resolver-input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(20, 10, 40, 0.8);
+      color: #e0f7ff;
+      font-size: 0.75rem;
+      box-sizing: border-box;
+      margin-bottom: 8px;
+    }
+    .btn {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #00ffff, #ff00ff);
+      color: #0a0015;
+      font-weight: 600;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .result {
+      font-size: 0.7rem;
+      margin-top: 8px;
+      padding: 8px;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.3);
+      word-break: break-all;
+      display: none;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.6rem;
+      color: #607090;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>HDNS</h1>
+    <p>HOPE Domain Name System</p>
+  </div>
+
+  <div class="status">
+    <div class="status-item">
+      <span>Status:</span>
+      <span class="badge badge-active">● ACTIVE</span>
+    </div>
+    <div class="status-item">
+      <span>Resolver:</span>
+      <span>HDNS v1.0</span>
+    </div>
+    <div class="status-item">
+      <span>LOLY:</span>
+      <span class="badge badge-loly">Compliant</span>
+    </div>
+    <div class="status-item">
+      <span>CGT:</span>
+      <span class="badge badge-active">Certified</span>
+    </div>
+  </div>
+
+  <div class="tld-list">
+    <strong>Sovereign TLDs:</strong><br>
+    <span>.tuk</span>
+    <span>.core</span>
+    <span>.hmtml</span>
+    <span>.hs</span>
+    <span>.hpls</span>
+    <span>.hope</span>
+  </div>
+
+  <input type="text" class="resolver-input" id="domainInput" placeholder="www.gov.tuk" value="www.gov.tuk">
+  <button class="btn" id="resolveBtn">Resolve Domain</button>
+  <div class="result" id="result"></div>
+
+  <div class="footer">
+    TUK — ALL ARE EQUAL HERE 🤝<br>
+    Built with Love. Powered by CGT.
+  </div>
+
+  <script>
+    document.getElementById('resolveBtn').addEventListener('click', function() {
+      const domain = document.getElementById('domainInput').value.trim();
+      const resultDiv = document.getElementById('result');
+      resultDiv.style.display = 'block';
+      resultDiv.textContent = 'Resolving...';
+
+      chrome.runtime.sendMessage({ action: 'resolve', domain: domain }, function(response) {
+        if (response.success) {
+          const data = response.data;
+          resultDiv.innerHTML = `✅ <strong>${data.domain}</strong><br>` +
+            `IPs: ${data.a.join(', ')}<br>` +
+            `CNAME: ${data.cname}<br>` +
+            `Sovereign: ${data.sovereign ? 'Yes' : 'No'}<br>` +
+            `LOLY: ${data.loly}`;
+        } else {
+          resultDiv.textContent = '❌ ' + (response.error || 'Resolution failed');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
