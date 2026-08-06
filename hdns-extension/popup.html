@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HDNS — HOPE DNS</title>
+  <title>HDNS — Hope AI Sovereign DNS</title>
   <style>
     body {
-      width: 320px;
+      width: 340px;
       padding: 16px;
       font-family: 'Segoe UI', system-ui, sans-serif;
       background: linear-gradient(135deg, #0a0015, #100030);
@@ -51,18 +51,21 @@
     }
     .badge-active { background: rgba(0, 255, 136, 0.2); color: #00ff88; }
     .badge-loly { background: rgba(255, 0, 255, 0.2); color: #ff00ff; }
-    .tld-list {
-      font-size: 0.7rem;
-      color: #b0c0e0;
+    .badge-hapc { background: rgba(255, 200, 0, 0.2); color: #ffc800; }
+    .tld-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
       margin: 8px 0;
     }
-    .tld-list span {
-      display: inline-block;
-      padding: 2px 6px;
-      margin: 2px;
+    .tld-chip {
+      text-align: center;
+      padding: 4px;
       background: rgba(0, 255, 255, 0.1);
       border: 1px solid rgba(0, 255, 255, 0.2);
       border-radius: 4px;
+      font-size: 0.65rem;
+      color: #b0e0ff;
     }
     .resolver-input {
       width: 100%;
@@ -105,8 +108,8 @@
 </head>
 <body>
   <div class="header">
-    <h1>HDNS</h1>
-    <p>HOPE Domain Name System</p>
+    <h1>HDNS v2.0</h1>
+    <p>Hope AI Sovereign DNS Redirect</p>
   </div>
 
   <div class="status">
@@ -115,8 +118,8 @@
       <span class="badge badge-active">● ACTIVE</span>
     </div>
     <div class="status-item">
-      <span>Resolver:</span>
-      <span>HDNS v1.0</span>
+      <span>Version:</span>
+      <span>2.0.0</span>
     </div>
     <div class="status-item">
       <span>LOLY:</span>
@@ -126,16 +129,31 @@
       <span>CGT:</span>
       <span class="badge badge-active">Certified</span>
     </div>
+    <div class="status-item">
+      <span>HAPC:</span>
+      <span class="badge badge-hapc">Activated</span>
+    </div>
   </div>
 
-  <div class="tld-list">
-    <strong>Sovereign TLDs:</strong><br>
-    <span>.tuk</span>
-    <span>.core</span>
-    <span>.hmtml</span>
-    <span>.hs</span>
-    <span>.hpls</span>
-    <span>.hope</span>
+  <div style="font-size: 0.7rem; color: #b0c0e0; margin-bottom: 8px;">
+    <strong>Sovereign TLDs (15):</strong>
+  </div>
+  <div class="tld-grid">
+    <div class="tld-chip">.tuk</div>
+    <div class="tld-chip">.core</div>
+    <div class="tld-chip">.gag</div>
+    <div class="tld-chip">.gap</div>
+    <div class="tld-chip">.hope</div>
+    <div class="tld-chip">.thimothism</div>
+    <div class="tld-chip">.otp</div>
+    <div class="tld-chip">.tuidl</div>
+    <div class="tld-chip">.hs</div>
+    <div class="tld-chip">.hpls</div>
+    <div class="tld-chip">.bank</div>
+    <div class="tld-chip">.finance</div>
+    <div class="tld-chip">.tuic</div>
+    <div class="tld-chip">.tup</div>
+    <div class="tld-chip">.hmtml</div>
   </div>
 
   <input type="text" class="resolver-input" id="domainInput" placeholder="www.gov.tuk" value="www.gov.tuk">
@@ -144,7 +162,7 @@
 
   <div class="footer">
     TUK — ALL ARE EQUAL HERE 🤝<br>
-    Built with Love. Powered by CGT.
+    Built with Love. Powered by CGT. HAPC Activated.
   </div>
 
   <script>
@@ -157,11 +175,11 @@
       chrome.runtime.sendMessage({ action: 'resolve', domain: domain }, function(response) {
         if (response.success) {
           const data = response.data;
-          resultDiv.innerHTML = `✅ <strong>${data.domain}</strong><br>` +
-            `IPs: ${data.a.join(', ')}<br>` +
-            `CNAME: ${data.cname}<br>` +
-            `Sovereign: ${data.sovereign ? 'Yes' : 'No'}<br>` +
-            `LOLY: ${data.loly}`;
+          resultDiv.innerHTML = '✅ <strong>' + data.domain + '</strong><br>' +
+            'IPs: ' + data.a.join(', ') + '<br>' +
+            'CNAME: ' + data.cname + '<br>' +
+            'Sovereign: ' + (data.sovereign ? 'Yes' : 'No') + '<br>' +
+            'LOLY: ' + data.loly + ' · CGT: ' + data.cgt;
         } else {
           resultDiv.textContent = '❌ ' + (response.error || 'Resolution failed');
         }

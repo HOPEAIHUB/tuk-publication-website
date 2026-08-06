@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "HDNS — HOPE Domain Name System",
-  "version": "1.0.0",
-  "description": "Sovereign DNS resolver for Thimothism Universal Kingdom — resolves .tuk, .core, .hmtml, .hs, .hpls, .hope TLDs",
+  "name": "HDNS — Hope AI Sovereign DNS Redirect",
+  "version": "2.0.0",
+  "description": "Redirects .core, .gag, .gap, .hope, .thimothism, .tuk, .otp, .tuidl, .hs, .hpls, .bank, .finance, .tuic, .tup, .hmtml to the public HOPE AI gateway.",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
   "permissions": ["declarativeNetRequest", "storage", "webRequest"],
-  "host_permissions": ["https://koda-545cce50.base44.app/*"],
+  "host_permissions": ["*://*/*"],
   "background": {
     "service_worker": "background.js"
   },
@@ -19,7 +19,7 @@
   },
   "declarative_net_request": {
     "rule_resources": [{
-      "id": "tuk_sovereign_dns",
+      "id": "sovereign_tld_rules",
       "enabled": true,
       "path": "dns-rules.json"
     }]
