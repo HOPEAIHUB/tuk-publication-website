@@ -3,32 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HDNS — Hope AI Sovereign DNS</title>
+  <title>HDNS v2.1 — Hope AI Sovereign DNS</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       width: 340px;
       padding: 16px;
       font-family: 'Segoe UI', system-ui, sans-serif;
       background: linear-gradient(135deg, #0a0015, #100030);
       color: #e0f7ff;
-      margin: 0;
     }
-    .header {
-      text-align: center;
-      margin-bottom: 16px;
-    }
+    .header { text-align: center; margin-bottom: 16px; }
     .header h1 {
       font-size: 1.3rem;
-      margin: 0;
       background: linear-gradient(135deg, #00ffff, #ff00ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .header p {
-      font-size: 0.7rem;
-      color: #8090b0;
-      margin: 4px 0 0;
-    }
+    .header p { font-size: 0.7rem; color: #8090b0; margin: 4px 0 0; }
     .status {
       background: rgba(0, 255, 255, 0.1);
       border: 1px solid rgba(0, 255, 255, 0.3);
@@ -54,17 +46,17 @@
     .badge-hapc { background: rgba(255, 200, 0, 0.2); color: #ffc800; }
     .tld-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 4px;
       margin: 8px 0;
     }
     .tld-chip {
       text-align: center;
-      padding: 4px;
+      padding: 4px 2px;
       background: rgba(0, 255, 255, 0.1);
       border: 1px solid rgba(0, 255, 255, 0.2);
       border-radius: 4px;
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       color: #b0e0ff;
     }
     .resolver-input {
@@ -104,12 +96,14 @@
       color: #607090;
       margin-top: 12px;
     }
+    .test-domains { font-size: 0.65rem; color: #6080a0; margin-top: 8px; }
+    .test-domains a { color: #00ffff; text-decoration: none; }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1>HDNS v2.0</h1>
-    <p>Hope AI Sovereign DNS Redirect</p>
+    <h1>HDNS v2.1</h1>
+    <p>Hope AI Sovereign DNS — Manifest V3</p>
   </div>
 
   <div class="status">
@@ -119,7 +113,15 @@
     </div>
     <div class="status-item">
       <span>Version:</span>
-      <span>2.0.0</span>
+      <span>2.1.0</span>
+    </div>
+    <div class="status-item">
+      <span>Rules:</span>
+      <span>195 redirect rules</span>
+    </div>
+    <div class="status-item">
+      <span>Method:</span>
+      <span style="font-size: 0.65rem;">declarativeNetRequest</span>
     </div>
     <div class="status-item">
       <span>LOLY:</span>
@@ -136,7 +138,7 @@
   </div>
 
   <div style="font-size: 0.7rem; color: #b0c0e0; margin-bottom: 8px;">
-    <strong>Sovereign TLDs (15):</strong>
+    <strong>15 Sovereign TLDs:</strong>
   </div>
   <div class="tld-grid">
     <div class="tld-chip">.tuk</div>
@@ -144,25 +146,35 @@
     <div class="tld-chip">.gag</div>
     <div class="tld-chip">.gap</div>
     <div class="tld-chip">.hope</div>
-    <div class="tld-chip">.thimothism</div>
+    <div class="tld-chip">.thim</div>
     <div class="tld-chip">.otp</div>
     <div class="tld-chip">.tuidl</div>
     <div class="tld-chip">.hs</div>
     <div class="tld-chip">.hpls</div>
     <div class="tld-chip">.bank</div>
-    <div class="tld-chip">.finance</div>
+    <div class="tld-chip">.fin</div>
     <div class="tld-chip">.tuic</div>
     <div class="tld-chip">.tup</div>
     <div class="tld-chip">.hmtml</div>
   </div>
 
+  <div style="font-size: 0.7rem; color: #b0c0e0; margin: 8px 0 4px;">
+    <strong>Try it — type in address bar:</strong>
+  </div>
+  <div class="test-domains">
+    www.gov.tuk · vision.tuk · about.tuk<br>
+    services.tuk · bank.tuk · www.hope<br>
+    www.core · www.hmtml · www.bank
+  </div>
+
   <input type="text" class="resolver-input" id="domainInput" placeholder="www.gov.tuk" value="www.gov.tuk">
-  <button class="btn" id="resolveBtn">Resolve Domain</button>
+  <button class="btn" id="resolveBtn">Resolve via HDNS API</button>
   <div class="result" id="result"></div>
 
   <div class="footer">
     TUK — ALL ARE EQUAL HERE 🤝<br>
-    Built with Love. Powered by CGT. HAPC Activated.
+    Built with Love. Powered by CGT. HAPC Activated.<br>
+    <span style="color: #405070;">v2.1 — Manifest V3 — 195 rules</span>
   </div>
 
   <script>
@@ -173,15 +185,15 @@
       resultDiv.textContent = 'Resolving...';
 
       chrome.runtime.sendMessage({ action: 'resolve', domain: domain }, function(response) {
-        if (response.success) {
-          const data = response.data;
-          resultDiv.innerHTML = '✅ <strong>' + data.domain + '</strong><br>' +
-            'IPs: ' + data.a.join(', ') + '<br>' +
-            'CNAME: ' + data.cname + '<br>' +
-            'Sovereign: ' + (data.sovereign ? 'Yes' : 'No') + '<br>' +
-            'LOLY: ' + data.loly + ' · CGT: ' + data.cgt;
+        if (response && response.success) {
+          const d = response.data;
+          resultDiv.innerHTML = '✅ <strong>' + d.domain + '</strong><br>' +
+            'IPs: ' + (d.a || []).join(', ') + '<br>' +
+            'CNAME: ' + (d.cname || 'none') + '<br>' +
+            'Sovereign: ' + (d.sovereign ? 'Yes' : 'No') + '<br>' +
+            'LOLY: ' + d.loly + ' · CGT: ' + d.cgt;
         } else {
-          resultDiv.textContent = '❌ ' + (response.error || 'Resolution failed');
+          resultDiv.textContent = '❌ ' + (response?.error || 'Resolution failed');
         }
       });
     });

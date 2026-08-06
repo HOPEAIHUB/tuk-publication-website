@@ -2,91 +2,3121 @@
   {
     "id": 1,
     "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.tuk/", "resourceTypes": ["main_frame"] }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 2,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.core/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 3,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.gag/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 4,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.gap/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 5,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.hope/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 6,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.thimothism/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 7,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.otp/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 8,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.tuidl/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 9,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.hs/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 10,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.hpls/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 11,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/services.html" } },
-    "condition": { "urlFilter": "||*.bank/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 12,
-    "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/services.html" } },
-    "condition": { "urlFilter": "||*.finance/", "resourceTypes": ["main_frame"] }
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 13,
     "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/services.html" } },
-    "condition": { "urlFilter": "||*.tuic/", "resourceTypes": ["main_frame"] }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.tuk",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 14,
     "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/index.html" } },
-    "condition": { "urlFilter": "||*.tup/", "resourceTypes": ["main_frame"] }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 15,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 26,
     "priority": 1,
-    "action": { "type": "redirect", "redirect": { "url": "https://hopeaihub.github.io/tuk-publication-website/about.html" } },
-    "condition": { "urlFilter": "||*.hmtml/", "resourceTypes": ["main_frame"] }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.core",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.gag",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 45,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.gap",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.hope",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 69,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 76,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 77,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.thimothism",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 89,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 91,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.otp",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 96,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 97,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 98,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 99,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 100,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 101,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 102,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 103,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 104,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.tuidl",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 105,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 106,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 107,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 108,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 109,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 110,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 111,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 112,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 113,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 114,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 115,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 116,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 117,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.hs",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 118,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 119,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 120,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 121,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 122,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 123,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 124,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 125,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 126,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 127,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 128,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 129,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 130,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.hpls",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 131,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 132,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 133,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 134,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 135,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 136,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 137,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 138,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 139,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 140,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 141,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 142,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 143,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.bank",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 144,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 145,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 146,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 147,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 148,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 149,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 150,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 151,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 152,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 153,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 154,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 155,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 156,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.finance",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 157,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 158,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 159,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 160,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 161,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 162,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 163,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 164,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 165,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 166,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 167,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 168,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 169,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.tuic",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 170,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 171,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 172,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 173,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 174,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 175,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 176,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 177,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 178,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 179,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 180,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 181,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 182,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.tup",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 183,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 184,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.gov.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 185,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||www.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 186,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||gov.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 187,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/vision.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||vision.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 188,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/about.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||about.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 189,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||services.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 190,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/community.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||community.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 191,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/contact.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||contact.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 192,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||bank.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 193,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/services.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||cloud.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 194,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/index.html"
+      }
+    },
+    "condition": {
+      "urlFilter": "||api.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 195,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://hopeaihub.github.io/tuk-publication-website/"
+      }
+    },
+    "condition": {
+      "urlFilter": "||*.hmtml",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   }
 ]

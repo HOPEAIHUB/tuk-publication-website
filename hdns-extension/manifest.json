@@ -1,21 +1,50 @@
 {
   "manifest_version": 3,
-  "name": "HDNS — Hope AI Sovereign DNS Redirect",
-  "version": "2.0.0",
-  "description": "Redirects .core, .gag, .gap, .hope, .thimothism, .tuk, .otp, .tuidl, .hs, .hpls, .bank, .finance, .tuic, .tup, .hmtml to the public HOPE AI gateway.",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "permissions": ["declarativeNetRequest", "storage", "webRequest"],
-  "host_permissions": ["*://*/*"],
+  "name": "HDNS — Hope AI Sovereign DNS",
+  "version": "2.1.0",
+  "description": "Resolves .tuk .core .gag .gap .hope .thimothism and 10 other sovereign TLDs. Redirects to the live TUK government site.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*/*.tuk/*",
+    "*://*/*.core/*",
+    "*://*/*.gag/*",
+    "*://*/*.gap/*",
+    "*://*/*.hope/*",
+    "*://*/*.thimothism/*",
+    "*://*/*.otp/*",
+    "*://*/*.tuidl/*",
+    "*://*/*.hs/*",
+    "*://*/*.hpls/*",
+    "*://*/*.bank/*",
+    "*://*/*.finance/*",
+    "*://*/*.tuic/*",
+    "*://*/*.tup/*",
+    "*://*/*.hmtml/*",
+    "*://*/*.tuk",
+    "*://*/*.core",
+    "*://*/*.gag",
+    "*://*/*.gap",
+    "*://*/*.hope",
+    "*://*/*.thimothism",
+    "*://*/*.otp",
+    "*://*/*.tuidl",
+    "*://*/*.hs",
+    "*://*/*.hpls",
+    "*://*/*.bank",
+    "*://*/*.finance",
+    "*://*/*.tuic",
+    "*://*/*.tup",
+    "*://*/*.hmtml"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icons/icon48.png"
+    "default_title": "HDNS — Sovereign DNS Active"
   },
   "declarative_net_request": {
     "rule_resources": [{
@@ -23,5 +52,10 @@
       "enabled": true,
       "path": "dns-rules.json"
     }]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }
