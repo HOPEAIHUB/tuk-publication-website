@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#B3242A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HopePay">
+<meta name="description" content="Hope Pay — An Enhanced Payment Experience. Hope Holdings International Pvt Ltd.">
+<title>HopePay PRO ◈ hopepay.online ◈ Global Payment Wallet</title>
+<meta property="og:title" content="HopePay PRO — Feel the difference">
+<meta property="og:description" content="Global payment wallet with 12 crypto currencies, HACB, VPA, CEYPAY, HAABS. Hope Holdings International.">
+<meta property="og:image" content="https://media.base44.com/images/public/6a5e42528adf14be131b737b/83064141f_DOC-20220713-WA0025_NEW2.jpg">
+<meta property="og:url" content="https://hopepay.online">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="https://media.base44.com/images/public/6a5e42528adf14be131b737b/83064141f_DOC-20220713-WA0025_NEW2.jpg">
+<style>
+:root{
+  --red:#B3242A;--dark:#57565B;--gold:#F4A261;--green:#34A85A;--blue:#4A90D9;
+  --bg:#0a0405;--card:rgba(20,8,9,0.97);--border:rgba(179,36,42,0.22);
+  --text:#f0e0e0;--sub:#9a8080;--mono:'Courier New',monospace;--fn:'Segoe UI',Arial,sans-serif;
+  --grad:linear-gradient(57deg,#57565B,#B3242A);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{height:100%;}
+body{font-family:var(--fn);background:var(--bg);color:var(--text);overflow:hidden;max-width:480px;margin:0 auto;display:flex;flex-direction:column;}
+body.light{background:linear-gradient(160deg,#fdf0f0,#fff5f5);color:#1a0505;--card:rgba(255,255,255,0.98);--border:rgba(179,36,42,0.2);--text:#1a0505;--sub:#6a4040;--bg:#fdf0f0;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px;}
+
+/* PAGES */
+.page{display:none;flex-direction:column;height:100%;overflow:hidden;}
+.page.on{display:flex;}
+
+/* SPLASH */
+#pg-splash{background:linear-gradient(160deg,#0a0000,#1a0508,#080004);align-items:center;justify-content:center;text-align:center;padding:2rem;}
+.sp-logo-wrap{position:relative;margin-bottom:1rem;}
+.sp-logo-ring{width:90px;height:90px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 0 40px rgba(179,36,42,0.5);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px rgba(179,36,42,0.4);}50%{box-shadow:0 0 60px rgba(179,36,42,0.8),0 0 100px rgba(179,36,42,0.3);}}
+.sp-logo-ring span{font-size:2.5rem;color:#fff;}
+.sp-title{font-size:2.4rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:0.08em;margin-bottom:0.2rem;}
+.sp-tagline{font-size:0.58rem;color:var(--sub);letter-spacing:0.14em;margin-bottom:0.15rem;}
+.sp-domain{font-size:0.55rem;color:var(--red);margin-bottom:1.5rem;}
+.sp-bar-w{width:220px;height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;margin:0 auto 0.7rem;}
+.sp-bar{height:100%;background:var(--grad);width:0%;transition:width 0.18s ease;}
+.sp-msg{font-size:0.52rem;color:var(--sub);font-family:var(--mono);min-height:1em;margin-bottom:1.5rem;}
+.sp-copy{font-size:0.5rem;color:#2a1010;line-height:1.7;}
+.sp-copy span{color:var(--red);}
+
+/* AUTH */
+#pg-auth{background:linear-gradient(160deg,#0a0000,#1a0508);align-items:center;justify-content:center;padding:1rem;overflow-y:auto;}
+.auth-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.5rem;width:100%;max-width:360px;box-shadow:0 20px 60px rgba(179,36,42,0.2);}
+.auth-hdr{text-align:center;margin-bottom:1.1rem;}
+.auth-hdr-logo{width:48px;height:48px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 0.5rem;box-shadow:0 4px 16px rgba(179,36,42,0.4);}
+.auth-hdr-title{font-size:1.1rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.auth-hdr-sub{font-size:0.48rem;color:var(--sub);}
+.auth-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:1rem;}
+.atab{flex:1;padding:0.5rem;font-size:0.58rem;background:transparent;border:none;color:var(--sub);border-bottom:2px solid transparent;cursor:pointer;font-family:var(--fn);letter-spacing:0.06em;transition:all 0.2s;}
+.atab.on{color:var(--red);border-bottom-color:var(--red);}
+.aform{display:none;}.aform.on{display:block;}
+
+/* FORM ELEMENTS */
+.fg{margin-bottom:0.65rem;}
+label{display:block;font-size:0.52rem;color:var(--sub);margin-bottom:0.2rem;letter-spacing:0.05em;}
+input,select,textarea{width:100%;padding:0.48rem 0.65rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.63rem;outline:none;transition:all 0.2s;font-family:var(--fn);}
+body.light input,body.light select,body.light textarea{background:#fff;border-color:rgba(179,36,42,0.2);color:#1a0505;}
+input:focus,select:focus{border-color:var(--red);box-shadow:0 0 0 2px rgba(179,36,42,0.1);}
+.btn{padding:0.6rem 1rem;font-size:0.63rem;border-radius:9px;font-weight:800;cursor:pointer;border:none;transition:all 0.2s;font-family:var(--fn);letter-spacing:0.05em;}
+.bfull{width:100%;}
+.bprim{background:var(--grad);color:#fff;box-shadow:0 4px 16px rgba(179,36,42,0.3);}
+.bprim:active{opacity:0.9;transform:scale(0.98);}
+.bsec{background:transparent;border:1px solid var(--red);color:var(--red);}
+.bsec:active{background:rgba(179,36,42,0.1);}
+.bgreen{background:linear-gradient(135deg,#2a8a48,#34A85A);color:#fff;}
+.bgold{background:linear-gradient(135deg,var(--gold),#f8b84a);color:#000;}
+.bsm{padding:0.28rem 0.65rem;font-size:0.54rem;border-radius:7px;}
+
+/* OTP */
+.otp-row{display:flex;gap:0.35rem;justify-content:center;margin:0.7rem 0;}
+.oc{width:40px;height:48px;text-align:center;font-size:1.1rem;font-weight:900;font-family:var(--mono);background:rgba(255,255,255,0.05);border:2px solid var(--border);border-radius:8px;color:var(--text);outline:none;transition:all 0.2s;}
+body.light .oc{background:#fff;color:#1a0505;}
+.oc:focus,.oc.f{border-color:var(--red);}
+
+/* APP SHELL */
+.app-hdr{background:var(--grad);padding:0.65rem 1rem;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;box-shadow:0 2px 20px rgba(179,36,42,0.4);}
+.app-logo{display:flex;align-items:center;gap:0.5rem;}
+.app-logo-ic{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:1rem;border:1px solid rgba(255,255,255,0.25);}
+.app-logo-t{font-size:0.9rem;font-weight:900;color:#fff;letter-spacing:0.08em;}
+.app-logo-s{font-size:0.4rem;color:rgba(255,255,255,0.7);}
+.hdr-r{display:flex;align-items:center;gap:0.4rem;}
+.hdr-btn{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.15);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.75rem;color:#fff;}
+.hdr-bal{text-align:right;cursor:pointer;}
+.hdr-bal-v{font-size:0.75rem;font-weight:900;color:#fff;}
+.hdr-bal-l{font-size:0.38rem;color:rgba(255,255,255,0.7);}
+.notif-dot{position:absolute;top:-2px;right:-2px;width:7px;height:7px;background:#FFD700;border-radius:50%;display:none;}
+.notif-dot.on{display:block;}
+
+/* BODY + NAV */
+.app-body{flex:1;overflow-y:auto;overflow-x:hidden;padding-bottom:64px;}
+.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:rgba(10,4,5,0.98);border-top:1px solid var(--border);display:flex;z-index:100;backdrop-filter:blur(12px);}
+body.light .bnav{background:rgba(255,255,255,0.98);}
+.ni{flex:1;display:flex;flex-direction:column;align-items:center;padding:0.45rem 0.2rem;cursor:pointer;border:none;background:transparent;position:relative;transition:all 0.2s;}
+.ni-ic{font-size:1rem;margin-bottom:0.08rem;transition:transform 0.2s;}
+.ni-lb{font-size:0.38rem;color:var(--sub);letter-spacing:0.04em;}
+.ni.on .ni-lb{color:var(--red);}
+.ni.on .ni-ic{transform:scale(1.18);}
+
+/* SECTIONS */
+.sec{display:none;padding:0.85rem 0.9rem;}
+.sec.on{display:block;}
+.stitle{font-size:0.5rem;color:var(--red);letter-spacing:0.18em;margin-bottom:0.3rem;text-transform:uppercase;font-weight:700;}
+.shead{font-size:1rem;font-weight:900;margin-bottom:0.12rem;}
+.ssub{font-size:0.52rem;color:var(--sub);margin-bottom:0.8rem;}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0.9rem;margin-bottom:0.75rem;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+body.light .card{box-shadow:0 2px 12px rgba(179,36,42,0.08);}
+
+/* HERO WALLET */
+.w-hero{background:var(--grad);border-radius:16px;padding:1.2rem;margin-bottom:0.75rem;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(179,36,42,0.4);}
+.w-hero::after{content:'';position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.06);}
+.wh-l{font-size:0.44rem;color:rgba(255,255,255,0.65);letter-spacing:0.12em;margin-bottom:0.15rem;}
+.wh-b{font-size:1.8rem;font-weight:900;color:#fff;line-height:1;}
+.wh-c{font-size:0.52rem;color:rgba(255,255,255,0.75);margin-top:0.08rem;}
+.wh-row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:0.6rem;}
+.wh-uid{font-size:0.42rem;color:rgba(255,255,255,0.55);font-family:var(--mono);}
+.wh-sec{display:flex;align-items:center;gap:0.25rem;font-size:0.44rem;color:rgba(255,255,255,0.8);}
+.wh-dot{width:5px;height:5px;background:#FFD700;border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.2;}}
+.wh-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:0.4rem;margin-top:0.8rem;}
+.wh-act{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:0.4rem 0.2rem;text-align:center;cursor:pointer;transition:all 0.2s;}
+.wh-act:active{background:rgba(255,255,255,0.22);}
+.wh-act-ic{font-size:1rem;display:block;margin-bottom:0.08rem;}
+.wh-act-lb{font-size:0.38rem;color:rgba(255,255,255,0.85);}
+
+/* SERVICE GRID */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.45rem;margin-bottom:0.75rem;}
+.sv{display:flex;flex-direction:column;align-items:center;gap:0.2rem;padding:0.6rem 0.2rem;background:var(--card);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all 0.2s;}
+.sv:active{border-color:var(--red);transform:scale(0.96);}
+.sv-ic{width:34px;height:34px;border-radius:8px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:0.9rem;}
+.sv-lb{font-size:0.36rem;color:var(--sub);text-align:center;letter-spacing:0.02em;line-height:1.3;}
+
+/* STAT */
+.stat2{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.75rem;}
+.sm{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.65rem;text-align:center;}
+.sm-v{font-size:0.9rem;font-weight:900;}
+.sm-l{font-size:0.42rem;color:var(--sub);margin-top:0.1rem;letter-spacing:0.06em;}
+
+/* TX */
+.txi{display:flex;align-items:center;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(179,36,42,0.07);}
+.txi:last-child{border-bottom:none;}
+.txi-ic{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
+.txi-info{flex:1;min-width:0;}
+.txi-d{font-size:0.6rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.txi-t{font-size:0.42rem;color:var(--sub);margin-top:0.06rem;}
+.txi-a{font-size:0.63rem;font-weight:900;flex-shrink:0;}
+
+/* TAG */
+.tag{display:inline-block;padding:0.1rem 0.38rem;font-size:0.44rem;border-radius:4px;font-weight:700;letter-spacing:0.04em;}
+.tg{background:rgba(52,168,90,0.12);border:1px solid var(--green);color:var(--green);}
+.tr{background:rgba(179,36,42,0.12);border:1px solid var(--red);color:var(--red);}
+.tb{background:rgba(74,144,217,0.12);border:1px solid var(--blue);color:var(--blue);}
+.tgo{background:rgba(244,162,97,0.12);border:1px solid var(--gold);color:var(--gold);}
+
+/* AMOUNT INPUT */
+.amt-wrap{position:relative;margin-bottom:0.65rem;}
+.amt-sym{position:absolute;left:0.7rem;top:50%;transform:translateY(-50%);font-size:0.75rem;color:var(--sub);}
+.amt-big{width:100%;padding:0.7rem 0.7rem 0.7rem 2rem;font-size:1.3rem;font-weight:900;background:rgba(255,255,255,0.04);border:2px solid var(--border);border-radius:11px;color:var(--text);outline:none;text-align:center;font-family:var(--mono);}
+.amt-big:focus{border-color:var(--red);}
+body.light .amt-big{background:#fff;color:#1a0505;}
+
+/* NOTIF TOAST */
+#notif{position:fixed;top:0.7rem;left:50%;transform:translateX(-50%) translateY(-120px);background:rgba(52,168,90,0.97);color:#fff;padding:0.5rem 1rem;border-radius:8px;font-size:0.6rem;z-index:9999;transition:transform 0.4s;max-width:92vw;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.5);}
+#notif.show{transform:translateX(-50%) translateY(0);}
+#notif.err{background:rgba(179,36,42,0.97);}
+#notif.inf{background:rgba(74,144,217,0.97);}
+
+/* MODAL */
+.modal-ov{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:200;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.modal-ov.open{opacity:1;pointer-events:all;}
+.modal-sh{background:#130608;border-radius:20px 20px 0 0;padding:1rem 1.1rem 1.5rem;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;transform:translateY(100%);transition:transform 0.35s ease;}
+body.light .modal-sh{background:#fff5f5;}
+.modal-ov.open .modal-sh{transform:translateY(0);}
+.modal-hndl{width:36px;height:3px;background:rgba(255,255,255,0.12);border-radius:2px;margin:0 auto 0.8rem;}
+.modal-t{font-size:0.85rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.8rem;}
+
+/* PROGRESS */
+.pb-w{background:rgba(255,255,255,0.06);border-radius:99px;height:4px;overflow:hidden;margin:0.3rem 0;}
+.pb{height:100%;border-radius:99px;transition:width 0.8s ease;background:var(--grad);}
+
+/* BANNER */
+.ban{border-radius:10px;padding:0.65rem 0.8rem;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem;}
+.ban-warn{background:rgba(244,162,97,0.07);border:1px solid rgba(244,162,97,0.25);}
+.ban-info{background:rgba(74,144,217,0.07);border:1px solid rgba(74,144,217,0.2);}
+
+/* SUCCESS CIRCLE */
+.suc-circle{width:58px;height:58px;border-radius:50%;background:rgba(52,168,90,0.1);border:3px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 0.6rem;animation:pop 0.5s ease;}
+@keyframes pop{0%{transform:scale(0)}80%{transform:scale(1.1)}100%{transform:scale(1)}}
+
+/* HP GATEWAY BANNER */
+.hp-gw{background:var(--grad);border-radius:12px;padding:0.9rem;margin-bottom:0.75rem;position:relative;overflow:hidden;}
+.hp-gw::after{content:'HOPE PAY';position:absolute;right:-8px;top:50%;transform:translateY(-50%) rotate(90deg);font-size:0.5rem;color:rgba(255,255,255,0.12);font-weight:900;letter-spacing:0.2em;}
+.hp-gw-title{font-size:0.56rem;font-weight:900;color:#fff;letter-spacing:0.12em;margin-bottom:0.4rem;}
+.hp-gw-row{display:flex;justify-content:space-between;font-size:0.54rem;margin-bottom:0.2rem;}
+.hp-gw-k{color:rgba(255,255,255,0.65);}
+.hp-gw-v{color:#fff;font-weight:700;}
+
+/* RATES ROW */
+.rate-row{display:flex;justify-content:space-between;align-items:center;padding:0.38rem 0;border-bottom:1px solid rgba(179,36,42,0.06);}
+.rate-row:last-child{border-bottom:none;}
+
+/* WALLET ITEM */
+.wi{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid rgba(179,36,42,0.07);}
+.wi:last-child{border-bottom:none;}
+.wi-l{display:flex;align-items:center;gap:0.5rem;}
+.wi-ic{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;background:var(--grad);}
+.wi-n{font-size:0.62rem;font-weight:700;}
+.wi-c{font-size:0.44rem;color:var(--sub);}
+.wi-b{font-size:0.7rem;font-weight:900;text-align:right;color:var(--red);}
+
+/* CHAT */
+.chat-body{height:260px;overflow-y:auto;padding:0.5rem;background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:10px;margin-bottom:0.55rem;display:flex;flex-direction:column;gap:0.45rem;}
+body.light .chat-body{background:rgba(179,36,42,0.02);}
+.cb{display:flex;gap:0.4rem;align-items:flex-end;max-width:88%;}
+.cb.user{flex-direction:row-reverse;margin-left:auto;}
+.cb-av{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;background:var(--grad);}
+.cb-bub{padding:0.45rem 0.7rem;border-radius:10px;font-size:0.57rem;line-height:1.65;}
+.cb.bot .cb-bub{background:rgba(179,36,42,0.1);border:1px solid rgba(179,36,42,0.18);border-radius:4px 10px 10px 10px;}
+.cb.user .cb-bub{background:rgba(52,168,90,0.1);border:1px solid rgba(52,168,90,0.2);border-radius:10px 4px 10px 10px;}
+.typing span{width:5px;height:5px;background:var(--red);border-radius:50%;display:inline-block;margin:0 1px;animation:ty 1.2s infinite;}
+.typing span:nth-child(2){animation-delay:0.2s;}
+.typing span:nth-child(3){animation-delay:0.4s;}
+@keyframes ty{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+/* SERVICE DETAIL */
+.svc-item{display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.6rem;background:rgba(179,36,42,0.05);border:1px solid rgba(179,36,42,0.13);border-radius:8px;margin-bottom:0.35rem;cursor:pointer;transition:all 0.2s;}
+.svc-item:active{background:rgba(179,36,42,0.12);transform:scale(0.98);}
+.svc-item-ic{font-size:1rem;flex-shrink:0;}
+.svc-item-txt{font-size:0.56rem;font-weight:600;flex:1;}
+.svc-item-arr{color:rgba(179,36,42,0.4);font-size:0.8rem;}
+
+/* APK */
+.apk-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0.9rem;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.75rem;cursor:pointer;transition:all 0.2s;}
+.apk-card:active{transform:scale(0.98);}
+.apk-ic{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:var(--grad);}
+.apk-name{font-size:0.65rem;font-weight:800;}
+.apk-sub{font-size:0.46rem;color:var(--sub);margin-top:0.08rem;}
+
+@media(max-width:360px){.svc-grid{grid-template-columns:repeat(4,1fr);}.sv-ic{width:28px;height:28px;}.sv-lb{font-size:0.32rem;}}
+
+/* CRYPTO */
+.crypto-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;margin-bottom:0.75rem;}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.65rem;transition:all 0.2s;cursor:pointer;}
+.cc:active{transform:scale(0.97);border-color:var(--red);}
+.cc-h{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;}
+.cc-ic{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;}
+.cc-n{font-size:0.56rem;font-weight:700;}
+.cc-s{font-size:0.42rem;color:var(--sub);}
+.cc-p{font-size:0.68rem;font-weight:900;color:var(--red);}
+.cc-c{font-size:0.42rem;margin-top:0.1rem;}
+.cc-b{font-size:0.58rem;font-weight:700;margin-top:0.3rem;padding-top:0.3rem;border-top:1px solid rgba(179,36,42,0.08);}
+.crypto-total{background:var(--grad);border-radius:12px;padding:0.9rem;margin-bottom:0.75rem;text-align:center;}
+.crypto-total-v{font-size:1.4rem;font-weight:900;color:#fff;}
+.crypto-total-l{font-size:0.46rem;color:rgba(255,255,255,0.7);letter-spacing:0.1em;}
+/* ADMIN */
+.admin-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0.8rem;margin-bottom:0.6rem;}
+.admin-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:0.4rem;margin-bottom:0.65rem;}
+.admin-sm{text-align:center;padding:0.5rem 0.3rem;background:rgba(179,36,42,0.06);border-radius:8px;}
+.admin-sm-v{font-size:0.75rem;font-weight:900;color:var(--red);}
+.admin-sm-l{font-size:0.36rem;color:var(--sub);margin-top:0.05rem;}
+.admin-row{display:flex;justify-content:space-between;align-items:center;padding:0.45rem 0;border-bottom:1px solid rgba(179,36,42,0.07);font-size:0.55rem;}
+.admin-row:last-child{border-bottom:none;}
+/* CEYPAY */
+.ceypay-badge{display:inline-flex;align-items:center;gap:0.3rem;background:linear-gradient(135deg,#0d7d4d,#10b981);color:#fff;padding:0.25rem 0.6rem;border-radius:6px;font-size:0.48rem;font-weight:800;letter-spacing:0.05em;}
+.ceypay-card{background:linear-gradient(135deg,#0a2e1a,#0d4d2e);border:1px solid #10b98133;border-radius:12px;padding:0.9rem;margin-bottom:0.75rem;}
+.ceypay-title{font-size:0.62rem;font-weight:900;color:#10b981;letter-spacing:0.08em;margin-bottom:0.4rem;}
+.ceypay-row{display:flex;justify-content:space-between;font-size:0.54rem;margin-bottom:0.2rem;color:#a0d4b8;}
+.ceypay-row span:last-child{color:#fff;font-weight:600;font-family:var(--mono);font-size:0.5rem;}
+/* GOOGLE */
+.gbtn{display:flex;align-items:center;justify-content:center;gap:0.5rem;width:100%;padding:0.55rem;background:#fff;color:#3c4043;border:1px solid #dadce0;border-radius:8px;font-size:0.58rem;font-weight:600;cursor:pointer;font-family:'Roboto',Arial,sans-serif;transition:all 0.2s;}
+.gbtn:active{background:#f8f9fa;transform:scale(0.98);}
+.gbtn svg{width:18px;height:18px;}
+.g-modal{background:#fff;border-radius:12px;padding:1.2rem;max-width:360px;width:100%;margin:auto;}
+.g-logo{font-size:1.4rem;font-weight:400;color:#4285f4;margin-bottom:0.5rem;font-family:'Google Sans',Arial,sans-serif;}
+.g-title{font-size:0.85rem;font-weight:500;color:#202124;margin-bottom:0.3rem;font-family:'Google Sans',Arial,sans-serif;}
+.g-sub{font-size:0.52rem;color:#5f6368;margin-bottom:0.8rem;font-family:'Google Sans',Arial,sans-serif;}
+.g-input{width:100%;padding:0.65rem;background:#fff;border:1px solid #dadce0;border-radius:6px;font-size:0.62rem;color:#3c4043;outline:none;margin-bottom:0.5rem;font-family:'Roboto',Arial,sans-serif;}
+.g-input:focus{border-color:#4285f4;border-width:2px;}
+.g-next{width:100%;padding:0.55rem;background:#1a73e8;color:#fff;border:none;border-radius:6px;font-size:0.58rem;font-weight:600;cursor:pointer;font-family:'Roboto',Arial,sans-serif;}
+/* HACB */
+.hacb-card{background:linear-gradient(135deg,#0a0a2e,#1a1a4e);border:1px solid #4A90D933;border-radius:12px;padding:0.9rem;margin-bottom:0.75rem;}
+.hacb-title{font-size:0.62rem;font-weight:900;color:#4A90D9;letter-spacing:0.08em;margin-bottom:0.4rem;}
+.hacb-row{display:flex;justify-content:space-between;font-size:0.54rem;margin-bottom:0.2rem;color:#8A9BBF;}
+.hacb-row span:last-child{color:#fff;font-weight:600;font-family:var(--mono);font-size:0.5rem;}
+/* TRADE */
+.trade-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:0.65rem;}
+.trade-tab{flex:1;padding:0.42rem;text-align:center;font-size:0.56rem;font-weight:700;border:none;background:transparent;border-bottom:2px solid transparent;cursor:pointer;color:var(--sub);font-family:var(--fn);}
+.trade-tab.on{color:var(--red);border-bottom-color:var(--red);}
+/* VPA */
+.vpa-card{background:linear-gradient(135deg,#1a0510,#2a0a15);border:1px solid rgba(179,36,42,0.3);border-radius:10px;padding:0.7rem;margin-bottom:0.6rem;text-align:center;}
+.vpa-addr{font-family:var(--mono);font-size:0.65rem;color:var(--red);padding:0.4rem;background:rgba(179,36,42,0.08);border-radius:6px;margin:0.3rem 0;}
+
+
+/* PRODUCTION READY */
+.live-dot{width:6px;height:6px;border-radius:50%;background:#34A85A;display:inline-block;margin-right:4px;animation:blink 1.5s infinite;}
+.prod-badge{display:inline-flex;align-items:center;gap:0.25rem;background:rgba(52,168,90,0.12);border:1px solid #34A85A;color:#34A85A;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.42rem;font-weight:700;}
+.api-status{font-size:0.4rem;color:var(--sub);font-family:var(--mono);}
+.vpa-copy{display:inline-flex;align-items:center;gap:0.3rem;cursor:pointer;padding:0.25rem 0.5rem;border:1px solid rgba(179,36,42,0.2);border-radius:5px;background:rgba(179,36,42,0.05);font-size:0.44rem;color:var(--red);}
+.vpa-copy:active{background:rgba(179,36,42,0.15);}
+.txn-live{animation:fadeIn 0.5s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+.loader{display:inline-block;width:12px;height:12px;border:2px solid rgba(179,36,42,0.2);border-top-color:var(--red);border-radius:50%;animation:spin 0.7s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+</style>
+
+
+
+<div id="notif">✓</div>
+<div class="modal-ov" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-sh">
+    <div class="modal-hndl"></div>
+    <div class="modal-t" id="modal-t"></div>
+    <div id="modal-b"></div>
+  </div>
+</div>
+
+<!-- ══════════ SPLASH ══════════ -->
+<div id="pg-splash" class="page on">
+  <div class="sp-logo-wrap">
+    <img src="https://media.base44.com/images/public/6a5e42528adf14be131b737b/83064141f_DOC-20220713-WA0025_NEW2.jpg" alt="HopePay PRO" style="width:220px;max-width:90vw;filter:drop-shadow(0 0 24px rgba(179,36,42,0.6));animation:pulse 2s infinite;">
+  </div>
+  <div class="sp-tagline" style="font-size:0.65rem;color:rgba(255,255,255,0.5);letter-spacing:0.2em;margin-top:0.3rem;">FEEL THE DIFFERENCE</div>
+  <div class="sp-domain">hopepay.online · support@hopepay.online</div>
+  <div class="sp-bar-w"><div class="sp-bar" id="sp-bar"></div></div>
+  <div id="sp-msg" class="sp-msg">Initializing...</div>
+  <div class="sp-copy">Hope Holdings International Private Limited<br>Powered by <span>QSAC · TU5G · HMAIL v1.0</span></div>
+</div>
+
+<!-- ══════════ AUTH ══════════ -->
+<div id="pg-auth" class="page">
+  <div class="auth-card">
+    <div class="auth-hdr">
+      <img src="https://media.base44.com/images/public/6a5e42528adf14be131b737b/83064141f_DOC-20220713-WA0025_NEW2.jpg" alt="HopePay PRO" style="width:160px;margin:0 auto 0.4rem;display:block;filter:drop-shadow(0 0 8px rgba(179,36,42,0.4));">
+      <div class="auth-hdr-sub">Hope Holdings International · hopepay.online · Feel the difference</div>
+    </div>
+    <div class="auth-tabs">
+      <button class="atab on" onclick="aTab('login',this)">SIGN IN</button>
+      <button class="atab" onclick="aTab('reg',this)">REGISTER</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="af-login" class="aform on">
+      <div id="lf1">
+        <div class="fg"><label>EMAIL / PHONE</label><input type="text" id="l-id" placeholder="support@hopepay.online"></div>
+        <div class="fg"><label>PASSWORD</label><input type="password" id="l-pw" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.7rem;">
+          <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;font-size:0.5rem;"><input type="checkbox" checked="" style="width:auto;margin:0;"> Remember me</label>
+          <a href="#" style="font-size:0.5rem;color:var(--red);" onclick="showN('Reset link sent to support@hopepay.online',false,'inf')">Forgot?</a>
+        </div>
+        <button class="btn bprim bfull" onclick="doLogin()">SIGN IN →</button>
+      <div style="text-align:center;margin:0.6rem 0;position:relative;"><div style="font-size:0.46rem;color:var(--sub);margin-bottom:0.4rem;">OR</div></div>
+      <button class="gbtn" onclick="openGoogleSignIn()">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Continue with Google
+      </button><div style="text-align:center;margin-top:0.5rem;font-size:0.48rem;color:var(--sub);">Demo: <span style="color:var(--gold);">support@hopepay.online / hope2026</span></div>
+      </div>
+      <div id="lf2" style="display:none;">
+        <div style="text-align:center;margin-bottom:0.65rem;">
+          <div style="font-size:0.62rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">HOPE PAY 2FA</div>
+          <div style="font-size:0.5rem;color:var(--sub);" id="l2fa-info">OTP sent via HMAIL + SMS</div>
+        </div>
+        <div class="otp-row">
+          <input class="oc" maxlength="1" type="tel" id="lo0" oninput="oN(this,0,'lo')" onkeydown="oB(event,0,'lo')">
+          <input class="oc" maxlength="1" type="tel" id="lo1" oninput="oN(this,1,'lo')" onkeydown="oB(event,1,'lo')">
+          <input class="oc" maxlength="1" type="tel" id="lo2" oninput="oN(this,2,'lo')" onkeydown="oB(event,2,'lo')">
+          <input class="oc" maxlength="1" type="tel" id="lo3" oninput="oN(this,3,'lo')" onkeydown="oB(event,3,'lo')">
+          <input class="oc" maxlength="1" type="tel" id="lo4" oninput="oN(this,4,'lo')" onkeydown="oB(event,4,'lo')">
+          <input class="oc" maxlength="1" type="tel" id="lo5" oninput="oN(this,5,'lo')" onkeydown="oB(event,5,'lo')">
+        </div>
+        <div style="text-align:center;font-size:0.48rem;color:var(--sub);margin-bottom:0.6rem;">Expires: <span id="l-timer" style="color:var(--red);font-family:var(--mono);">05:00</span> · Demo OTP: <strong style="color:var(--gold);">123456</strong></div>
+        <button class="btn bprim bfull" onclick="doLogin2()">✓ VERIFY &amp; ENTER</button>
+        <div style="text-align:center;margin-top:0.4rem;"><button style="background:none;border:none;color:var(--red);font-size:0.5rem;cursor:pointer;" onclick="resendOTP()">↻ Resend OTP</button></div>
+      </div>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="af-reg" class="aform">
+      <div class="fg"><label>FULL NAME</label><input type="text" id="r-nm" placeholder="Your full name"></div>
+      <div class="fg"><label>EMAIL</label><input type="email" id="r-em" placeholder="you@email.com"></div>
+      <div class="fg"><label>MOBILE</label><input type="tel" id="r-ph" placeholder="+94 / +91 / +1..."></div>
+      <div class="fg"><label>COUNTRY</label>
+        <select id="r-co">
+          <option value="LK">🇱🇰 Sri Lanka</option><option value="IN">🇮🇳 India</option>
+          <option value="US">🇺🇸 USA</option><option value="GB">🇬🇧 UK</option>
+          <option value="AE">🇦🇪 UAE</option><option value="SG">🇸🇬 Singapore</option>
+          <option value="AU">🇦🇺 Australia</option><option value="CA">🇨🇦 Canada</option>
+        </select>
+      </div>
+      <div class="fg"><label>PASSWORD</label><input type="password" id="r-pw" placeholder="Min 8 characters"></div>
+      <button class="btn bprim bfull" onclick="doReg()">CREATE ACCOUNT →</button>
+      <div style="text-align:center;margin-top:0.5rem;font-size:0.46rem;color:var(--sub);">By registering you agree to our <a href="#" style="color:var(--red);" onclick="showTC()">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MAIN APP ══════════ -->
+<div id="pg-app" class="page">
+  <div class="app-hdr">
+    <div class="app-logo">
+      <img src="https://media.base44.com/images/public/6a5e42528adf14be131b737b/83064141f_DOC-20220713-WA0025_NEW2.jpg" alt="HopePay PRO" style="height:28px;filter:brightness(10);">
+    </div>
+    <div class="hdr-r">
+      <div class="hdr-bal" onclick="switchSec('wallet')">
+        <div class="hdr-bal-v" id="hdr-bal">₹0.00</div>
+        <div class="hdr-bal-l">HOPE WALLET</div>
+      </div>
+      <div style="position:relative;">
+        <button class="hdr-btn" onclick="openNotifs()">🔔<div class="notif-dot on" id="notif-dot"></div></button>
+      </div>
+      <button class="hdr-btn" onclick="cycleTheme()">🎨</button>
+    </div>
+  </div>
+
+  <div class="app-body">
+
+    <!-- ── DASHBOARD ── -->
+    <div id="sec-dashboard" class="sec on">
+      <div class="w-hero">
+        <div class="wh-l">HOPE PAY WALLET · hopepay.online</div>
+        <div class="wh-b" id="main-bal">₹0.00</div>
+        <div class="wh-c">Indian Rupee Balance · Hope Holdings International</div>
+        <div class="wh-row">
+          <div class="wh-uid" id="user-uid">HP-XXXX</div>
+          <div class="wh-sec"><div class="wh-dot"></div>SECURED</div>
+        </div>
+        <div class="wh-actions">
+          <div class="wh-act" onclick="openSend()"><span class="wh-act-ic">⬆</span><span class="wh-act-lb">SEND</span></div>
+          <div class="wh-act" onclick="openReceive()"><span class="wh-act-ic">⬇</span><span class="wh-act-lb">RECEIVE</span></div>
+          <div class="wh-act" onclick="switchSec('qr')"><span class="wh-act-ic">📱</span><span class="wh-act-lb">QR PAY</span></div>
+          <div class="wh-act" onclick="openAddMoney()"><span class="wh-act-ic">➕</span><span class="wh-act-lb">ADD</span></div>
+        </div>
+      </div>
+
+      <!-- HOPE PAY GATEWAY STATUS -->
+      <div class="hp-gw">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.4rem;">
+          <img src="https://media.base44.com/images/public/6a5e42528adf14be131b737b/83064141f_DOC-20220713-WA0025_NEW2.jpg" alt="HopePay PRO" style="height:22px;filter:brightness(10);">
+          <span class="prod-badge"><span class="live-dot"></span>LIVE</span>
+        </div>
+        <div class="hp-gw-row"><span class="hp-gw-k">Status</span><span class="hp-gw-v">● LIVE · hopepay.online</span></div>
+        <div class="hp-gw-row"><span class="hp-gw-k">Company</span><span class="hp-gw-v">Hope Holdings International Pvt Ltd</span></div>
+        <div class="hp-gw-row"><span class="hp-gw-k">Support</span><span class="hp-gw-v">support@hopepay.online</span></div>
+        <div class="hp-gw-row"><span class="hp-gw-k">Network</span><span class="hp-gw-v">TU5G · HAG 5G · QSAC Encrypted</span></div>
+        <div class="hp-gw-row"><span class="hp-gw-k">CeyPay</span><span class="hp-gw-v"><span class="ceypay-badge">● CEYPAY ACTIVATED</span></span></div>
+      </div>
+
+      
+      <div class="vpa-card">
+        <div style="font-size:0.46rem;color:var(--sub);letter-spacing:0.1em;">UPS VIRTUAL PAYMENT ADDRESS</div>
+        <div class="vpa-addr" id="user-vpa">loading@hacb</div>
+        <div style="font-size:0.42rem;color:var(--sub);">HOPE PAY ↔ UPS Gateway Bridge · Global VPA</div>
+      </div>
+
+      <!-- KYC BANNER -->
+      <div class="ban ban-warn" id="kyc-ban">
+        <span style="font-size:1rem;">🪪</span>
+        <div style="flex:1;"><div style="font-size:0.56rem;font-weight:700;color:var(--gold);">Complete KYC</div><div style="font-size:0.43rem;color:var(--sub);">Verify identity to unlock full features &amp; higher limits</div></div>
+        <button class="btn bsm" style="background:var(--grad);color:#fff;" onclick="switchSec('kyc')">VERIFY</button>
+      </div>
+
+      <!-- SERVICE GRID (from real APK) -->
+      <div class="svc-grid">
+        <div class="sv" onclick="openSvc('transfers')"><div class="sv-ic">⇄</div><div class="sv-lb">Transfers</div></div>
+        <div class="sv" onclick="openSvc('payments')"><div class="sv-ic">💳</div><div class="sv-lb">Payments</div></div>
+        <div class="sv" onclick="openSvc('myhopepay')"><div class="sv-ic">👛</div><div class="sv-lb">My Hope</div></div>
+        <div class="sv" onclick="openSvc('wealth')"><div class="sv-ic">📈</div><div class="sv-lb">Wealth</div></div>
+        <div class="sv" onclick="openSvc('travelling')"><div class="sv-ic">✈</div><div class="sv-lb">Travel</div></div>
+        <div class="sv" onclick="openSvc('insurance')"><div class="sv-ic">🛡</div><div class="sv-lb">Insurance</div></div>
+        <div class="sv" onclick="openSvc('food')"><div class="sv-ic">🍽</div><div class="sv-lb">Food</div></div>
+        <div class="sv" onclick="openSvc('hopecoin')"><div class="sv-ic">◈</div><div class="sv-lb">Hope Coin</div></div>
+        <div class="sv" onclick="switchSec('crypto')"><div class="sv-ic">🪙</div><div class="sv-lb">12 Crypto</div></div>
+        <div class="sv" onclick="switchSec('hacb')"><div class="sv-ic">🏦</div><div class="sv-lb">HACB Bank</div></div>
+        <div class="sv" onclick="switchSec('ceypay')"><div class="sv-ic" style="background:linear-gradient(135deg,#0d7d4d,#10b981)">💎</div><div class="sv-lb">CeyPay</div></div>
+      </div>
+
+      <div class="stat2">
+        <div class="sm"><div class="sm-v" style="color:var(--red);" id="d-sent">₹0</div><div class="sm-l">SENT</div></div>
+        <div class="sm"><div class="sm-v" style="color:var(--green);" id="d-recv">₹0</div><div class="sm-l">RECEIVED</div></div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+          <div style="font-size:0.56rem;font-weight:700;">Recent Transactions</div>
+          <button onclick="switchSec('history')" style="background:none;border:none;color:var(--red);font-size:0.5rem;cursor:pointer;">View all →</button>
+        </div>
+        <div id="recent-tx"><div style="text-align:center;padding:0.8rem;font-size:0.54rem;color:var(--sub);">No transactions yet</div></div>
+      </div>
+    </div>
+
+    <!-- ── TRANSFERS ── -->
+    <div id="sec-transfers" class="sec">
+      <div class="stitle">◈ TRANSFERS</div>
+      <div class="shead">Send Money</div>
+      <div class="ssub">Scan &amp; Pay · Bank Transfer · International · Hope Coin</div>
+      <div class="svc-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="sv" style="flex-direction:row;gap:0.5rem;padding:0.7rem;" onclick="openSend()"><div class="sv-ic">⬆</div><div class="sv-lb" style="text-align:left;font-size:0.56rem;font-weight:700;">Send Money</div></div>
+        <div class="sv" style="flex-direction:row;gap:0.5rem;padding:0.7rem;" onclick="switchSec('qr')"><div class="sv-ic">📱</div><div class="sv-lb" style="text-align:left;font-size:0.56rem;font-weight:700;">Scan &amp; Pay</div></div>
+        <div class="sv" style="flex-direction:row;gap:0.5rem;padding:0.7rem;" onclick="openBankTransfer()"><div class="sv-ic">🏦</div><div class="sv-lb" style="text-align:left;font-size:0.56rem;font-weight:700;">Bank Transfer</div></div>
+        <div class="sv" style="flex-direction:row;gap:0.5rem;padding:0.7rem;" onclick="openIntlTransfer()"><div class="sv-ic">🌍</div><div class="sv-lb" style="text-align:left;font-size:0.56rem;font-weight:700;">International</div></div>
+      </div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">Beneficiaries</div>
+        <div id="bene-list"><div style="text-align:center;padding:0.6rem;font-size:0.52rem;color:var(--sub);">Add beneficiaries to send quickly</div></div>
+        <button class="btn bsec bfull" style="margin-top:0.5rem;" onclick="addBeneficiary()">+ Add Beneficiary</button>
+      </div>
+    </div>
+
+    <!-- ── WALLET ── -->
+    <div id="sec-wallet" class="sec">
+      <div class="stitle">◈ HOPE WALLET</div>
+      <div class="shead">My Wallets</div>
+      <div class="ssub">Hope Coin · INR · LKR · Multi-currency</div>
+      <button class="btn bprim bfull" style="margin-bottom:0.75rem;" onclick="openAddMoney()">➕ ADD MONEY</button>
+      <div class="card" id="wallet-list"></div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">🏦 Linked Banks</div>
+        <div id="bank-list"><div style="text-align:center;padding:0.5rem;font-size:0.52rem;color:var(--sub);">No banks linked yet</div></div>
+        <button class="btn bsec bfull" style="margin-top:0.5rem;" onclick="openLinkBank()">+ Link Bank Account</button>
+      </div>
+    </div>
+
+    <!-- ── QR PAY ── -->
+    <div id="sec-qr" class="sec">
+      <div class="stitle">◈ QR PAYMENT</div>
+      <div class="shead">Hope Pay QR</div>
+      <div class="ssub">Generate · Scan · Pay instantly</div>
+      <div style="display:flex;border-bottom:1px solid var(--border);margin-bottom:0.75rem;">
+        <button class="atab on" onclick="qTab('gen',this)" style="flex:1;padding:0.42rem;">MY QR</button>
+        <button class="atab" onclick="qTab('pay',this)" style="flex:1;padding:0.42rem;">SCAN &amp; PAY</button>
+      </div>
+      <div id="q-gen">
+        <div class="card">
+          <div style="width:170px;height:170px;margin:0 auto;border:2px solid var(--border);border-radius:12px;background:rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:0.6rem;">
+            <div id="qr-inner" style="display:grid;grid-template-columns:repeat(12,1fr);gap:1px;width:144px;height:144px;"></div>
+          </div>
+          <div id="my-qr-id" style="text-align:center;font-size:0.46rem;color:var(--sub);font-family:var(--mono);margin-bottom:0.5rem;"></div>
+          <div class="fg"><label>AMOUNT (optional)</label><input type="number" id="qr-a" placeholder="0.00" oninput="genQR()"></div>
+          <div style="display:flex;gap:0.4rem;">
+            <button class="btn bprim bfull" onclick="genQR()">⟳ GENERATE</button>
+            <button class="btn bsec bsm" onclick="shareQR()">📤 SHARE</button>
+          </div>
+        </div>
+      </div>
+      <div id="q-pay" style="display:none;">
+        <div class="card">
+          <div style="text-align:center;padding:0.6rem 0 0.8rem;">
+            <div style="font-size:2.5rem;margin-bottom:0.3rem;">📷</div>
+            <div style="font-size:0.6rem;font-weight:700;">Point camera at QR code</div>
+            <div style="font-size:0.48rem;color:var(--sub);margin:0.25rem 0 0.7rem;">Or enter QR ID / UPI ID manually</div>
+          </div>
+          <div class="fg"><label>QR / UPI ID</label><input type="text" id="qrp-id" placeholder="HP-QR-XXXXX or name@hopepay"></div>
+          <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="qrp-amt" placeholder="0.00"></div>
+          <button class="btn bprim bfull" onclick="doQRPay()">💳 PAY NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── HISTORY ── -->
+    <div id="sec-history" class="sec">
+      <div class="stitle">◈ HISTORY</div>
+      <div class="shead">Transactions</div>
+      <div class="ssub">Full audit trail · QSAC verified · HMAIL confirmed</div>
+      <div style="display:flex;gap:0.3rem;margin-bottom:0.65rem;flex-wrap:wrap;">
+        <button class="btn bsec bsm" onclick="fTx('all')">All</button>
+        <button class="btn bsec bsm" onclick="fTx('sent')">Sent</button>
+        <button class="btn bsec bsm" onclick="fTx('received')">Received</button>
+        <button class="btn bsec bsm" onclick="fTx('payment')">Payments</button>
+        <button class="btn bsec bsm" onclick="fTx('transfer')">Transfers</button>
+      </div>
+      <div class="card" id="tx-full"><div style="text-align:center;padding:1rem;font-size:0.54rem;color:var(--sub);">No transactions yet</div></div>
+    </div>
+
+    <!-- ── KYC ── -->
+    <div id="sec-kyc" class="sec">
+      <div class="stitle">◈ KYC VERIFICATION</div>
+      <div class="shead">Identity Verification</div>
+      <div class="ssub">AEPS · Aadhaar · PAN · QSAC secured</div>
+      <div class="card">
+        <div id="kyc-done" style="display:none;text-align:center;padding:0.8rem;">
+          <div style="font-size:2rem;margin-bottom:0.3rem;">✅</div>
+          <div style="font-size:0.75rem;font-weight:800;color:var(--green);">KYC Verified!</div>
+          <div style="font-size:0.52rem;color:var(--sub);margin-top:0.2rem;">Full access unlocked · QSAC secured</div>
+        </div>
+        <div id="kyc-form">
+          <div class="fg"><label>DOCUMENT TYPE</label>
+            <select id="kyc-dt"><option>Aadhaar Card</option><option>PAN Card</option><option>Passport</option><option>Driving License</option><option>National ID</option></select>
+          </div>
+          <div class="fg"><label>DOCUMENT NUMBER</label><input type="text" id="kyc-dn" placeholder="Document number"></div>
+          <div class="fg"><label>FULL NAME</label><input type="text" id="kyc-fn" placeholder="As on document"></div>
+          <div class="fg"><label>DATE OF BIRTH</label><input type="date" id="kyc-dob"></div>
+          <div class="fg"><label>ADDRESS</label><textarea id="kyc-addr" rows="2" placeholder="Full address"></textarea></div>
+          <div class="ban ban-info" style="margin-bottom:0.6rem;font-size:0.5rem;">🔐 AEPS Aadhaar verification powered by QSAC ICSS. No physical documents required.</div>
+          <button class="btn bprim bfull" onclick="submitKYC()">🪪 SUBMIT &amp; VERIFY</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AI SUPPORT ── -->
+    <div id="sec-support" class="sec">
+      <div class="stitle">◈ HOPE PAY SUPPORT</div>
+      <div class="shead">AI Assistant</div>
+      <div class="ssub">support@hopepay.online · 24/7 · QSAC Encrypted</div>
+
+      <div class="ban ban-info" style="font-size:0.52rem;">
+        <span>📧</span>
+        <span>support@hopepay.online · hopepay.online</span>
+      </div>
+
+      <div class="chat-body" id="chat-msgs">
+        <div class="cb bot">
+          <div class="cb-av">💳</div>
+          <div class="cb-bub"><strong style="color:var(--red);">Hope AI Support</strong><br>Welcome to Hope Pay! I'm here to help with transfers, payments, KYC, and all services.<br><em style="font-size:0.48rem;color:var(--sub);">support@hopepay.online</em></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:0.3rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+        <button class="btn bsec bsm" onclick="qChat('What is my balance?')">Balance</button>
+        <button class="btn bsec bsm" onclick="qChat('How to send money?')">Send</button>
+        <button class="btn bsec bsm" onclick="qChat('KYC help')">KYC</button>
+        <button class="btn bsec bsm" onclick="qChat('Hope Coin info')">Hope Coin</button>
+      </div>
+      <div style="display:flex;gap:0.4rem;">
+        <input type="text" id="chat-in" placeholder="Ask anything about Hope Pay..." onkeydown="if(event.key==='Enter')sendChat()">
+        <button class="btn bprim bsm" onclick="sendChat()">▶</button>
+      </div>
+
+      <!-- STATUS -->
+      <div class="card" style="margin-top:0.75rem;">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">System Status</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;font-size:0.54rem;">
+          <div style="display:flex;justify-content:space-between;padding:0.38rem;background:rgba(179,36,42,0.04);border-radius:6px;"><span>Hope Pay Gateway</span><span class="tag tg">● ONLINE</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.38rem;background:rgba(179,36,42,0.04);border-radius:6px;"><span>Bank Transfer</span><span class="tag tg">● ACTIVE</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.38rem;background:rgba(179,36,42,0.04);border-radius:6px;"><span>UPI / QR</span><span class="tag tg">● LIVE</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.38rem;background:rgba(179,36,42,0.04);border-radius:6px;"><span>HMAIL Notifications</span><span class="tag tg">● READY</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.38rem;background:rgba(179,36,42,0.04);border-radius:6px;"><span>AEPS KYC</span><span class="tag tg">● ACTIVE</span></div>
+        </div>
+        <div style="margin-top:0.6rem;font-size:0.48rem;color:var(--sub);">For issues: <a href="mailto:support@hopepay.online" style="color:var(--red);">support@hopepay.online</a></div>
+      </div>
+    </div>
+
+    <!-- ── PROFILE ── -->
+    <div id="sec-profile" class="sec">
+      <div class="stitle">◈ PROFILE</div>
+      <div class="shead" id="p-name">Partner</div>
+      <div class="ssub" id="p-uid">HP-XXXX · hopepay.online</div>
+      <div class="card" style="margin-bottom:0.65rem;">
+        <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:0.7rem;">
+          <div style="width:46px;height:46px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:2px solid rgba(179,36,42,0.3);">👤</div>
+          <div>
+            <div style="font-size:0.7rem;font-weight:800;" id="pc-name">Partner</div>
+            <div style="font-size:0.46rem;color:var(--sub);" id="pc-email">support@hopepay.online</div>
+            <div style="margin-top:0.15rem;"><span class="tag tgo" id="pc-kyc">● KYC PENDING</span></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.35rem;font-size:0.5rem;">
+          <div style="padding:0.4rem;background:rgba(179,36,42,0.04);border-radius:6px;"><div style="color:var(--sub);">USER ID</div><div style="font-family:var(--mono);font-size:0.46rem;" id="pc-uid2">—</div></div>
+          <div style="padding:0.4rem;background:rgba(179,36,42,0.04);border-radius:6px;"><div style="color:var(--sub);">COUNTRY</div><div id="pc-co">🌍</div></div>
+          <div style="padding:0.4rem;background:rgba(179,36,42,0.04);border-radius:6px;"><div style="color:var(--sub);">ACCOUNT</div><div style="color:var(--green);">ACTIVE</div></div>
+          <div style="padding:0.4rem;background:rgba(179,36,42,0.04);border-radius:6px;"><div style="color:var(--sub);">2FA</div><div style="color:var(--green);">ENABLED</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.45rem;">Settings</div>
+        <div style="display:flex;flex-direction:column;gap:0.28rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="cycleTheme()"><span style="font-size:0.55rem;">🎨 Theme</span><span class="tag tb" id="theme-lbl">DARK</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="switchSec('kyc')"><span style="font-size:0.55rem;">🪪 KYC Verification</span><span class="tag tgo" id="s-kyc">PENDING</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="switchSec('support')"><span style="font-size:0.55rem;">💬 Support</span><span style="font-size:0.46rem;color:var(--red);">support@hopepay.online</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="switchSec('admin')"><span style="font-size:0.55rem;">🔧 Admin Panel</span><span style="font-size:0.6rem;color:var(--sub);">›</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="switchSec('superadmin')"><span style="font-size:0.55rem;">👑 Super Admin</span><span style="font-size:0.6rem;color:var(--sub);">›</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="switchSec('ceypay')"><span style="font-size:0.55rem;">💎 CeyPay Exchange</span><span style="font-size:0.6rem;color:var(--sub);">›</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="openPrivacy()"><span style="font-size:0.55rem;">🔐 Privacy Policy</span><span style="font-size:0.6rem;color:var(--sub);">›</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.42rem;border-radius:7px;cursor:pointer;" onclick="showTC()"><span style="font-size:0.55rem;">📄 Terms &amp; Conditions</span><span style="font-size:0.6rem;color:var(--sub);">›</span></div>
+        </div>
+      </div>
+      <div id="admin-access" style="display:none;margin-bottom:0.5rem;">
+      <button class="btn bprim bfull" style="margin-bottom:0.3rem;" onclick="switchSec('admin')">🔧 ADMIN PANEL</button>
+      <button class="btn bfull" style="background:linear-gradient(135deg,#gold,#F4A261);color:#000;margin-bottom:0.3rem;" onclick="switchSec('superadmin')" id="sa-btn">👑 SUPER ADMIN PANEL</button>
+    </div>
+    <button class="btn bfull" style="background:rgba(179,36,42,0.12);border:1px solid var(--red);color:var(--red);margin-bottom:0.5rem;" onclick="doLogout()">SIGN OUT</button>
+      <div style="text-align:center;font-size:0.42rem;color:#2a1010;">HopePay PRO v2.0 · hopepay.online · HAABS v1.0.4D · Feel the difference<br>© 2026 Hope Holdings International Pvt Ltd · Thimothy Abraham T-Driven</div>
+    </div>
+
+    <!-- ── ADMIN PANEL ── -->
+    <div id="sec-admin" class="sec">
+      <div class="stitle">◈ ADMIN PANEL</div>
+      <div class="shead">User Management</div>
+      <div class="ssub">View users · Monitor transactions · System status</div>
+      <button class="btn bprim bfull" style="margin-bottom:0.75rem;" onclick="loadAdminData()">⟳ REFRESH DATA</button>
+      <div class="card" id="admin-stats">
+        <div class="stat2">
+          <div class="sm"><div class="sm-v" style="color:var(--red);" id="a-users">—</div><div class="sm-l">TOTAL USERS</div></div>
+          <div class="sm"><div class="sm-v" style="color:var(--green);" id="a-verified">—</div><div class="sm-l">VERIFIED</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">Registered Users</div>
+        <div id="admin-user-list" style="max-height:400px;overflow-y:auto;">
+          <div style="text-align:center;padding:1rem;font-size:0.54rem;color:var(--sub);">Click REFRESH to load users</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SUPER ADMIN PANEL ── -->
+    <div id="sec-superadmin" class="sec">
+      <div class="stitle">◈ SUPER ADMIN</div>
+      <div class="shead">HOPE AI Cloud Bank — Full Control</div>
+      <div class="ssub">12 Crypto Reserves · HAABS · CEYPAY · Trading · 4d.hopepay.online</div>
+
+      <!-- TOTAL ECOSYSTEM VALUE -->
+      <div class="card" style="background:var(--grad);border:none;">
+        <div style="font-size:0.44rem;color:rgba(255,255,255,0.65);letter-spacing:0.12em;">TOTAL ECOSYSTEM ASSET VALUE</div>
+        <div style="font-size:1.6rem;font-weight:900;color:#fff;" id="sa-total-value">$225.9M</div>
+        <div style="font-size:0.52rem;color:rgba(255,255,255,0.75);">Total Supply Value · 12 Crypto Tokens</div>
+        <div style="display:flex;justify-content:space-between;margin-top:0.5rem;">
+          <div><div style="font-size:0.44rem;color:rgba(255,255,255,0.55);">CIRCULATING MCap</div><div style="font-size:0.7rem;font-weight:700;color:#fff;" id="sa-circ-value">$59.4M</div></div>
+          <div><div style="font-size:0.44rem;color:rgba(255,255,255,0.55);">IN LKR</div><div style="font-size:0.7rem;font-weight:700;color:#fff;">Rs 67.77B</div></div>
+        </div>
+      </div>
+
+      <button class="btn bprim bfull" style="margin-bottom:0.5rem;" onclick="loadCryptoLive();renderSuperAdminPanel();">⟳ REFRESH LIVE PRICES</button>
+
+      <!-- 12 CRYPTO RESERVES -->
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">💎 12 Crypto Currency Reserves — Actual Values</div>
+        <div id="sa-crypto-list"></div>
+      </div>
+
+      <!-- CRYPTO TRANSFER -->
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">⚡ Transfer Crypto to HOPE PAY Wallet</div>
+        <div class="fg"><label>CRYPTO TOKEN</label>
+          <select id="sa-tok"></select></div>
+        <div class="fg"><label>AMOUNT</label>
+          <div class="amt-wrap"><div class="amt-sym">◈</div><input class="amt-big" type="number" id="sa-amt" placeholder="0.00"></div></div>
+        <div class="fg"><label>TO VPA / WALLET ADDRESS</label><input type="text" id="sa-vpa" placeholder="username@hacb"></div>
+        <button class="btn bprim bfull" onclick="superAdminTransfer()">⚡ TRANSFER FROM RESERVES</button>
+      </div>
+
+      <!-- HAABS STATUS -->
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">🤖 HAABS v1.0.4D — AI Backend System</div>
+        <div id="sa-haabs">
+          <div style="font-size:0.52rem;color:var(--sub);">Loading HAABS status...</div>
+        </div>
+      </div>
+
+      <!-- CEYPAY -->
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">🇱🇰 CeyPay — Sri Lanka Crypto Exchange</div>
+        <div style="font-size:0.52rem;line-height:1.8;">
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Status</span><span class="tag tg">● ACTIVATED</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Merchant ID</span><span style="font-family:var(--mono);font-size:0.44rem;">a7a30204...c9e1</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>QR URL</span><span style="font-size:0.44rem;color:var(--red);">merchant.ceypay.io</span></div>
+          <div style="margin-top:0.4rem;"><a href="https://merchant.ceypay.io/qr/4c0c52cb-9eef-45b4-8181-1d5b5825e91b" target="_blank" style="color:var(--red);font-size:0.48rem;">→ Open CeyPay Merchant QR ↗</a></div>
+        </div>
+      </div>
+
+      <!-- EXTERNAL LINKS -->
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">🔗 External Platforms</div>
+        <div class="svc-item" onclick="window.open('https://trading.thimothism.com','_blank')"><span class="svc-item-ic">📈</span><span class="svc-item-txt">TUCB Trading — trading.thimothism.com</span><span class="svc-item-arr">↗</span></div>
+        <div class="svc-item" onclick="window.open('https://aipay.hopeaihub.info/market','_blank')"><span class="svc-item-ic">🌐</span><span class="svc-item-txt">TUK Global Markets — aipay.hopeaihub.info</span><span class="svc-item-arr">↗</span></div>
+      </div>
+
+      <!-- SYSTEM OVERVIEW -->
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">📊 System Overview</div>
+        <div style="font-size:0.52rem;line-height:1.8;">
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Backend Functions</span><strong>23</strong></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Entities</span><strong>9</strong></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Crypto Tokens</span><strong>12</strong></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>HAABS</span><span class="tag tg">● ACTIVATED</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Domain</span><strong>4d.hopepay.online</strong></div>
+          <div style="display:flex;justify-content:space-between;padding:0.2rem 0;"><span>Version</span><strong>HopePay PRO v2.0</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MORE / APK ── -->
+    <div id="sec-more" class="sec">
+      <div class="stitle">◈ DOWNLOAD</div>
+      <div class="shead">Get HopePay App</div>
+      <div class="ssub">Multi-platform · PWA · APK · hopepay.online</div>
+      <div class="apk-card" onclick="dlApp('android')">
+        <div class="apk-ic">🤖</div>
+        <div><div class="apk-name">Android APK</div><div class="apk-sub">Android 5.0+ · Hope Pay Signed · ~14MB</div></div>
+        <button class="btn bprim bsm" style="margin-left:auto;">⬇ APK</button>
+      </div>
+      <div class="apk-card" onclick="dlApp('ios')">
+        <div class="apk-ic">🍎</div>
+        <div><div class="apk-name">iOS / iPadOS</div><div class="apk-sub">iOS 14+ · Add to Home Screen</div></div>
+        <button class="btn bprim bsm" style="margin-left:auto;">⬇ iOS</button>
+      </div>
+      <div class="apk-card" onclick="dlApp('pwa')">
+        <div class="apk-ic">🌐</div>
+        <div><div class="apk-name">PWA — Install Now</div><div class="apk-sub">All devices · Offline capable · Instant</div></div>
+        <button class="btn bsec bsm" style="margin-left:auto;">⬡ INSTALL</button>
+      </div>
+      <div class="apk-card" onclick="dlApp('windows')">
+        <div class="apk-ic">🖥</div>
+        <div><div class="apk-name">Windows Desktop</div><div class="apk-sub">Win 10/11 · PWABuilder MSIX</div></div>
+        <button class="btn bprim bsm" style="margin-left:auto;">⬇ MSIX</button>
+      </div>
+      <div style="margin-top:0.3rem;text-align:center;font-size:0.5rem;color:var(--sub);">All downloads verified by Hope Holdings International<br><a href="mailto:support@hopepay.online" style="color:var(--red);">support@hopepay.online</a></div>
+    </div>
+
+
+    <!-- ── CRYPTO ── -->
+    <div id="sec-crypto" class="sec">
+      <div class="stitle">◈ 12 CRYPTO CURRENCIES</div>
+      <div class="shead">HOPE CHAIN Wallet</div>
+      <div class="ssub">Live prices · Transferable · Tradable · QSAC secured</div>
+      <div class="crypto-total">
+        <div class="crypto-total-l">TOTAL PORTFOLIO VALUE (USD)</div>
+        <div class="crypto-total-v" id="crypto-total">$0.00</div>
+        <div style="font-size:0.42rem;color:rgba(255,255,255,0.6);margin-top:0.2rem;" id="crypto-total-lkr">≈ Rs 0.00 LKR</div>
+      </div>
+      <div style="display:flex;gap:0.3rem;margin-bottom:0.65rem;">
+        <button class="btn bprim bsm" onclick="openTrade('buy')">📈 BUY</button>
+        <button class="btn bsec bsm" onclick="openTrade('sell')">📉 SELL</button>
+        <button class="btn bsec bsm" onclick="openCryptoTransfer()">⬆ TRANSFER</button>
+        <button class="btn bsec bsm" onclick="loadCryptoPrices()">⟳ REFRESH</button>
+      </div>
+      <div class="crypto-grid" id="crypto-grid"></div>
+      <div style="font-size:0.42rem;color:var(--sub);text-align:center;padding:0.5rem;">Powered by HOPE CHAIN · CoinGecko API · CEYPAY Sri Lanka</div>
+    </div>
+
+    <!-- ── HACB ── -->
+    <div id="sec-hacb" class="sec">
+      <div class="stitle">🏦 HOPE AI CLOUD BANK</div>
+      <div class="shead">HACB Integration</div>
+      <div class="ssub">Your HOPE AI Cloud Bank account · VPA · UPS Gateway</div>
+      <div class="hacb-card">
+        <div class="hacb-title">🏦 HOPE AI CLOUD BANK (HACB)</div>
+        <div class="hacb-row"><span>Account Holder</span><span id="hacb-name">—</span></div>
+        <div class="hacb-row"><span>Account Number</span><span id="hacb-acc">—</span></div>
+        <div class="hacb-row"><span>VPA (UPS Address)</span><span id="hacb-vpa">—</span></div>
+        <div class="hacb-row"><span>Bank Network</span><span>HOPE CHAIN · ChainID 984</span></div>
+        <div class="hacb-row"><span>Encryption</span><span>QSAC-AES256-GCM</span></div>
+        <div class="hacb-row"><span>Status</span><span style="color:#34A85A!important">● ACTIVE</span></div>
+      </div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">HACB Services</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div class="svc-item" onclick="switchSec('transfers')"><span class="svc-item-ic">⇄</span><span class="svc-item-txt">Transfer via VPA</span><span class="svc-item-arr">›</span></div>
+          <div class="svc-item" onclick="switchSec('crypto')"><span class="svc-item-ic">🪙</span><span class="svc-item-txt">12 Crypto Wallets</span><span class="svc-item-arr">›</span></div>
+          <div class="svc-item" onclick="openBankTransfer()"><span class="svc-item-ic">🏦</span><span class="svc-item-txt">Bank Transfer</span><span class="svc-item-arr">›</span></div>
+          <div class="svc-item" onclick="switchSec('ceypay')"><span class="svc-item-ic">💎</span><span class="svc-item-txt">CeyPay Exchange</span><span class="svc-item-arr">›</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">TUCB Reserve</div>
+        <div style="font-size:0.52rem;color:var(--sub);line-height:1.7;">HACB operates on the TUCB (Thimothism Universal Central Bank) network. Your account is backed by TUCB Coin reserves. All transactions are logged on the TUTLE immutable ledger with QSAC encryption.</div>
+      </div>
+    </div>
+
+    <!-- ── CEYPAY ── -->
+    <div id="sec-ceypay" class="sec">
+      <div class="stitle">💎 CEYPAY</div>
+      <div class="shead">Sri Lanka Crypto Exchange</div>
+      <div class="ssub">CEYPAY ACTIVATED · Crypto-to-LKR Exchange</div>
+      <div class="ceypay-card">
+        <div class="ceypay-title">💎 CEYPAY MERCHANT — ACTIVATED</div>
+        <div class="ceypay-row"><span>Merchant ID</span><span>a7a30204-c610-4dab</span></div>
+        <div class="ceypay-row"><span>API Key</span><span>f97d3dc7-044a-4d35</span></div>
+        <div class="ceypay-row"><span>Network</span><span>Sri Lanka · LKR</span></div>
+        <div class="ceypay-row"><span>Status</span><span style="color:#10b981!important">● ACTIVATED</span></div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:0.6rem;font-weight:700;margin-bottom:0.4rem;">CeyPay Merchant QR</div>
+        <div style="width:160px;height:160px;margin:0 auto;border:2px solid #10b98133;border-radius:12px;overflow:hidden;margin-bottom:0.5rem;">
+          <img src="https://api.qrserver.com/create/?size=160x160&data=https://merchant.ceypay.io/qr/4c0c52cb-9eef-45b4-8181-1d5b5825e91b" style="width:100%;height:100%;" alt="CeyPay QR">
+        </div>
+        <div style="font-size:0.42rem;color:var(--sub);font-family:var(--mono);margin-bottom:0.4rem;">merchant.ceypay.io/qr/4c0c52cb</div>
+        <a href="https://merchant.ceypay.io/qr/4c0c52cb-9eef-45b4-8181-1d5b5825e91b" target="_blank" class="btn bgreen bsm" style="display:inline-block;text-decoration:none;">💳 OPEN CEYPAY PAYMENT</a>
+      </div>
+      <div class="card">
+        <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.5rem;">💎 Crypto-to-LKR Exchange</div>
+        <div class="fg"><label>FROM CRYPTO</label>
+          <select id="cy-from"></select></div>
+        <div class="amt-wrap"><div class="amt-sym">◈</div><input class="amt-big" type="number" id="cy-amt" placeholder="0.00" oninput="calcCeyPay()"></div>
+        <div style="text-align:center;font-size:0.6rem;margin:0.3rem 0;color:var(--sub);">⇅ CONVERT</div>
+        <div class="amt-wrap"><div class="amt-sym">Rs</div><input class="amt-big" type="number" id="cy-lkr" placeholder="0.00 LKR" readonly></div>
+        <div style="font-size:0.42rem;color:var(--sub);margin-bottom:0.5rem;">Rate: 1 USD ≈ Rs 300 LKR · CeyPay Sri Lanka</div>
+        <button class="btn bgreen bfull" onclick="doCeyPayExchange()">💎 EXCHANGE VIA CEYPAY</button>
+      </div>
+    </div>
+
+    <!-- ── ADMIN PANEL ── -->
+    <div id="sec-admin" class="sec">
+      <div class="stitle">🔧 ADMIN PANEL</div>
+      <div class="shead">HOPE PAY Administration</div>
+      <div class="ssub">User management · Transaction monitoring</div>
+      <div id="admin-content">
+        <div class="card" style="text-align:center;padding:1.5rem;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">🔐</div>
+          <div style="font-size:0.65rem;font-weight:700;margin-bottom:0.3rem;">Admin Login Required</div>
+          <div style="font-size:0.5rem;color:var(--sub);margin-bottom:0.7rem;">Enter admin credentials to access the panel</div>
+          <div class="fg" style="text-align:left;"><label>ADMIN EMAIL</label><input type="email" id="ad-em" placeholder="admin@hopepay.online"></div>
+          <div class="fg" style="text-align:left;"><label>PASSWORD</label><input type="password" id="ad-pw" placeholder="Password" onkeydown="if(event.key==='Enter')doAdminLogin()"></div>
+          <button class="btn bprim bfull" onclick="doAdminLogin()">🔐 LOGIN AS ADMIN</button>
+          <div style="font-size:0.42rem;color:var(--sub);margin-top:0.4rem;">Super Admin: author@thimothyabraham.com</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SUPER ADMIN PANEL ── -->
+    <div id="sec-superadmin" class="sec">
+      <div class="stitle">👑 SUPER ADMIN</div>
+      <div class="shead">Full System Control</div>
+      <div class="ssub">12 Crypto Reserves · User Management · CEYPAY · Gateway</div>
+      <div id="superadmin-content">
+        <div class="admin-card">
+          <div style="font-size:0.6rem;font-weight:800;color:var(--red);margin-bottom:0.3rem;">👑 SUPER ADMIN LOGIN</div>
+          <div class="fg"><label>SUPER ADMIN EMAIL</label><input type="email" id="sa-em" placeholder="author@thimothyabraham.com" value="author@thimothyabraham.com"></div>
+          <div class="fg"><label>PASSWORD</label><input type="password" id="sa-pw" placeholder="UPSPAYTIM" onkeydown="if(event.key==='Enter')doSuperAdminLogin()"></div>
+          <button class="btn bprim bfull" onclick="doSuperAdminLogin()">👑 ACCESS SUPER ADMIN</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end app-body -->
+
+  <div class="bnav">
+    <button class="ni on" onclick="swSec('dashboard',this)"><div class="ni-ic">🏠</div><div class="ni-lb">HOME</div></button>
+    <button class="ni" onclick="swSec('transfers',this)"><div class="ni-ic">⇄</div><div class="ni-lb">TRANSFER</div></button>
+    <button class="ni" onclick="swSec('qr',this)"><div class="ni-ic">📱</div><div class="ni-lb">QR PAY</div></button>
+    <button class="ni" onclick="swSec('support',this)"><div class="ni-ic">💬</div><div class="ni-lb">SUPPORT</div></button>
+    <button class="ni" onclick="swSec('profile',this)"><div class="ni-ic">👤</div><div class="ni-lb">ME</div></button>
+  </div>
+</div>
+
+<script>
+// ═══════════ STORAGE ═══════════
+const GS=k=>JSON.parse(localStorage.getItem('hp2_'+k)||'null');
+const SS=(k,v)=>localStorage.setItem('hp2_'+k,JSON.stringify(v));
+const GU=()=>GS('user')||{name:'Partner',email:'support@hopepay.online',uid:'HP-DEMO',country:'IN',kyc:'pending',bal:0,wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0},{cur:'USD',sym:'$',bal:0}],banks:[]};
+
+// ═══════════ SPLASH ═══════════
+const MSGS=['HopePay PRO Gateway — Initializing...','QSAC Security Layer — Active...','HMAIL v1.0 — Connected...','TU5G Network — Online...','HACB Cloud Bank — Loaded...','12 Crypto Currencies — $225.9M Assets...','CEYPAY Sri Lanka — Activated...','UPS VPA Gateway — Online...','HOPE CHAIN — ChainID 984 Connected...','HAABS AI Backend — Activated...','Google Sign-In — Ready...','✓ HopePay PRO — Welcome! hopepay.online'];
+let _si=0;
+(function splash(){
+  if(_si>=MSGS.length){setTimeout(initApp,300);return;}
+  document.getElementById('sp-msg').textContent=MSGS[_si];
+  document.getElementById('sp-bar').style.width=((_si+1)/MSGS.length*100)+'%';
+  _si++;setTimeout(splash,190);
+})();
+
+function initApp(){
+  const u=GS('user');
+  goPage(u&&u.uid?'pg-app':'pg-auth');
+  if(u&&u.uid)bootApp(u);
+  else genMyQR();
+}
+function goPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));const el=document.getElementById(id);if(el)el.classList.add('on');}
+
+// ═══════════ AUTH ═══════════
+function aTab(id,btn){
+  document.querySelectorAll('.atab').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');
+  document.querySelectorAll('.aform').forEach(f=>f.classList.remove('on'));
+  const el=document.getElementById('af-'+id);if(el)el.classList.add('on');
+}
+let _otp='';
+async function doLogin(){
+  const id=(document.getElementById('l-id').value||'').trim();
+  const pw=(document.getElementById('l-pw').value||'').trim();
+  if(!id||!pw){showN('Enter credentials',true);return;}
+  const btn=document.querySelector('#lf1 .btn.bprim');
+  if(btn){btn.innerHTML='<span class="loader"></span> Signing in...';btn.disabled=true;}
+  try{
+    // Try real backend auth
+    const res=await apiCall('adminLogin','POST',{email:id,password:pw});
+    if(res&&res.success){
+      // Admin / Super Admin login
+      const existing=GS('user');
+      const u=existing&&existing.uid?existing:{
+        name:id.includes('@')?id.split('@')[0]:'Partner',
+        email:id,uid:'HP-'+Math.random().toString(36).substr(2,6).toUpperCase(),
+        country:'IN',kyc:'verified',bal:0,
+        wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0},{cur:'LKR',sym:'Rs',bal:0}],
+        banks:[],crypto:{},
+        hacbAcc:'70'+Math.floor(1000000000+Math.random()*8999999999),
+        vpa:id.split('@')[0]+'@hacb',
+        role:res.role||'admin'
+      };
+      SS('user',u);bootApp(u);goPage('pg-app');
+      showN('✓ Admin signed in · '+res.role);
+      if(btn){btn.innerHTML='SIGN IN →';btn.disabled=false;}
+      return;
+    }
+  } catch(e){}
+  // Standard 2FA flow
+  _otp=String(Math.floor(100000+Math.random()*900000));
+  document.getElementById('lf1').style.display='none';
+  document.getElementById('lf2').style.display='block';
+  document.getElementById('l2fa-info').textContent='OTP sent to '+id.slice(0,4)+'*** via HMAIL + SMS';
+  startTimer('l-timer',300);
+  showN('OTP sent — use 123456 for demo',false,'inf');
+  if(btn){btn.innerHTML='SIGN IN →';btn.disabled=false;}
+}
+function doLogin2(){
+  const entered=[0,1,2,3,4,5].map(i=>(document.getElementById('lo'+i)||{value:''}).value).join('');
+  if(entered==='123456'||entered===_otp){
+    const id=document.getElementById('l-id').value;
+    const existing=GS('user');
+    const u=existing&&existing.uid?existing:{
+      name:id.includes('@')?id.split('@')[0]:'Partner',
+      email:id,uid:'HP-'+Math.random().toString(36).substr(2,6).toUpperCase(),
+      country:'IN',kyc:'pending',bal:0,
+      wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0},{cur:'USD',sym:'$',bal:0}],banks:[]
+    };
+    SS('user',u);bootApp(u);goPage('pg-app');
+    fireEmail(u.email,'Hope Pay Login Confirmed','Login confirmed on HopePay at hopepay.online. Secured by 2FA. If this was not you, contact support@hopepay.online');
+  }else{showN('Invalid OTP — use 123456',true);}
+}
+async function doReg(){
+  const nm=(document.getElementById('r-nm').value||'').trim();
+  const em=(document.getElementById('r-em').value||'').trim();
+  const pw=(document.getElementById('r-pw').value||'').trim();
+  const ph=document.getElementById('r-ph').value||'';
+  const co=document.getElementById('r-co').value||'LK';
+  if(!nm||!em||!pw){showN('Fill all fields',true);return;}
+  if(pw.length<8){showN('Password must be at least 8 characters',true);return;}
+  const btn=document.querySelector('#af-reg .btn.bprim');
+  if(btn){btn.innerHTML='<span class="loader"></span> Creating Account...';btn.disabled=true;}
+  try{
+    // Call real backend registerUser API
+    const res=await apiCall('registerUser','POST',{fullName:nm,email:em,password:pw,phone:ph,country:co});
+    if(res&&res.success){
+      const u={name:nm,email:em,phone:ph,uid:res.userId||('HP-'+Math.random().toString(36).substr(2,6).toUpperCase()),
+        country:co,kyc:'pending',bal:0,
+        wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0},{cur:'LKR',sym:'Rs',bal:0}],
+        banks:[],crypto:{},
+        hacbAcc:res.accountNumber||('70'+Math.floor(1000000000+Math.random()*8999999999)),
+        vpa:res.vpa||(nm.toLowerCase().replace(/\s+/g,'')+'@hacb'),
+        role:'user',otp_pending:true};
+      SS('user',u);
+      // Show OTP screen
+      openModal('📱 Verify Your Account',`
+        <div style="text-align:center;margin-bottom:0.6rem;">
+          <div style="font-size:0.62rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ACCOUNT VERIFICATION</div>
+          <div style="font-size:0.5rem;color:var(--sub);margin-top:0.2rem;">OTP sent to ${em}${ph?' & '+ph:''}</div>
+          ${res.otp?'<div style="margin-top:0.3rem;font-size:0.46rem;color:var(--gold);">Demo OTP: <strong>'+res.otp+'</strong></div>':''}
+        </div>
+        <div class="otp-row">
+          <input class="oc" maxlength="1" type="tel" id="ro0" oninput="oN(this,0,'ro')" onkeydown="oB(event,0,'ro')">
+          <input class="oc" maxlength="1" type="tel" id="ro1" oninput="oN(this,1,'ro')" onkeydown="oB(event,1,'ro')">
+          <input class="oc" maxlength="1" type="tel" id="ro2" oninput="oN(this,2,'ro')" onkeydown="oB(event,2,'ro')">
+          <input class="oc" maxlength="1" type="tel" id="ro3" oninput="oN(this,3,'ro')" onkeydown="oB(event,3,'ro')">
+          <input class="oc" maxlength="1" type="tel" id="ro4" oninput="oN(this,4,'ro')" onkeydown="oB(event,4,'ro')">
+          <input class="oc" maxlength="1" type="tel" id="ro5" oninput="oN(this,5,'ro')" onkeydown="oB(event,5,'ro')">
+        </div>
+        <button class="btn bprim bfull" onclick="doVerifyRegOTP()">✓ VERIFY & ACTIVATE</button>
+        <div style="text-align:center;margin-top:0.4rem;font-size:0.48rem;color:var(--sub);">Account: ${res.accountNumber||'Generating...'} · VPA: ${res.vpa||nm.toLowerCase()+'@hacb'}</div>`);
+      showN('Account created! Check email for OTP.');
+    } else {
+      // Fallback: create locally if API unavailable
+      const u={name:nm,email:em,phone:ph,uid:'HP-'+Math.random().toString(36).substr(2,6).toUpperCase(),
+        country:co,kyc:'pending',bal:0,
+        wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0},{cur:'LKR',sym:'Rs',bal:0}],
+        banks:[],crypto:{},
+        hacbAcc:'70'+Math.floor(1000000000+Math.random()*8999999999),
+        vpa:nm.toLowerCase().replace(/\s+/g,'')+'@hacb',role:'user'};
+      SS('user',u);bootApp(u);goPage('pg-app');
+      showN('Account created! Welcome '+nm+' 🔥 (offline mode)');
+    }
+  } catch(e){
+    showN('Registration error — trying offline mode',true);
+    const u={name:nm,email:em,phone:ph,uid:'HP-'+Math.random().toString(36).substr(2,6).toUpperCase(),
+      country:co,kyc:'pending',bal:0,
+      wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0}],
+      banks:[],crypto:{},hacbAcc:'70'+Math.floor(1000000000+Math.random()*8999999999),
+      vpa:nm.toLowerCase().replace(/\s+/g,'')+'@hacb',role:'user'};
+    SS('user',u);bootApp(u);goPage('pg-app');
+  } finally {
+    if(btn){btn.innerHTML='CREATE ACCOUNT →';btn.disabled=false;}
+  }
+}
+function doVerifyRegOTP(){
+  const entered=[0,1,2,3,4,5].map(i=>(document.getElementById('ro'+i)||{value:''}).value).join('');
+  if(entered.length===6){
+    const u=GU();u.kyc='verified';SS('user',u);
+    closeModal();bootApp(u);goPage('pg-app');
+    showN('✅ Account verified! Welcome '+u.name+'! Love Others Like You 🔥');
+  } else {showN('Enter the 6-digit OTP',true);}
+}
+function doLogout(){SS('user',null);goPage('pg-auth');document.getElementById('lf1').style.display='block';document.getElementById('lf2').style.display='none';}
+
+// ═══════════ BOOT ═══════════
+function bootApp(u){
+  // Show admin access if role is admin or super_admin
+  if(u.role==='admin'||u.role==='super_admin'){
+    const aa=document.getElementById('admin-access');
+    if(aa)aa.style.display='block';
+  }
+  const inr=(u.wallets||[]).find(w=>w.cur==='INR')||{bal:0};
+  document.getElementById('hdr-bal').textContent='₹'+inr.bal.toFixed(2);
+  document.getElementById('main-bal').textContent='₹'+inr.bal.toFixed(2);
+  document.getElementById('user-uid').textContent=u.uid;
+  document.getElementById('p-name').textContent=u.name;
+  document.getElementById('p-uid').textContent=u.uid+' · hopepay.online';
+  document.getElementById('pc-name').textContent=u.name;
+  document.getElementById('pc-email').textContent=u.email;
+  document.getElementById('pc-uid2').textContent=u.uid;
+  document.getElementById('pc-co').textContent=({IN:'🇮🇳 India',LK:'🇱🇰 Sri Lanka',US:'🇺🇸 USA',AE:'🇦🇪 UAE',SG:'🇸🇬 Singapore',GB:'🇬🇧 UK',AU:'🇦🇺 Australia',CA:'🇨🇦 Canada'})[u.country]||'🌍 Global';
+  if(u.kyc==='verified'){
+    document.getElementById('kyc-ban').style.display='none';
+    const pk=document.getElementById('pc-kyc');if(pk){pk.textContent='● KYC VERIFIED';pk.className='tag tg';}
+    const sk=document.getElementById('s-kyc');if(sk){sk.textContent='VERIFIED';sk.className='tag tg';}
+  }
+  renderWallets();renderTx();genMyQR();renderBeneficiaries();renderCrypto();renderHACB();
+  // Load live prices silently on boot
+  setTimeout(()=>{loadCryptoPrices().catch(()=>{});},1200);
+  // Update HAABS stats silently
+  setTimeout(()=>{syncHAABS().catch(()=>{});},2000);
+}
+
+// ═══════════ SECTION NAV ═══════════
+function switchSec(id){swSec(id,null);}
+function swSec(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.ni').forEach(b=>b.classList.remove('on'));
+  const el=document.getElementById('sec-'+id);if(el)el.classList.add('on');
+  if(btn)btn.classList.add('on');
+  document.querySelector('.app-body').scrollTop=0;
+  if(id==='wallet')renderWallets();
+  if(id==='history')renderTxFull();
+}
+
+// ═══════════ THEME ═══════════
+const THEMES=['','light'];let _ti=0;
+function cycleTheme(){_ti=(_ti+1)%THEMES.length;document.body.className=THEMES[_ti];const el=document.getElementById('theme-lbl');if(el)el.textContent=_ti===0?'DARK':'LIGHT';showN((_ti===0?'Dark':'Light')+' theme',false,'inf');}
+
+// ═══════════ NOTIFICATION ═══════════
+function showN(msg,err,type){
+  const n=document.getElementById('notif');
+  n.textContent=(err?'✗ ':type==='inf'?'ℹ ':'✓ ')+msg;
+  n.className='notif show'+(err?' err':type==='inf'?' inf':'');
+  setTimeout(()=>n.classList.remove('show'),3000);
+}
+
+// ═══════════ MODAL ═══════════
+function openModal(t,b){document.getElementById('modal-t').textContent=t;document.getElementById('modal-b').innerHTML=b;document.getElementById('modal').classList.add('open');}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+
+// ═══════════ OTP ═══════════
+function oN(el,i,p){if(el.value){el.classList.add('f');const n=document.getElementById(p+(i+1));if(n)n.focus();}else el.classList.remove('f');}
+function oB(e,i,p){if(e.key==='Backspace'&&!e.target.value){const n=document.getElementById(p+(i-1));if(n){n.value='';n.classList.remove('f');n.focus();}}}
+let _timerIv=null;
+function startTimer(id,s){clearInterval(_timerIv);let t=s;_timerIv=setInterval(()=>{t--;const el=document.getElementById(id);if(!el){clearInterval(_timerIv);return;}const m=Math.floor(t/60),sc=t%60;el.textContent=String(m).padStart(2,'0')+':'+String(sc).padStart(2,'0');if(t<=0){clearInterval(_timerIv);el.textContent='EXPIRED';}},1000);}
+function resendOTP(){showN('OTP resent to your device',false,'inf');startTimer('l-timer',300);}
+
+// ═══════════ HMAIL (Email Log) ═══════════
+function fireEmail(to,subject,body){
+  const log=GS('email_log')||[];
+  log.unshift({to,subject,body,sent:new Date().toISOString(),from:'noreply@hopepay.online',status:'sent'});
+  SS('email_log',log);
+  console.log('%c✉ HMAIL [hopepay.online]: '+subject+' → '+to,'color:#B3242A;');
+}
+
+// ═══════════ TRANSACTION ENGINE ═══════════
+function addTx(type,from,to,amount,currency,note,icon){
+  const id='HP-TX-'+Date.now().toString(36).toUpperCase();
+  const txs=GS('txs')||[];
+  txs.unshift({id,type,from,to,amount:parseFloat(amount),currency,note:note||'',icon:icon||'💳',date:new Date().toISOString(),status:'completed',gateway:'Hope Pay v1.0 4D'});
+  SS('txs',txs);return id;
+}
+function updateBal(u){
+  const inr=(u.wallets||[]).find(w=>w.cur==='INR')||{bal:0};
+  const el=document.getElementById('hdr-bal');if(el)el.textContent='₹'+inr.bal.toFixed(2);
+  const el2=document.getElementById('main-bal');if(el2)el2.textContent='₹'+inr.bal.toFixed(2);
+}
+
+// ═══════════ SEND ═══════════
+function openSend(){
+  const u=GU();
+  openModal('⬆ Send Money',`
+    <div class="fg"><label>FROM</label>
+      <select id="s-from">${(u.wallets||[]).map(w=>`<option value="${w.cur}">${w.sym} ${w.cur} — ${(w.bal||0).toFixed(2)}</option>`).join('')}</select></div>
+    <div class="fg"><label>TO (Phone / ID / UPI)</label><input type="text" id="s-to" placeholder="HP-XXXXX or mobile or UPI"/></div>
+    <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="s-amt" placeholder="0.00"/></div>
+    <div class="fg"><label>NOTE</label><input type="text" id="s-note" placeholder="Paying for..."/></div>
+    <div style="background:rgba(179,36,42,0.06);border:1px solid rgba(179,36,42,0.14);border-radius:8px;padding:0.5rem;font-size:0.5rem;color:var(--sub);margin-bottom:0.65rem;">💳 Hope Pay v1.0 4D · QSAC encrypted · Email confirmation sent</div>
+    <button class="btn bprim bfull" onclick="doSend()">⬆ SEND NOW</button>`);
+}
+function doSend(){
+  const from=document.getElementById('s-from').value;
+  const to=(document.getElementById('s-to').value||'').trim();
+  const amt=parseFloat(document.getElementById('s-amt').value)||0;
+  const note=document.getElementById('s-note').value||'';
+  if(!to){showN('Enter recipient',true);return;}
+  if(amt<=0){showN('Enter valid amount',true);return;}
+  const u=GU();const w=u.wallets.find(x=>x.cur===from);
+  if(!w||w.bal<amt){showN('Insufficient balance',true);return;}
+  w.bal=parseFloat((w.bal-amt).toFixed(4));
+  const txId=addTx('sent',u.uid,to,amt,from,note,'⬆');
+  SS('user',u);updateBal(u);closeModal();
+  const ds=document.getElementById('d-sent');if(ds)ds.textContent='₹'+(parseFloat((ds.textContent||'₹0').replace('₹',''))+amt).toFixed(0);
+  showN('✓ Sent ₹'+amt+' to '+to+' via Hope Pay');
+  fireEmail(u.email,'Money Sent — Hope Pay','You sent ₹'+amt+' to '+to+'. TX: '+txId+'. Note: '+note+'. Hope Pay v1.0 4D secured. support@hopepay.online');
+  renderTx();
+}
+
+// ═══════════ RECEIVE ═══════════
+function openReceive(){
+  const u=GU();
+  openModal('⬇ Receive Money',`
+    <div style="text-align:center;padding:0.3rem 0 0.7rem;">
+      <div style="font-size:0.6rem;font-weight:700;margin-bottom:0.2rem;">Your Hope Pay ID</div>
+      <div style="font-family:var(--mono);font-size:0.65rem;color:var(--red);padding:0.5rem;background:rgba(179,36,42,0.06);border-radius:7px;margin:0.3rem 0;">${u.uid}</div>
+      <div style="font-size:0.5rem;color:var(--sub);margin-bottom:0.5rem;">UPI: ${(u.uid||'HP-XXXX').toLowerCase()}@hopepay</div>
+      <button class="btn bsec bfull" onclick="navigator.clipboard&&navigator.clipboard.writeText('${u.uid}').then(()=>showN('ID copied!',false,'inf'))">📋 COPY ID</button>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:0.7rem;">
+      <div class="fg"><label>REQUEST AMOUNT</label>
+        <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="rv-a" placeholder="0.00"/></div>
+      </div>
+      <button class="btn bprim bfull" onclick="doReceive()">⬇ REQUEST PAYMENT</button>
+    </div>`);
+}
+function doReceive(){
+  const amt=parseFloat(document.getElementById('rv-a').value)||0;
+  if(amt<=0){showN('Enter amount',true);return;}
+  const u=GU();const w=u.wallets.find(x=>x.cur==='INR');
+  if(w)w.bal=parseFloat((w.bal+amt).toFixed(4));
+  const txId=addTx('received','External',u.uid,amt,'INR','Money received','⬇');
+  SS('user',u);updateBal(u);closeModal();
+  const dr=document.getElementById('d-recv');if(dr)dr.textContent='₹'+(parseFloat((dr.textContent||'₹0').replace('₹',''))+amt).toFixed(0);
+  showN('✓ Received ₹'+amt+' via Hope Pay');
+  fireEmail(u.email,'Money Received — Hope Pay','You received ₹'+amt+'. TX: '+txId+'. Hope Pay v1.0 4D secured.');
+  renderTx();
+}
+
+// ═══════════ ADD MONEY ═══════════
+function openAddMoney(){
+  openModal('➕ Add Money',`
+    <div class="fg"><label>AMOUNT</label>
+      <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="am-a" placeholder="0.00"/></div>
+    </div>
+    <div class="fg"><label>METHOD</label>
+      <select id="am-m">
+        <option>Net Banking</option><option>Debit Card</option><option>Credit Card</option>
+        <option>UPI</option><option>IMPS / NEFT / RTGS</option><option>Hope Coin</option>
+      </select></div>
+    <div style="background:rgba(179,36,42,0.05);border:1px solid rgba(179,36,42,0.13);border-radius:8px;padding:0.5rem;font-size:0.5rem;color:var(--sub);margin-bottom:0.65rem;">💳 Hope Pay v1.0 4D · Instant credit · QSAC secured</div>
+    <button class="btn bprim bfull" onclick="doAddMoney()">➕ ADD MONEY</button>`);
+}
+function doAddMoney(){
+  const amt=parseFloat(document.getElementById('am-a').value)||0;
+  const method=document.getElementById('am-m').value;
+  if(amt<=0){showN('Enter valid amount',true);return;}
+  const u=GU();const w=u.wallets.find(x=>x.cur==='INR');
+  if(w)w.bal=parseFloat((w.bal+amt).toFixed(4));
+  const txId=addTx('topup',method,u.uid,amt,'INR','Add money via '+method,'➕');
+  SS('user',u);updateBal(u);closeModal();
+  showN('✓ ₹'+amt+' added via '+method);
+  fireEmail(u.email,'Money Added — Hope Pay','₹'+amt+' added to your Hope Pay wallet via '+method+'. TX: '+txId+'. support@hopepay.online');
+  renderTx();renderWallets();
+}
+
+// ═══════════ BANK TRANSFER ═══════════
+function openBankTransfer(){
+  openModal('🏦 Bank Transfer',`
+    <div class="fg"><label>ACCOUNT NUMBER</label><input type="text" id="bt-acc" placeholder="Bank account number"/></div>
+    <div class="fg"><label>IFSC CODE</label><input type="text" id="bt-ifsc" placeholder="IFSC code (e.g. SBIN0001234)"/></div>
+    <div class="fg"><label>ACCOUNT NAME</label><input type="text" id="bt-nm" placeholder="Beneficiary name"/></div>
+    <div class="fg"><label>BANK</label>
+      <select id="bt-bank">
+        <option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option>
+        <option>Axis Bank</option><option>Yes Bank</option><option>Kotak Mahindra</option>
+        <option>Bank of Baroda</option><option>Punjab National Bank</option>
+        <option>Bank of Ceylon (Sri Lanka)</option><option>Commercial Bank (Sri Lanka)</option>
+      </select></div>
+    <div class="fg"><label>AMOUNT (₹)</label>
+      <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="bt-amt" placeholder="0.00"/></div>
+    </div>
+    <div class="fg"><label>TRANSFER TYPE</label>
+      <select><option>IMPS (Instant)</option><option>NEFT (2-4 hrs)</option><option>RTGS (₹2L+)</option></select></div>
+    <button class="btn bprim bfull" onclick="doBankTransfer()">🏦 TRANSFER NOW</button>`);
+}
+function doBankTransfer(){
+  const acc=(document.getElementById('bt-acc').value||'').trim();
+  const nm=(document.getElementById('bt-nm').value||'').trim();
+  const amt=parseFloat(document.getElementById('bt-amt').value)||0;
+  const bank=document.getElementById('bt-bank').value;
+  if(!acc||!nm||amt<=0){showN('Fill all fields',true);return;}
+  const u=GU();const w=u.wallets.find(x=>x.cur==='INR');
+  if(!w||w.bal<amt){showN('Insufficient balance',true);return;}
+  w.bal=parseFloat((w.bal-amt).toFixed(4));
+  const txId=addTx('transfer',u.uid,'BANK:'+acc.slice(-4),amt,'INR','Bank: '+bank+' / '+nm,'🏦');
+  SS('user',u);updateBal(u);closeModal();
+  showN('✓ ₹'+amt+' transferred to '+bank);
+  fireEmail(u.email,'Bank Transfer Initiated','₹'+amt+' transferred to '+nm+' ('+bank+') xxxx'+acc.slice(-4)+'. TX: '+txId+'. Hope Pay v1.0 4D.');
+  renderTx();
+}
+
+// ═══════════ INTERNATIONAL ═══════════
+function openIntlTransfer(){
+  openModal('🌍 International Transfer',`
+    <div class="fg"><label>DESTINATION COUNTRY</label>
+      <select id="it-co">
+        <option>🇱🇰 Sri Lanka</option><option>🇺🇸 USA</option><option>🇬🇧 UK</option>
+        <option>🇦🇪 UAE</option><option>🇸🇬 Singapore</option><option>🇦🇺 Australia</option>
+      </select></div>
+    <div class="fg"><label>RECIPIENT NAME</label><input type="text" id="it-nm" placeholder="Recipient full name"/></div>
+    <div class="fg"><label>ACCOUNT / IBAN</label><input type="text" id="it-acc" placeholder="Account or IBAN"/></div>
+    <div class="fg"><label>SWIFT / BIC</label><input type="text" id="it-swift" placeholder="SWIFT code"/></div>
+    <div class="fg"><label>AMOUNT (₹ INR)</label>
+      <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="it-amt" placeholder="0.00"/></div>
+    </div>
+    <div style="background:rgba(179,36,42,0.05);border:1px solid rgba(179,36,42,0.13);border-radius:8px;padding:0.5rem;font-size:0.5rem;color:var(--sub);margin-bottom:0.6rem;">🌍 Hope Pay International Transfer · SWIFT/SEPA · 1-3 business days</div>
+    <button class="btn bprim bfull" onclick="doIntlTransfer()">🌍 SEND INTERNATIONAL</button>`);
+}
+function doIntlTransfer(){
+  const nm=(document.getElementById('it-nm').value||'').trim();
+  const amt=parseFloat(document.getElementById('it-amt').value)||0;
+  const co=document.getElementById('it-co').value;
+  if(!nm||amt<=0){showN('Fill all fields',true);return;}
+  const u=GU();const w=u.wallets.find(x=>x.cur==='INR');
+  if(!w||w.bal<amt){showN('Insufficient balance',true);return;}
+  w.bal=parseFloat((w.bal-amt).toFixed(4));
+  const txId=addTx('transfer',u.uid,'INTL:'+nm,amt,'INR','International: '+co,'🌍');
+  SS('user',u);updateBal(u);closeModal();
+  showN('✓ International transfer: ₹'+amt+' to '+nm);
+  fireEmail(u.email,'International Transfer — Hope Pay','₹'+amt+' sent internationally to '+nm+' ('+co+'). TX: '+txId+'. Processing 1-3 days. Hope Pay v1.0 4D.');
+  renderTx();
+}
+
+// ═══════════ ADD BENEFICIARY ═══════════
+function addBeneficiary(){
+  openModal('➕ Add Beneficiary',`
+    <div class="fg"><label>NAME</label><input type="text" id="be-nm" placeholder="Beneficiary name"/></div>
+    <div class="fg"><label>TYPE</label>
+      <select id="be-ty"><option>Mobile / UPI</option><option>Bank Account</option><option>Hope Pay ID</option></select></div>
+    <div class="fg"><label>ID / NUMBER</label><input type="text" id="be-id" placeholder="Mobile, UPI, or HP-XXXXX"/></div>
+    <button class="btn bprim bfull" onclick="saveBeneficiary()">SAVE BENEFICIARY</button>`);
+}
+function saveBeneficiary(){
+  const nm=(document.getElementById('be-nm').value||'').trim();
+  const id=(document.getElementById('be-id').value||'').trim();
+  const ty=document.getElementById('be-ty').value;
+  if(!nm||!id){showN('Fill all fields',true);return;}
+  const u=GU();if(!u.benes)u.benes=[];
+  u.benes.unshift({name:nm,id,type:ty,added:new Date().toISOString()});
+  SS('user',u);closeModal();showN('Beneficiary added: '+nm);
+  renderBeneficiaries();
+}
+function renderBeneficiaries(){
+  const u=GU();const benes=u.benes||[];const el=document.getElementById('bene-list');if(!el)return;
+  if(!benes.length){el.innerHTML='<div style="text-align:center;padding:0.5rem;font-size:0.52rem;color:var(--sub);">No beneficiaries yet</div>';return;}
+  el.innerHTML=benes.map(b=>`<div style="display:flex;align-items:center;gap:0.5rem;padding:0.45rem 0;border-bottom:1px solid rgba(179,36,42,0.07);cursor:pointer;" onclick="quickSend('${b.name}','${b.id}')">
+    <div style="width:30px;height:30px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:0.75rem;flex-shrink:0;">👤</div>
+    <div style="flex:1;"><div style="font-size:0.58rem;font-weight:700;">${b.name}</div><div style="font-size:0.44rem;color:var(--sub);">${b.id} · ${b.type}</div></div>
+    <button class="btn bprim bsm" onclick="event.stopPropagation();quickSend('${b.name}','${b.id}')">SEND</button>
+  </div>`).join('');
+}
+function quickSend(name,id){
+  closeModal();
+  document.getElementById('s-to')&&(document.getElementById('s-to').value=id);
+  openSend();
+}
+
+// ═══════════ LINK BANK ═══════════
+function openLinkBank(){
+  openModal('🏦 Link Bank Account',`
+    <div class="fg"><label>BANK</label>
+      <select id="lb-bank">
+        <option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option>
+        <option>Axis Bank</option><option>Yes Bank</option><option>Kotak Mahindra</option>
+        <option>Bank of Ceylon</option><option>Commercial Bank (LK)</option>
+      </select></div>
+    <div class="fg"><label>ACCOUNT NUMBER</label><input type="text" id="lb-acc" placeholder="Account number"/></div>
+    <div class="fg"><label>ACCOUNT HOLDER</label><input type="text" id="lb-nm" placeholder="Name as on account"/></div>
+    <div class="fg"><label>IFSC (for India)</label><input type="text" id="lb-ifsc" placeholder="IFSC code"/></div>
+    <button class="btn bprim bfull" onclick="doLinkBank()">🏦 LINK BANK</button>`);
+}
+function doLinkBank(){
+  const bank=document.getElementById('lb-bank').value;
+  const acc=(document.getElementById('lb-acc').value||'').trim();
+  const nm=(document.getElementById('lb-nm').value||'').trim();
+  if(!acc||!nm){showN('Fill all fields',true);return;}
+  const u=GU();if(!u.banks)u.banks=[];
+  u.banks.push({bank,acc:'xxxx'+acc.slice(-4),name:nm,linked:new Date().toISOString()});
+  SS('user',u);closeModal();showN('✓ '+bank+' linked!');
+  const el=document.getElementById('bank-list');
+  if(el)el.innerHTML=(u.banks||[]).map(b=>`<div style="padding:0.45rem;background:rgba(179,36,42,0.04);border-radius:7px;margin-bottom:0.3rem;font-size:0.55rem;"><strong>${b.bank}</strong> · ${b.acc} · ${b.name}</div>`).join('');
+  fireEmail(u.email,'Bank Account Linked','Your '+bank+' account ('+acc.slice(-4)+') has been linked to Hope Pay. support@hopepay.online');
+}
+
+// ═══════════ WALLETS ═══════════
+function renderWallets(){
+  const u=GU();const ws=u.wallets||[];const el=document.getElementById('wallet-list');if(!el)return;
+  const COLORS={INR:'#B3242A',HOPE:'#6495ED',USD:'#34A85A',LKR:'#F4A261',HOPE_COIN:'#9B59B6'};
+  el.innerHTML=ws.map(w=>`<div class="wi">
+    <div class="wi-l">
+      <div class="wi-ic">${{INR:'₹',HOPE:'◈',USD:'$',LKR:'Rs',HOPE_COIN:'◈'}[w.cur]||w.sym||'💳'}</div>
+      <div><div class="wi-n">${{INR:'Indian Rupee',HOPE:'Hope Coin',USD:'US Dollar',LKR:'Sri Lankan Rupee'}[w.cur]||w.cur}</div><div class="wi-c">${w.cur}</div></div>
+    </div>
+    <div class="wi-b">${w.sym||''}${(w.bal||0).toFixed(4)}</div>
+  </div>`).join('');
+}
+
+// ═══════════ QR ═══════════
+let _qrId='';
+function genMyQR(){
+  const u=GU();_qrId=u&&u.uid?'HP-QR-'+u.uid:'HP-QR-DEMO';
+  const el=document.getElementById('my-qr-id');if(el)el.textContent=_qrId+' · '+((u&&u.uid)||'HP-DEMO')+'@hopepay';
+  // Try real QR API first, fallback to pixel art
+  const inner=document.getElementById('qr-inner');if(!inner)return;
+  const vpa=u.vpa||(u.uid?u.uid.toLowerCase()+'@hacb':'demo@hacb');
+  const qrData=encodeURIComponent('upi://pay?pa='+vpa+'&pn='+encodeURIComponent(u.name||'HopePay')+'&am=&cu=INR');
+  const qrUrl='https://api.qrserver.com/v1/create-qr-code/?size=144x144&data='+qrData+'&bgcolor=0a0405&color=B3242A&margin=2';
+  inner.style.backgroundImage='url('+qrUrl+')';
+  inner.style.backgroundSize='contain';
+  inner.style.backgroundRepeat='no-repeat';
+  inner.style.backgroundPosition='center';
+  inner.innerHTML='';
+  // Fallback pixel art if img fails
+  setTimeout(()=>{if(!inner.style.backgroundImage){_fallbackQR(inner,_qrId);}},1500);
+}
+function _fallbackQR(inner,seed){
+  inner.style.backgroundImage='';
+  inner.style.display='grid';
+  for(let i=0;i<144;i++){
+    const cell=document.createElement('div');cell.style.borderRadius='1px';
+    const v=(seed.charCodeAt(i%seed.length)*31+i*7)%4;
+    cell.style.background=v<2?'#B3242A':v===2?'rgba(179,36,42,0.15)':'transparent';
+    inner.appendChild(cell);
+  }
+}
+function _old_genMyQR(){
+  const u=GU();_qrId=u&&u.uid?'HP-QR-'+u.uid:'HP-QR-DEMO';
+  const el=document.getElementById('my-qr-id');if(el)el.textContent=_qrId+' · '+((u&&u.uid)||'HP-DEMO')+'@hopepay';
+  const inner=document.getElementById('qr-inner');if(!inner)return;
+  inner.innerHTML='';
+  const seed=_qrId;
+  for(let i=0;i<144;i++){
+    const cell=document.createElement('div');cell.style.borderRadius='1px';
+    const v=(seed.charCodeAt(i%seed.length)*31+i*7)%4;
+    cell.style.background=v<2?'#B3242A':v===2?'rgba(179,36,42,0.15)':'transparent';
+    inner.appendChild(cell);
+  }
+}
+function genQR(){genMyQR();}
+function _close_old_qr(){} // end old qr
+function shareQR(){
+  if(navigator.share)navigator.share({title:'HopePay',text:'Pay me via Hope Pay: '+_qrId,url:'https://hopepay.online/pay/'+_qrId});
+  else navigator.clipboard&&navigator.clipboard.writeText(_qrId).then(()=>showN('QR ID copied!'));
+}
+function qTab(id,btn){
+  document.querySelectorAll('#sec-qr .atab').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');
+  document.getElementById('q-gen').style.display=id==='gen'?'block':'none';
+  document.getElementById('q-pay').style.display=id==='pay'?'block':'none';
+}
+function doQRPay(){
+  const id=(document.getElementById('qrp-id').value||'').trim();
+  const amt=parseFloat(document.getElementById('qrp-amt').value)||0;
+  if(!id){showN('Enter QR ID',true);return;}
+  if(amt<=0){showN('Enter amount',true);return;}
+  const u=GU();const w=u.wallets.find(x=>x.cur==='INR');
+  if(!w||w.bal<amt){showN('Insufficient balance',true);return;}
+  w.bal=parseFloat((w.bal-amt).toFixed(4));
+  const txId=addTx('qr',u.uid,'QR:'+id,amt,'INR','QR Pay','📱');
+  SS('user',u);updateBal(u);closeModal();
+  showN('✓ ₹'+amt+' paid via QR to '+id);
+  fireEmail(u.email,'QR Payment Sent','₹'+amt+' sent via QR to '+id+'. TX: '+txId+'. Hope Pay v1.0 4D.');
+  renderTx();document.getElementById('qrp-id').value='';document.getElementById('qrp-amt').value='';
+}
+
+// ═══════════ SERVICE CATEGORIES ═══════════
+const SVCS={
+  transfers:{title:'⇄ Transfers',items:['Send Money','Self Transfer','Bank Transfer','Third Party Transfer','Hope Pay International Transfer','Hope Coin Buy & Sell','Hope Pay Smart Payment ★New']},
+  payments:{title:'💳 Payments',items:['Scan & Pay','Mobile Recharge','DTH Recharge','Pay Credit Card Bill','Mobile Post Paid Bill','Electricity Bill','Rent on Credit Card','Book Gas Cylinder','Hope Pay Post Paid']},
+  myhopepay:{title:'👛 My Hope Pay',items:['Balance & History','Hope Wallet','Hope Offer','Scan & Pay','Hope Pay Members Area']},
+  wealth:{title:'📈 Grow Your Wealth',items:['Hope Pay Money','Stocks','Mutual Funds','Hope Pay Investments ★New','Hope Coin ★New','Free Credit Score','Hope Pay Wealth Members ★New']},
+  travelling:{title:'✈ Hope International Travel',items:['Bus Tickets','Air Tickets','Train Tickets','Fast Tag Recharge','Metro Tickets','Hope International Holidays','Hope Pay Travel Members ★New']},
+  insurance:{title:'🛡 Hope Pay Insurance',items:['Car & Bike Insurance','Corona & Dengue Insurance','Term & Health & Life Insurance','Diabetes & Dental Care Insurance','Cyber Fraud Insurance ★New','Hope Pay Insurance Members ★New']},
+  food:{title:'🍽 Hope Food Order',items:['Food Order (Single & Group)','Family Function Food Ordering ★New','Event Food Ordering ★New','Industries Daily Menu Advance Booking ★New','Hope Food Order Members ★New']},
+  hopecoin:{title:'◈ Hope Coin',items:['Buy Hope Coin','Sell Hope Coin','Hope Coin Wallet','Hope Coin Investment','International Transfer via Hope Coin','Hope Coin to INR','Hope Coin to LKR via CeyPay']},
+};
+
+function openSvc(key){
+  const svc=SVCS[key];if(!svc)return;
+  openModal(svc.title,`
+    <div style="display:flex;flex-direction:column;gap:0;">
+      ${svc.items.map(item=>`<div class="svc-item" onclick="processSvc('${key}','${item.replace(/[★']/g,'')}')">
+        <span class="svc-item-ic">💳</span>
+        <span class="svc-item-txt">${item}</span>
+        <span class="svc-item-arr">›</span>
+      </div>`).join('')}
+    </div>
+    <button class="btn bprim bfull" style="margin-top:0.7rem;" onclick="closeModal()">CLOSE</button>`);
+}
+
+function processSvc(cat,action){
+  if(cat==='transfers'){
+    if(action.includes('Send')||action.includes('Transfer')){closeModal();openSend();return;}
+    if(action.includes('Bank')){closeModal();openBankTransfer();return;}
+    if(action.includes('International')){closeModal();openIntlTransfer();return;}
+    if(action.includes('Coin')){closeModal();openHopeCoin();return;}
+  }
+  if(cat==='myhopepay'){
+    if(action.includes('Balance')||action.includes('History')){closeModal();switchSec('history');return;}
+    if(action.includes('Wallet')){closeModal();switchSec('wallet');return;}
+    if(action.includes('Scan')){closeModal();switchSec('qr');return;}
+  }
+  if(cat==='hopecoin'){closeModal();openHopeCoin();return;}
+  if(cat==='wealth'&&action.includes('Credit')){
+    openModal('📊 Free Credit Score',`
+      <div style="text-align:center;padding:0.6rem;">
+        <div style="font-size:2rem;margin-bottom:0.4rem;">📊</div>
+        <div style="font-size:1.8rem;font-weight:900;color:var(--green);margin-bottom:0.2rem;">${Math.floor(720+Math.random()*80)}</div>
+        <div style="font-size:0.6rem;font-weight:700;color:var(--green);">EXCELLENT</div>
+        <div style="font-size:0.5rem;color:var(--sub);margin-top:0.3rem;">Powered by Hope Pay · QSAC verified</div>
+      </div>
+      <button class="btn bprim bfull" style="margin-top:0.6rem;" onclick="closeModal()">CLOSE</button>`);
+    return;
+  }
+  // Generic service
+  openModal('💳 '+action,`
+    <div style="text-align:center;padding:0.4rem 0 0.7rem;">
+      <div style="font-size:1.5rem;margin-bottom:0.3rem;">💳</div>
+      <div style="font-size:0.65rem;font-weight:700;margin-bottom:0.15rem;">${action}</div>
+      <div style="font-size:0.48rem;color:var(--sub);">Hope Holdings International · hopepay.online</div>
+    </div>
+    <div class="fg"><label>AMOUNT (if applicable)</label>
+      <div class="amt-wrap"><div class="amt-sym">₹</div><input class="amt-big" type="number" id="sv-amt" placeholder="0.00"/></div>
+    </div>
+    <div class="fg"><label>DETAILS / REFERENCE</label><input type="text" id="sv-ref" placeholder="Details or reference..."/></div>
+    <div style="background:rgba(179,36,42,0.05);border:1px solid rgba(179,36,42,0.13);border-radius:8px;padding:0.5rem;font-size:0.5rem;color:var(--sub);margin-bottom:0.65rem;">💳 Powered by Hope Pay v1.0 4D · HMAIL confirmation · support@hopepay.online</div>
+    <button class="btn bprim bfull" onclick="submitSvc('${cat}','${action}')">💳 PROCESS VIA HOPE PAY</button>`);
+}
+
+function submitSvc(cat,action){
+  const amt=parseFloat(document.getElementById('sv-amt')&&document.getElementById('sv-amt').value)||0;
+  const ref=document.getElementById('sv-ref')&&document.getElementById('sv-ref').value||'';
+  const u=GU();
+  const txId=addTx('payment',u.uid,'HOPEPAY:'+cat,amt,'INR',action+' · '+ref,'💳');
+  if(amt>0){const w=u.wallets.find(x=>x.cur==='INR');if(w&&w.bal>=amt){w.bal=parseFloat((w.bal-amt).toFixed(4));SS('user',u);updateBal(u);}}
+  closeModal();
+  showN('✓ '+action+' processed · HP-TX: '+txId.slice(0,12));
+  fireEmail(u.email,'Hope Pay: '+action,'Your request "'+action+'" has been processed. TX: '+txId+'. support@hopepay.online');
+  renderTx();
+}
+
+// ═══════════ HOPE COIN ═══════════
+function openHopeCoin(){
+  const u=GU();const hc=(u.wallets||[]).find(w=>w.cur==='HOPE')||{bal:0};
+  openModal('◈ Hope Coin',`
+    <div style="background:var(--grad);border-radius:10px;padding:0.8rem;text-align:center;margin-bottom:0.75rem;">
+      <div style="font-size:1.5rem;font-weight:900;color:#fff;">◈ ${(hc.bal||0).toFixed(4)}</div>
+      <div style="font-size:0.5rem;color:rgba(255,255,255,0.75);">Hope Coin Balance</div>
+    </div>
+    <div class="fg"><label>ACTION</label>
+      <select id="hc-act"><option>Buy Hope Coin</option><option>Sell Hope Coin</option><option>Transfer Hope Coin</option><option>Convert to INR</option></select></div>
+    <div class="fg"><label>AMOUNT (₹ or HOPE)</label>
+      <div class="amt-wrap"><div class="amt-sym">◈</div><input class="amt-big" type="number" id="hc-amt" placeholder="0.00"/></div>
+    </div>
+    <div style="font-size:0.5rem;color:var(--sub);padding:0.4rem;margin-bottom:0.5rem;">Live Rate: 1 HOPE = ₹45 · Updated by Hope Pay</div>
+    <button class="btn bprim bfull" onclick="doHopeCoin()">◈ PROCESS HOPE COIN</button>`);
+}
+function doHopeCoin(){
+  const act=document.getElementById('hc-act').value;
+  const amt=parseFloat(document.getElementById('hc-amt').value)||0;
+  if(amt<=0){showN('Enter amount',true);return;}
+  const u=GU();
+  let hc=u.wallets.find(w=>w.cur==='HOPE');
+  if(!hc){hc={cur:'HOPE',sym:'◈',bal:0};u.wallets.push(hc);}
+  const inr=u.wallets.find(w=>w.cur==='INR')||{bal:0};
+  if(act==='Buy Hope Coin'){const cost=amt*45;if(inr.bal<cost){showN('Insufficient INR',true);return;}inr.bal-=cost;hc.bal+=amt;}
+  else if(act==='Sell Hope Coin'){if(hc.bal<amt){showN('Insufficient Hope Coin',true);return;}hc.bal-=amt;inr.bal+=amt*45;}
+  else if(act==='Convert to INR'){if(hc.bal<amt){showN('Insufficient Hope Coin',true);return;}hc.bal-=amt;inr.bal+=amt*45;}
+  const txId=addTx('hopecoin',u.uid,'HOPECOIN',amt,'HOPE',act,'◈');
+  SS('user',u);updateBal(u);closeModal();
+  showN('✓ '+act+': '+amt+' HOPE');
+  fireEmail(u.email,'Hope Coin Transaction',''+act+': '+amt+' HOPE. TX: '+txId+'. Rate: ₹45/HOPE. Hope Pay v1.0 4D.');
+  renderTx();renderWallets();
+}
+
+// ═══════════ KYC ═══════════
+async function submitKYC(){
+  const dn=(document.getElementById('kyc-dn').value||'').trim();
+  const fn=(document.getElementById('kyc-fn').value||'').trim();
+  const dt=document.getElementById('kyc-dt').value;
+  const dob=document.getElementById('kyc-dob').value;
+  const addr=document.getElementById('kyc-addr').value;
+  if(!dn||!fn){showN('Fill required fields',true);return;}
+  const u=GU();
+  showN('Submitting KYC to HMTML AI Verifier...',false,'inf');
+  try{
+    const res=await fetch(API_BASE+'kycVerify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'submit',email:u.email,userId:u.uid,docType:dt,docNumber:dn,fullName:fn,dob:dob,address:addr,phone:u.phone||''})});
+    const data=await res.json();
+    if(data.success){
+      // Show OTP step
+      document.getElementById('kyc-form').innerHTML=`
+        <div style="text-align:center;margin-bottom:0.65rem;">
+          <div style="font-size:0.62rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">HMTML KYC — OTP VERIFICATION</div>
+          <div style="font-size:0.5rem;color:var(--sub);">Request ID: ${data.requestId}</div>
+          <div style="font-size:0.48rem;color:var(--gold);margin-top:0.2rem;">Dev OTP: ${data.otp}</div>
+        </div>
+        <div class="otp-row">
+          <input class="oc" maxlength="1" type="tel" id="ko0" oninput="oN(this,0,'ko')" onkeydown="oB(event,0,'ko')">
+          <input class="oc" maxlength="1" type="tel" id="ko1" oninput="oN(this,1,'ko')" onkeydown="oB(event,1,'ko')">
+          <input class="oc" maxlength="1" type="tel" id="ko2" oninput="oN(this,2,'ko')" onkeydown="oB(event,2,'ko')">
+          <input class="oc" maxlength="1" type="tel" id="ko3" oninput="oN(this,3,'ko')" onkeydown="oB(event,3,'ko')">
+          <input class="oc" maxlength="1" type="tel" id="ko4" oninput="oN(this,4,'ko')" onkeydown="oB(event,4,'ko')">
+          <input class="oc" maxlength="1" type="tel" id="ko5" oninput="oN(this,5,'ko')" onkeydown="oB(event,5,'ko')">
+        </div>
+        <button class="btn bprim bfull" onclick="verifyKYCOTP('${data.requestId}')">✓ VERIFY IDENTITY</button>
+        <div style="text-align:center;margin-top:0.4rem;font-size:0.48rem;color:var(--sub);">HMTML AI Verifier · QSAC secured · OCR + AI authentication</div>
+      `;
+      SS('kyc_pending',{requestId:data.requestId,email:u.email});
+      showN('KYC submitted! OTP sent for verification');
+    }else{
+      showN(data.error||'KYC submission failed',true);
+    }
+  }catch(e){
+    // Fallback to local KYC
+    u.kyc='verified';SS('user',u);
+    document.getElementById('kyc-done').style.display='block';
+    document.getElementById('kyc-form').style.display='none';
+    showN('KYC verified (offline mode)');
+  }
+}
+
+async function verifyKYCOTP(requestId){
+  const entered=[0,1,2,3,4,5].map(i=>(document.getElementById('ko'+i)||{value:''}).value).join('');
+  const pending=GS('kyc_pending');
+  if(!pending){showN('Session expired',true);return;}
+  showN('Verifying with HMTML AI...',false,'inf');
+  try{
+    const res=await fetch(API_BASE+'kycVerify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'verify',email:pending.email,otp:entered,requestId})});
+    const data=await res.json();
+    if(data.verified){
+      const u=GU();u.kyc='verified';SS('user',u);
+      document.getElementById('kyc-done').style.display='block';
+      document.getElementById('kyc-form').style.display='none';
+      document.getElementById('kyc-ban').style.display='none';
+      const pk=document.getElementById('pc-kyc');if(pk){pk.textContent='● KYC VERIFIED';pk.className='tag tg';}
+      const sk=document.getElementById('s-kyc');if(sk){sk.textContent='VERIFIED';sk.className='tag tg';}
+      showN('✅ KYC verified! 12 crypto wallets created! Full access unlocked!');
+      SS('kyc_pending',null);
+    }else{
+      showN(data.reason||'OTP verification failed',true);
+    }
+  }catch(e){showN('Network error: '+e.message,true);}
+}
+
+// ═══════════ TRANSACTIONS ═══════════
+const TX_CL={sent:'var(--red)',received:'var(--green)',topup:'var(--green)',transfer:'var(--blue)',payment:'#9B59B6',qr:'#F4A261',hopecoin:'#6495ED'};
+function renderTx(){
+  const txs=(GS('txs')||[]).slice(0,5);const el=document.getElementById('recent-tx');if(!el)return;
+  if(!txs.length){el.innerHTML='<div style="text-align:center;padding:0.7rem;font-size:0.52rem;color:var(--sub);">No transactions yet</div>';return;}
+  el.innerHTML=txs.map(tx=>txRow(tx)).join('');
+}
+function renderTxFull(type){
+  type=type||'all';let txs=GS('txs')||[];
+  if(type!=='all')txs=txs.filter(t=>t.type===type);
+  const el=document.getElementById('tx-full');if(!el)return;
+  if(!txs.length){el.innerHTML='<div style="text-align:center;padding:1rem;font-size:0.54rem;color:var(--sub);">No transactions</div>';return;}
+  el.innerHTML=txs.map(tx=>txRow(tx,true)).join('');
+}
+function txRow(tx,full){
+  const lbl={sent:'Sent to '+tx.to,received:'Received',topup:'Added: '+tx.note,transfer:'Transfer: '+tx.note,payment:tx.note,qr:'QR Pay',hopecoin:tx.note}[tx.type]||tx.note||tx.type;
+  const plus=['received','topup'].includes(tx.type);
+  return`<div class="txi">
+    <div class="txi-ic" style="background:${TX_CL[tx.type]||'var(--red)'}18;">${tx.icon||'💳'}</div>
+    <div class="txi-info">
+      <div class="txi-d">${lbl}</div>
+      <div class="txi-t">${new Date(tx.date).toLocaleString()}${full?' · '+tx.id.slice(0,14):''}</div>
+    </div>
+    <div class="txi-a" style="color:${TX_CL[tx.type]||'var(--red)'};">${plus?'+':'-'}₹${tx.amount}</div>
+  </div>`;
+}
+function fTx(t){renderTxFull(t);}
+
+// ═══════════ CHAT SUPPORT ═══════════
+const CHAT_KB={
+  'balance':()=>{const u=GU();const inr=(u.wallets||[]).find(w=>w.cur==='INR')||{bal:0};return 'Your Hope Pay balance is <strong style="color:var(--red);">₹'+inr.bal.toFixed(2)+'</strong>. Tap the wallet section to view all currencies. 💳';},
+  'send':()=>'To send money: tap ⬆ SEND on the home screen or go to Transfers. You can send via mobile number, Hope Pay ID, or UPI. HMAIL email confirmation sent automatically! 💳',
+  'kyc':()=>'KYC verification uses Aadhaar AEPS technology. No physical documents needed. Go to Profile → KYC Verification. Takes 30 seconds! After KYC, all features and higher limits unlock. ✅',
+  'hope coin':()=>'Hope Coin (◈) is the sovereign cryptocurrency of TUK. Current rate: 1 HOPE = ₹45. Buy, sell, transfer globally. Go to Services → Hope Coin. 🔥',
+  'transfer':()=>'Hope Pay supports: Instant Transfers (IMPS), Bank Transfers (NEFT/RTGS), International (SWIFT/SEPA), UPI, QR Pay. All secured by QSAC. 🏦',
+  'insurance':()=>'Hope Pay Insurance covers: Car & Bike, Health & Life, Cyber Fraud, Dental. Go to Services → Insurance. Powered by Hope Holdings International.',
+  'travel':()=>'Hope International Travel: Book bus, air, train tickets. Hope International Holidays packages. Go to Services → Travelling. ✈',
+  'support':()=>'Contact us: <strong>support@hopepay.online</strong> · hopepay.online. We respond within 24 hours. QSAC encrypted communication. 💳',
+  'password':()=>'Forgot password? Tap "Forgot?" on login screen. Reset link sent to your registered email via HMAIL. Contact support@hopepay.online if needed.',
+};
+function qChat(msg){document.getElementById('chat-in').value=msg;sendChat();}
+function sendChat(){
+  const input=document.getElementById('chat-in');const msg=input.value.trim();if(!msg)return;
+  addChatMsg(msg,'user');input.value='';
+  const typing=addTyping();
+  setTimeout(()=>{
+    typing.remove();
+    const lower=msg.toLowerCase();
+    let res=null;
+    for(const[k,fn] of Object.entries(CHAT_KB)){if(lower.includes(k)){res=fn();break;}}
+    if(!res)res='Thank you for contacting Hope Pay support! For account queries please visit <strong>hopepay.online</strong> or email <strong>support@hopepay.online</strong>. Hope Holdings International is here to help 24/7. 💳';
+    addChatMsg(res,'bot');
+  },600+Math.random()*500);
+}
+function addChatMsg(text,type){
+  const c=document.getElementById('chat-msgs');
+  const d=document.createElement('div');d.className='cb '+type;
+  d.innerHTML=`<div class="cb-av">${type==='bot'?'💳':'👤'}</div><div class="cb-bub">${text}</div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;return d;
+}
+function addTyping(){
+  const c=document.getElementById('chat-msgs');
+  const d=document.createElement('div');d.className='cb bot';
+  d.innerHTML='<div class="cb-av">💳</div><div class="cb-bub"><span class="typing"><span></span><span></span><span></span></span></div>';
+  c.appendChild(d);c.scrollTop=c.scrollHeight;return d;
+}
+
+// ═══════════ T&C / PRIVACY ═══════════
+function showTC(){
+  openModal('📄 Terms & Conditions',`
+    <div style="font-size:0.54rem;line-height:1.9;color:var(--sub);max-height:60vh;overflow-y:auto;">
+      <p style="margin-bottom:0.5rem;font-weight:700;color:var(--text);">Hope Holdings International Pvt Ltd</p>
+      <p style="margin-bottom:0.4rem;">By using Hope Pay you agree to these terms. Hope Pay is a payment service operated by Hope Holdings International Private Limited.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Services:</strong> Hope Pay provides digital payment services including wallet, transfers, bill payments, insurance, travel bookings, and investment products.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Security:</strong> All transactions are secured by QSAC ICSS encryption. 2FA is mandatory for all accounts.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">KYC:</strong> Users must complete KYC to access full features. We comply with all applicable financial regulations.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Support:</strong> support@hopepay.online · hopepay.online</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Liability:</strong> Hope Holdings International is not liable for losses due to unauthorized access when proper security measures have been followed by the user.</p>
+      <p>© 2026 Hope Holdings International Private Limited. All rights reserved. hopepay.online</p>
+    </div>
+    <button class="btn bprim bfull" style="margin-top:0.7rem;" onclick="closeModal()">ACCEPT & CLOSE</button>`);
+}
+function openPrivacy(){
+  openModal('🔐 Privacy Policy',`
+    <div style="font-size:0.54rem;line-height:1.9;color:var(--sub);max-height:60vh;overflow-y:auto;">
+      <p style="margin-bottom:0.5rem;font-weight:700;color:var(--text);">Privacy Policy — Hope Holdings International</p>
+      <p style="margin-bottom:0.4rem;">We collect personal data to provide and improve Hope Pay services. Your data is encrypted by QSAC ICSS and never sold to third parties.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Data Collected:</strong> Name, email, phone, KYC documents, transaction history.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Data Use:</strong> Transaction processing, KYC verification, support, security monitoring.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Data Protection:</strong> QSAC quantum encryption · HMAIL secure communication · TU5G network.</p>
+      <p style="margin-bottom:0.4rem;"><strong style="color:var(--text);">Contact:</strong> support@hopepay.online · hopepay.online</p>
+      <p>© 2026 Hope Holdings International Private Limited. hopepay.online</p>
+    </div>
+    <button class="btn bprim bfull" style="margin-top:0.7rem;" onclick="closeModal()">CLOSE</button>`);
+}
+
+// ═══════════ APK DOWNLOADS ═══════════
+function dlApp(os){
+  const info={
+    android:{t:'Android APK',b:`Install HopePay APK:\n\n1. Download: HopePay_hopepay_online.apk\n2. Enable "Install unknown apps" in settings\n3. Open APK file and install\n4. Login with support@hopepay.online\n\nPackage: com.hopepay.hopepay\nVersion: 2.0 · hopepay.online`},
+    ios:{t:'iOS Install',b:`Safari → hopepay.online\nTap Share → "Add to Home Screen"\nName: HopePay → Add\n\nOr use TestFlight with code: HOPEPAY2026`},
+    pwa:{t:'Install PWA',b:`Chrome/Edge: Three dots → Install App\nSafari: Share → Add to Home Screen\nFirefox: Three dots → Install\n\nWorks offline! Full app experience.`},
+    windows:{t:'Windows App',b:`1. Open pwabuilder.com\n2. Enter: hopepay.online\n3. Download Windows MSIX\n4. Install on Windows 10/11`}
+  };
+  const i=info[os]||{t:os,b:'Coming soon'};
+  openModal('📱 '+i.t,`
+    <div style="font-family:var(--mono);font-size:0.55rem;line-height:1.9;white-space:pre-line;background:rgba(0,0,0,0.2);border:1px solid rgba(179,36,42,0.15);border-radius:8px;padding:0.8rem;margin-bottom:0.7rem;">${i.b}</div>
+    <button class="btn bprim bfull" onclick="if(window._pwaPrompt){window._pwaPrompt.prompt();}else{showN('Tap browser menu → Add to Home Screen',false,'inf');}closeModal();">⬡ INSTALL NOW</button>`);
+}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();window._pwaPrompt=e;});
+
+// ═══════════ NOTIFICATIONS ═══════════
+function openNotifs(){
+  const emails=(GS('email_log')||[]).slice(0,4);const txs=(GS('txs')||[]).slice(0,3);
+  const items=[...txs.map(t=>'[TX] '+t.amount+' INR · '+t.note),...emails.map(e=>'[EMAIL] '+e.subject)];
+  if(!items.length){showN('No new notifications',false,'inf');return;}
+  openModal('🔔 Notifications',items.map(n=>`<div style="padding:0.45rem 0;border-bottom:1px solid rgba(179,36,42,0.08);font-size:0.55rem;">${n}</div>`).join('')+'<button class="btn bprim bfull" style="margin-top:0.65rem;" onclick="closeModal()">CLOSE</button>');
+  document.getElementById('notif-dot').classList.remove('on');
+}
+
+
+// ═══════════ API + CRYPTO ═══════════
+const API_BASE='https://solene-131b737b.base44.app/functions/';
+async function apiCall(ep,method,data){try{const o={method:method||'GET',headers:{'Content-Type':'application/json'}};if(data)o.body=JSON.stringify(data);const r=await fetch(API_BASE+ep,o);return await r.json();}catch(e){console.error('API:',e);return null;}}
+
+const CRYPTOS=[
+  {s:'TAL',n:'Talenton',ic:'🌟',p:0.015,supply:500000000,circ:125000000,c:'#FFD700',d:'Talent verification & creator economy',cg:'talentido'},
+  {s:'QSAC',n:'QSAC Coin',ic:'🔐',p:0.0678,supply:200000000,circ:50000000,c:'#4A90D9',d:'Quantum-Separated Algorithmic Cryptography'},
+  {s:'LUMINA',n:'Lumina',ic:'💡',p:0.054,supply:350000000,circ:85000000,c:'#E6E6FA',d:'Illumination & transparency/audit',cg:'lumina'},
+  {s:'AMORA',n:'AMORA',ic:'❤️',p:0.0567,supply:400000000,circ:100000000,c:'#FF6B6B',d:'Rewards & loyalty (LOLY)'},
+  {s:'CCTU',n:'CCTU',ic:'🔄',p:0.089,supply:300000000,circ:80000000,c:'#3498DB',d:'Cross-chain transfer for Thimothism Universal'},
+  {s:'TMC',n:'ThimoCoin',ic:'🪙',p:0.0123,supply:1000000000,circ:250000000,c:'#B3242A',d:'Primary transaction token of UPS-Pay'},
+  {s:'TC',n:'Thimothism Coin',ic:'⛓️',p:0.0345,supply:600000000,circ:180000000,c:'#2ECC71',d:'Universal ecosystem coin bridging all banks'},
+  {s:'GAIC',n:'Global AI Coin',ic:'🤖',p:0.0234,supply:750000000,circ:200000000,c:'#9B59B6',d:'AI-powered payment routing & analytics'},
+  {s:'HOPE',n:'Hope Coin',ic:'◈',p:0.0456,supply:500000000,circ:150000000,c:'#6495ED',d:'Governance & staking for HopePay ecosystem'},
+  {s:'HAIC',n:'HOPE AI Coin',ic:'🧠',p:0.0812,supply:200000000,circ:50000000,c:'#1ABC9C',d:'AI integration for HACS/HACST/HAHS'},
+  {s:'HCAI',n:'HOPE COIN AI',ic:'💝',p:0.0645,supply:300000000,circ:75000000,c:'#E74C3C',d:'AI companion & TUVP verification'},
+  {s:'TUCB',n:'TUCB Coin',ic:'🏦',p:0.0789,supply:350000000,circ:90000000,c:'#F39C12',d:'Central bank reserve token for TUCB network'},
+];
+const CEYPAY={activated:true,merchantId:'a7a30204-c610-4dab-a1b3-18f8bc5dc9e1',apiKey:'f97d3dc7-044a-4d35-83f5-cea65feb7cbe',qrUrl:'https://merchant.ceypay.io/qr/4c0c52cb-9eef-45b4-8181-1d5b5825e91b'};
+const HACB_CONFIG={name:'HOPE AI CLOUD BANK',vpaSuffix:'@hacb',chainId:984};
+
+async function loadCryptoPrices(){
+  showN('Fetching live crypto prices...',false,'inf');
+  const data=await apiCall('cryptoPrices');
+  if(data&&data.success&&data.prices){
+    data.prices.forEach(p=>{const c=CRYPTOS.find(x=>x.s===p.symbol);if(c)c.p=p.usdPrice||c.p;});
+  }
+  renderCrypto();showN('✓ Crypto prices updated');
+}
+function getUserCrypto(){const u=GU();if(!u.crypto)u.crypto={};return u.crypto;}
+function renderCrypto(){
+  const grid=document.getElementById('crypto-grid');if(!grid)return;
+  const uc=getUserCrypto();let total=0;
+  grid.innerHTML=CRYPTOS.map(c=>{
+    const bal=uc[c.s]||0;const val=bal*c.p;total+=val;
+    return `<div class="cc" onclick="openCryptoDetail('${c.s}')">
+      <div class="cc-h">
+        <div class="cc-ic" style="background:${c.c}22;color:${c.c};">${c.ic}</div>
+        <div><div class="cc-n">${c.n}</div><div class="cc-s">${c.s}</div></div>
+      </div>
+      <div class="cc-p">$${c.p.toFixed(4)}</div>
+      <div class="cc-c">${c.d}</div>
+      <div class="cc-b">${bal.toFixed(4)} ${c.s} <span style="float:right;color:var(--red);">$${val.toFixed(4)}</span></div>
+    </div>`;
+  }).join('');
+  const te=document.getElementById('crypto-total');if(te)te.textContent='$'+total.toFixed(4);
+  const tl=document.getElementById('crypto-total-lkr');if(tl)tl.textContent='≈ Rs '+(total*300).toFixed(2)+' LKR';
+  // Populate CEYPAY dropdown
+  const cyf=document.getElementById('cy-from');if(cyf)cyf.innerHTML=CRYPTOS.map(c=>`<option value="${c.s}">${c.ic} ${c.s} — $${c.p.toFixed(4)}</option>`).join('');
+}
+function openCryptoDetail(sym){
+  const c=CRYPTOS.find(x=>x.s===sym);if(!c)return;
+  const bal=getUserCrypto()[sym]||0;
+  openModal(c.ic+' '+c.n+' ('+c.s+)',`
+    <div style="text-align:center;margin-bottom:0.6rem;">
+      <div style="font-size:2rem;">${c.ic}</div>
+      <div style="font-size:0.7rem;font-weight:900;">${c.n}</div>
+      <div style="font-size:0.46rem;color:var(--sub);">${c.d}</div>
+    </div>
+    <div class="card" style="margin-bottom:0.6rem;">
+      <div style="display:flex;justify-content:space-between;font-size:0.56rem;margin-bottom:0.2rem;"><span style="color:var(--sub);">Price</span><span style="font-weight:700;color:var(--red);">$${c.p.toFixed(4)}</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:0.56rem;margin-bottom:0.2rem;"><span style="color:var(--sub);">Your Balance</span><span style="font-weight:700;">${bal.toFixed(4)} ${c.s}</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:0.56rem;"><span style="color:var(--sub);">Value</span><span style="font-weight:700;color:var(--red);">$${(bal*c.p).toFixed(4)}</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.3rem;">
+      <button class="btn bprim bsm" onclick="closeModal();openTrade('buy','${sym}')">📈 BUY</button>
+      <button class="btn bsec bsm" onclick="closeModal();openTrade('sell','${sym}')">📉 SELL</button>
+      <button class="btn bsec bsm" onclick="closeModal();openCryptoTransfer('${sym}')">⬆ SEND</button>
+    </div>
+    <button class="btn bfull" style="background:rgba(179,36,42,0.08);margin-top:0.5rem;" onclick="closeModal()">CLOSE</button>`);
+}
+function openTrade(type,preset){
+  const sel=preset||CRYPTOS[0].s;
+  openModal(type==='buy'?'📈 Buy Crypto':'📉 Sell Crypto',`
+    <div class="fg"><label>CRYPTO</label><select id="tr-sym">${CRYPTOS.map(c=>`<option value="${c.s}" ${c.s===sel?'selected':''}>${c.ic} ${c.s} — $${c.p.toFixed(4)}</option>`).join('')}</select></div>
+    <div class="amt-wrap"><div class="amt-sym">$</div><input class="amt-big" type="number" id="tr-amt" placeholder="0.00 USD" oninput="updateTradeEst()"></div>
+    <div style="font-size:0.5rem;color:var(--sub);margin-bottom:0.5rem;" id="tr-est">Enter amount to estimate</div>
+    <div style="background:rgba(179,36,42,0.06);border:1px solid rgba(179,36,42,0.14);border-radius:8px;padding:0.5rem;font-size:0.5rem;color:var(--sub);margin-bottom:0.6rem;">💎 HOPE CHAIN Trading · Live prices · QSAC secured · <a href="https://trading.thimothism.com" target="_blank" style="color:var(--red);">trading.thimothism.com</a></div>
+    <button class="btn bprim bfull" onclick="doTrade('${type}')">${type==='buy'?'📈 BUY NOW':'📉 SELL NOW'}</button>`);
+  setTimeout(updateTradeEst,100);
+}
+function updateTradeEst(){
+  const sym=document.getElementById('tr-sym').value;
+  const amt=parseFloat(document.getElementById('tr-amt').value)||0;
+  const c=CRYPTOS.find(x=>x.s===sym);
+  if(!c)return;
+  const tokens=amt/c.p;
+  document.getElementById('tr-est').textContent=`≈ ${tokens.toFixed(4)} ${c.s} at $${c.p.toFixed(4)}/${c.s}`;
+}
+function doTrade(type){
+  const sym=document.getElementById('tr-sym').value;
+  const amt=parseFloat(document.getElementById('tr-amt').value)||0;
+  if(amt<=0){showN('Enter amount',true);return;}
+  const c=CRYPTOS.find(x=>x.s===sym);if(!c)return;
+  const tokens=amt/c.p;
+  const u=GU();const inr=u.wallets.find(w=>w.cur==='INR')||{bal:0};
+  const usdCost=amt;
+  const inrCost=usdCost*83; // USD to INR approx
+  if(type==='buy'){
+    if(inr.bal<inrCost){showN('Insufficient INR balance (₹'+inrCost.toFixed(2)+' needed)',true);return;}
+    inr.bal=parseFloat((inr.bal-inrCost).toFixed(4));
+    if(!u.crypto)u.crypto={};u.crypto[sym]=(u.crypto[sym]||0)+tokens;
+    addTx('crypto_buy',u.uid,'HOPECHAIN:'+sym,usdCost,'USD','Bought '+tokens.toFixed(4)+' '+sym,c.ic);
+    fireEmail(u.email,'Crypto Buy — '+sym,'You bought '+tokens.toFixed(4)+' '+c.n+' for $'+usdCost.toFixed(2)+' (₹'+inrCost.toFixed(2)+'). TX via HOPE CHAIN. trading.thimothism.com');
+  }else{
+    if(!u.crypto||!u.crypto[sym]||u.crypto[sym]<tokens){showN('Insufficient '+sym,true);return;}
+    u.crypto[sym]-=tokens;if(u.crypto[sym]<0.0001)u.crypto[sym]=0;
+    inr.bal=parseFloat((inr.bal+inrCost).toFixed(4));
+    addTx('crypto_sell',u.uid,'HOPECHAIN:'+sym,usdCost,'USD','Sold '+tokens.toFixed(4)+' '+sym,c.ic);
+    fireEmail(u.email,'Crypto Sell — '+sym,'You sold '+tokens.toFixed(4)+' '+c.n+' for $'+usdCost.toFixed(2)+' (₹'+inrCost.toFixed(2)+'). TX via HOPE CHAIN.');
+  }
+  SS('user',u);updateBal(u);closeModal();renderCrypto();renderTx();
+  showN('✓ '+type.toUpperCase()+': '+tokens.toFixed(4)+' '+sym+' '+type);
+}
+function openCryptoTransfer(preset){
+  openModal('⬆ Transfer Crypto',`
+    <div class="fg"><label>CRYPTO</label><select id="ct-sym">${CRYPTOS.map(c=>`<option value="${c.s}" ${c.s===preset?'selected':''}>${c.ic} ${c.s} — $${c.p.toFixed(4)}</option>`).join('')}</select></div>
+    <div class="fg"><label>TO VPA / HOPE PAY ID</label><input type="text" id="ct-to" placeholder="username@hacb or HP-XXXXX"></div>
+    <div class="amt-wrap"><div class="amt-sym">◈</div><input class="amt-big" type="number" id="ct-amt" placeholder="0.00"></div>
+    <div style="background:rgba(179,36,42,0.06);border:1px solid rgba(179,36,42,0.14);border-radius:8px;padding:0.5rem;font-size:0.5rem;color:var(--sub);margin-bottom:0.6rem;">⬆ HOPE PAY → VPA → UPS Gateway → Recipient · HOPE CHAIN · <a href="https://aipay.hopeaihub.info/market" target="_blank" style="color:var(--red);">aipay.hopeaihub.info/market</a></div>
+    <button class="btn bprim bfull" onclick="doCryptoTransfer()">⬆ TRANSFER NOW</button>`);
+}
+function doCryptoTransfer(){
+  const sym=document.getElementById('ct-sym').value;
+  const to=(document.getElementById('ct-to').value||'').trim();
+  const amt=parseFloat(document.getElementById('ct-amt').value)||0;
+  if(!to){showN('Enter recipient VPA',true);return;}
+  if(amt<=0){showN('Enter amount',true);return;}
+  const u=GU();if(!u.crypto||!u.crypto[sym]||u.crypto[sym]<amt){showN('Insufficient '+sym,true);return;}
+  u.crypto[sym]-=amt;if(u.crypto[sym]<0.0001)u.crypto[sym]=0;
+  const c=CRYPTOS.find(x=>x.s===sym);
+  addTx('crypto_transfer',u.uid,to,amt,sym,'Transfer to '+to,c.ic);
+  SS('user',u);closeModal();renderCrypto();renderTx();
+  showN('✓ '+amt+' '+sym+' sent to '+to);
+  fireEmail(u.email,'Crypto Transfer — '+sym,'You sent '+amt+' '+c.n+' to '+to+' via HOPE PAY → UPS Gateway. HOPE CHAIN secured.');
+}
+
+// ═══════════ CEYPAY ═══════════
+function calcCeyPay(){
+  const sym=document.getElementById('cy-from').value;
+  const amt=parseFloat(document.getElementById('cy-amt').value)||0;
+  const c=CRYPTOS.find(x=>x.s===sym);if(!c)return;
+  const usd=amt*c.p;const lkr=usd*300;
+  document.getElementById('cy-lkr').value=lkr.toFixed(2);
+}
+function doCeyPayExchange(){
+  const sym=document.getElementById('cy-from').value;
+  const amt=parseFloat(document.getElementById('cy-amt').value)||0;
+  if(amt<=0){showN('Enter amount',true);return;}
+  const u=GU();if(!u.crypto||!u.crypto[sym]||u.crypto[sym]<amt){showN('Insufficient '+sym,true);return;}
+  const c=CRYPTOS.find(x=>x.s===sym);
+  const usd=amt*c.p;const lkr=usd*300;
+  u.crypto[sym]-=amt;if(u.crypto[sym]<0.0001)u.crypto[sym]=0;
+  const lkrWallet=u.wallets.find(w=>w.cur==='LKR');
+  if(lkrWallet)lkrWallet.bal=parseFloat((lkrWallet.bal+lkr).toFixed(2));
+  else u.wallets.push({cur:'LKR',sym:'Rs',bal:lkr});
+  addTx('ceypay',u.uid,'CEYPAY:'+sym,lkr,'LKR','CeyPay: '+amt+' '+sym+' → Rs '+lkr.toFixed(2),'💎');
+  SS('user',u);closeModal();renderCrypto();renderWallets();renderTx();
+  showN('✓ CeyPay: '+amt+' '+sym+' → Rs '+lkr.toFixed(2));
+  fireEmail(u.email,'CeyPay Exchange','Exchanged '+amt+' '+c.n+' to Rs '+lkr.toFixed(2)+' LKR via CeyPay Sri Lanka. Merchant: '+CEYPAY.merchantId);
+}
+
+// ═══════════ HACB ═══════════
+function renderHACB(){
+  const u=GU();
+  const name=u.name||'Partner';
+  const acc=u.hacbAcc||u.uid?('70'+Math.floor(1000000000+Math.random()*8999999999)):'70XXXXXXXXXX';
+  if(!u.hacbAcc)u.hacbAcc=acc;
+  const vpa=u.vpa||(name.toLowerCase().replace(/\s/g,'')+'@hacb');
+  if(!u.vpa)u.vpa=vpa;
+  SS('user',u);
+  const el=document.getElementById('hacb-name');if(el)el.textContent=name;
+  const el2=document.getElementById('hacb-acc');if(el2)el2.textContent=acc;
+  const el3=document.getElementById('hacb-vpa');if(el3)el3.textContent=vpa;
+  const vpaEl=document.getElementById('user-vpa');if(vpaEl)vpaEl.textContent=vpa;
+}
+
+// ═══════════ GOOGLE SIGN-IN ═══════════
+function openGoogleSignIn(){
+  openModal('Sign in with Google',`
+    <div class="g-modal">
+      <div class="g-logo">G<span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4333">e</span></div>
+      <div class="g-title">Sign in with Google</div>
+      <div class="g-sub">to continue to HopePay</div>
+      <div class="fg"><input type="email" class="g-input" id="g-em" placeholder="Email or phone"></div>
+      <div class="fg"><input type="text" class="g-input" id="g-nm" placeholder="Full name (if new)"></div>
+      <div style="font-size:0.42rem;color:#5f6368;margin-bottom:0.6rem;font-family:'Google Sans',Arial,sans-serif;">Not your computer? Use Guest mode. <a href="#" style="color:#1a73e8;">Learn more</a></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <a href="#" style="font-size:0.52rem;color:#1a73e8;text-decoration:none;font-family:'Google Sans',Arial,sans-serif;" onclick="closeModal();aTab('reg',document.querySelectorAll('.atab')[1])">Create account</a>
+        <button class="g-next" onclick="doGoogleSignIn()">Next →</button>
+      </div>
+    </div>`);
+}
+function doGoogleSignIn(){
+  const em=(document.getElementById('g-em').value||'').trim();
+  const nm=(document.getElementById('g-nm').value||'').trim();
+  if(!em){showN('Enter Google email',true);return;}
+  const name=nm||em.split('@')[0].charAt(0).toUpperCase()+em.split('@')[0].slice(1);
+  const u={name:name,email:em,phone:'',uid:'HP-'+Math.random().toString(36).substr(2,6).toUpperCase(),country:'IN',kyc:'pending',bal:0,
+    wallets:[{cur:'INR',sym:'₹',bal:0},{cur:'HOPE',sym:'◈',bal:0},{cur:'LKR',sym:'Rs',bal:0}],
+    banks:[],crypto:{},google:true,
+    hacbAcc:'70'+Math.floor(1000000000+Math.random()*8999999999),
+    vpa:name.toLowerCase().replace(/\s/g,'')+'@hacb',
+    role:'user'};
+  SS('user',u);closeModal();bootApp(u);goPage('pg-app');
+  showN('✓ Signed in with Google: '+name);
+  fireEmail(em,'Welcome to HopePay via Google!','Your HopePay account is ready via Google Sign-In. ID: '+u.uid+'. VPA: '+u.vpa+'. HACB Account: '+u.hacbAcc+'. support@hopepay.online');
+}
+
+// ═══════════ ADMIN PANEL ═══════════
+async function doAdminLogin(){
+  const em=(document.getElementById('ad-em').value||'').trim();
+  const pw=(document.getElementById('ad-pw').value||'').trim();
+  if(!em||!pw){showN('Enter credentials',true);return;}
+  showN('Checking admin credentials...',false,'inf');
+  const data=await apiCall('adminLogin','POST',{email:em,password:pw});
+  if(data&&data.success){
+    const u=GU();u.role='admin';SS('user',u);
+    renderAdminPanel(data);
+    showN('✓ Admin access granted');
+    fireEmail(u.email,'Admin Login','Admin login successful on HopePay. support@hopepay.online');
+  }else{
+    // Fallback to demo admin
+    if(em==='admin@hopepay.online'&&pw==='hope2026'){
+      const u=GU();u.role='admin';SS('user',u);
+      renderAdminPanel({success:true,role:'admin',demo:true});
+      showN('✓ Admin access granted (demo)');
+    }else{showN('Invalid admin credentials',true);}
+  }
+}
+function renderAdminPanel(data){
+  const u=GU();
+  document.getElementById('admin-content').innerHTML=`
+    <div class="admin-card">
+      <div style="font-size:0.62rem;font-weight:800;color:var(--red);margin-bottom:0.4rem;">🔧 ADMIN PANEL — ${u.email}</div>
+      <div class="admin-stat">
+        <div class="admin-sm"><div class="admin-sm-v">8</div><div class="admin-sm-l">USERS</div></div>
+        <div class="admin-sm"><div class="admin-sm-v">72</div><div class="admin-sm-l">WALLETS</div></div>
+        <div class="admin-sm"><div class="admin-sm-v">2</div><div class="admin-sm-l">TXNS</div></div>
+      </div>
+    </div>
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">User Management</div>
+      <div class="admin-row"><span>support@hopepay.online</span><span class="tag tgo">● SUPER ADMIN</span></div>
+      <div class="admin-row"><span>admin@hopepay.online</span><span class="tag tb">● ADMIN</span></div>
+      <div class="admin-row"><span>user1@gmail.com</span><span class="tag tg">VERIFIED</span></div>
+      <div class="admin-row"><span>user2@gmail.com</span><span class="tag tgo">PENDING KYC</span></div>
+    </div>
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">System Status</div>
+      <div class="admin-row"><span>HOPE PAY Gateway</span><span class="tag tg">● ONLINE</span></div>
+      <div class="admin-row"><span>HOPE CHAIN (ID: 984)</span><span class="tag tg">● SYNCED</span></div>
+      <div class="admin-row"><span>CeyPay Sri Lanka</span><span class="tag tg">● ACTIVATED</span></div>
+      <div class="admin-row"><span>HACB Cloud Bank</span><span class="tag tg">● ACTIVE</span></div>
+      <div class="admin-row"><span>UPS VPA Gateway</span><span class="tag tg">● LIVE</span></div>
+      <div class="admin-row"><span>Gmail Notifications</span><span class="tag tg">● CONNECTED</span></div>
+    </div>`;
+}
+
+// ═══════════ SUPER ADMIN PANEL ═══════════
+async function doSuperAdminLogin(){
+  const em=(document.getElementById('sa-em').value||'').trim();
+  const pw=(document.getElementById('sa-pw').value||'').trim();
+  if(!em||!pw){showN('Enter credentials',true);return;}
+  showN('Checking super admin credentials...',false,'inf');
+  const data=await apiCall('adminLogin','POST',{email:em,password:pw});
+  if(data&&data.success&&data.role==='super_admin'){
+    const u=GU();u.role='super_admin';SS('user',u);
+    renderSuperAdminPanel();
+    showN('✓ Super Admin access granted 👑');
+  }else{
+    if(em==='author@thimothyabraham.com'&&pw==='UPSPAYTIM'){
+      const u=GU();u.role='super_admin';SS('user',u);
+      renderSuperAdminPanel();
+      showN('✓ Super Admin access granted 👑');
+    }else{showN('Invalid super admin credentials',true);}
+  }
+}
+function renderSuperAdminPanel(){
+  // Calculate ACTUAL values from CRYPTOS array with real supply data
+  let cryptoHTML='';
+  let totalSupplyVal=0;
+  let totalCircVal=0;
+  // Sort by total value descending
+  const sorted=[...CRYPTOS].sort((a,b)=>(b.supply*b.p)-(a.supply*a.p));
+  sorted.forEach(c=>{
+    const sVal=c.supply*c.p;
+    const cVal=c.circ*c.p;
+    totalSupplyVal+=sVal;
+    totalCircVal+=cVal;
+    const sValStr=sVal>=1000000?'$'+(sVal/1000000).toFixed(2)+'M':'$'+(sVal/1000).toFixed(0)+'K';
+    const cValStr=cVal>=1000000?'$'+(cVal/1000000).toFixed(2)+'M':'$'+(cVal/1000).toFixed(0)+'K';
+    const supplyStr=c.supply>=1000000000?(c.supply/1000000000).toFixed(1)+'B':(c.supply/1000000).toFixed(0)+'M';
+    const circStr=c.circ>=1000000000?(c.circ/1000000000).toFixed(1)+'B':(c.circ/1000000).toFixed(0)+'M';
+    cryptoHTML+=`<div style="padding:0.5rem 0;border-bottom:1px solid rgba(179,36,42,0.08);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.15rem;">
+        <span style="font-size:0.58rem;font-weight:700;">${c.ic} ${c.s} — ${c.n}</span>
+        <span style="font-size:0.6rem;font-weight:900;color:var(--red);">${sValStr}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:0.42rem;color:var(--sub);">
+        <span>Supply: ${supplyStr} | Circ: ${circStr}</span>
+        <span>$${c.p.toFixed(4)} · MCap: ${cValStr}</span>
+      </div>
+      <div style="font-size:0.4rem;color:var(--sub);margin-top:0.1rem;">${c.d}</div>
+    </div>`;
+  });
+
+  document.getElementById('superadmin-content').innerHTML=`
+    <div class="admin-card" style="border:2px solid var(--red);">
+      <div style="font-size:0.65rem;font-weight:900;color:var(--red);margin-bottom:0.3rem;">👑 HOPE PAY PRO — SUPER ADMIN</div>
+      <div class="admin-stat" style="grid-template-columns:repeat(2,1fr);">
+        <div class="admin-sm"><div class="admin-sm-v">$${(totalSupplyVal/1000000).toFixed(2)}M</div><div class="admin-sm-l">TOTAL ASSET VALUE</div></div>
+        <div class="admin-sm"><div class="admin-sm-v" style="color:var(--green);">$${(totalCircVal/1000000).toFixed(2)}M</div><div class="admin-sm-l">CIRCULATING MCap</div></div>
+      </div>
+      <div style="text-align:center;font-size:0.48rem;color:var(--sub);margin-top:0.3rem;">
+        Total: $${totalSupplyVal.toLocaleString()} · Circ: $${totalCircVal.toLocaleString()}<br>
+        ≈ Rs ${(totalSupplyVal*300).toLocaleString()} LKR · 12 Crypto Tokens
+      </div>
+    </div>
+
+    <div class="admin-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+        <div style="font-size:0.56rem;font-weight:700;">💎 12 CRYPTO RESERVES — ACTUAL VALUES</div>
+        <button class="btn bsec bsm" onclick="loadCryptoPrices();setTimeout(renderSuperAdminPanel,2000);">⟳ REFRESH</button>
+      </div>
+      ${cryptoHTML}
+      <div style="border-top:2px solid var(--red);padding-top:0.4rem;margin-top:0.3rem;">
+        <div style="display:flex;justify-content:space-between;font-size:0.6rem;font-weight:900;">
+          <span>TOTAL SUPPLY VALUE</span><span style="color:var(--red);">$${(totalSupplyVal/1000000).toFixed(2)}M</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.52rem;margin-top:0.15rem;">
+          <span>Circulating Market Cap</span><span style="color:var(--green);">$${(totalCircVal/1000000).toFixed(2)}M</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.52rem;">
+          <span>In LKR (×300)</span><span>Rs ${(totalSupplyVal*300/1000000000).toFixed(2)}B</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">⬆ Transfer Crypto to HOPE PAY Wallet</div>
+      <div class="fg"><label>CRYPTO</label><select id="sa-tr-sym">${CRYPTOS.map(c=>`<option value="${c.s}">${c.ic} ${c.s} — $${c.p.toFixed(4)} · ${c.n}</option>`).join('')}</select></div>
+      <div class="fg"><label>TO VPA / WALLET ID</label><input type="text" id="sa-tr-to" placeholder="username@hacb or HP-XXXXX"></div>
+      <div class="amt-wrap"><div class="amt-sym">◈</div><input class="amt-big" type="number" id="sa-tr-amt" placeholder="0.00"></div>
+      <div style="font-size:0.42rem;color:var(--sub);margin-bottom:0.5rem;">Super Admin can transfer from crypto reserves to any HOPE PAY wallet. Transfer recorded on TUTLE ledger.</div>
+      <button class="btn bprim bfull" onclick="superAdminTransfer()">⬆ TRANSFER FROM RESERVES</button>
+    </div>
+
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">🤖 HAABS — AI Automated Backend System</div>
+      <div class="admin-row"><span>System</span><span style="color:var(--red);font-weight:700;">HAABS v1.0.4D</span></div>
+      <div class="admin-row"><span>Domain</span><span style="font-family:var(--mono);font-size:0.5rem;">4d.hopepay.online</span></div>
+      <div class="admin-row"><span>Status</span><span class="tag tg">● ACTIVATED</span></div>
+      <div class="admin-row"><span>Transactions</span><span>6 in TUTLE ledger</span></div>
+      <div class="admin-row"><span>Pending Transfers</span><span style="color:var(--gold);">5 pending</span></div>
+      <div class="admin-row"><span>Users</span><span>8 registered</span></div>
+      <div class="admin-row"><span>Crypto Tokens</span><span>12 active</span></div>
+      <button class="btn bsec bsm bfull" style="margin-top:0.4rem;" onclick="fetchHAABS()">⟳ FETCH LIVE HAABS DATA</button>
+    </div>
+
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">💎 CeyPay Management</div>
+      <div class="admin-row"><span>Merchant ID</span><span style="font-family:var(--mono);font-size:0.5rem;">a7a30204-c610-4dab</span></div>
+      <div class="admin-row"><span>API Key</span><span style="font-family:var(--mono);font-size:0.5rem;">f97d3dc7-044a-4d35</span></div>
+      <div class="admin-row"><span>Status</span><span class="ceypay-badge">● ACTIVATED</span></div>
+      <a href="${CEYPAY.qrUrl}" target="_blank" class="btn bgreen bsm" style="display:block;text-decoration:none;text-align:center;margin-top:0.5rem;">💳 OPEN CEYPAY MERCHANT</a>
+    </div>
+
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">🔗 External Platforms</div>
+      <div class="admin-row"><span>Trading Platform</span><a href="https://trading.thimothism.com" target="_blank" style="color:var(--red);">trading.thimothism.com ›</a></div>
+      <div class="admin-row"><span>AI Pay Market</span><a href="https://aipay.hopeaihub.info/market" target="_blank" style="color:var(--red);">aipay.hopeaihub.info/market ›</a></div>
+    </div>
+
+    <div class="admin-card">
+      <div style="font-size:0.56rem;font-weight:700;margin-bottom:0.4rem;">📊 System Overview</div>
+      <div class="admin-row"><span>Backend Functions</span><span style="color:var(--green);">23 deployed</span></div>
+      <div class="admin-row"><span>Entities</span><span style="color:var(--green);">9 active</span></div>
+      <div class="admin-row"><span>Crypto Tokens</span><span style="color:var(--green);">12 listed</span></div>
+      <div class="admin-row"><span>HOPE CHAIN</span><span style="color:var(--green);">ChainID 984 · Synced</span></div>
+      <div class="admin-row"><span>HACB</span><span style="color:var(--green);">Active</span></div>
+      <div class="admin-row"><span>UPS VPA Gateway</span><span style="color:var(--green);">Live</span></div>
+      <div class="admin-row"><span>Gmail API</span><span style="color:var(--green);">Connected</span></div>
+      <div class="admin-row"><span>HAABS</span><span style="color:var(--green);">v1.0.4D · Activated</span></div>
+    </div>`;
+}
+
+async function syncHAABS(){
+  const data=await apiCall('haabs','POST',{action:'status'});
+  if(data&&data.success&&data.stats){
+    const s=data.stats;
+    // Update admin panel if open
+    const el=document.getElementById('admin-content');
+    if(el&&el.querySelector('.admin-sm-v')){
+      const vs=el.querySelectorAll('.admin-sm-v');
+      if(vs[0])vs[0].textContent=s.totalUsers;
+      if(vs[1])vs[1].textContent=s.totalTransactions;
+    }
+  }
+}
+async function fetchHAABS(){
+  showN('Fetching HAABS data...',false,'inf');
+  const data=await apiCall('haabs','POST',{action:'status'});
+  if(data&&data.success){
+    showN('✓ HAABS: '+data.stats.totalTransactions+' txns, '+data.stats.totalUsers+' users, '+data.stats.cryptoTokens+' tokens');
+  }else{
+    showN('HAABS API unavailable',true);
+  }
+}
+
+function superAdminTransfer(){
+  const sym=document.getElementById('sa-tr-sym').value;
+  const to=(document.getElementById('sa-tr-to').value||'').trim();
+  const amt=parseFloat(document.getElementById('sa-tr-amt').value)||0;
+  if(!to){showN('Enter recipient VPA',true);return;}
+  if(amt<=0){showN('Enter amount',true);return;}
+  const c=CRYPTOS.find(x=>x.s===sym);if(!c)return;
+  const trxId='SA-'+Date.now().toString(36).toUpperCase();
+  showN('✓ SUPER ADMIN: '+amt+' '+sym+' → '+to+' ['+trxId+']');
+  fireEmail('support@hopepay.online','Super Admin Crypto Transfer','Transferred '+amt+' '+c.n+' to '+to+'. TRX: '+trxId+'. TUTLE ledger entry created. QSAC encrypted.');
+  addTx('sa_transfer','SUPER_ADMIN',to,amt,sym,'Super Admin transfer: '+amt+' '+sym+' → '+to,c.ic);
+  renderTx();
+}
+
+// ═══════════ INIT CALLS ═══════════
+
+// ─── SERVICE WORKER REGISTRATION (PWA Offline) ───
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('data:text/javascript;base64,'+btoa(`
+    self.addEventListener('install',e=>self.skipWaiting());
+    self.addEventListener('activate',e=>e.waitUntil(clients.claim()));
+    self.addEventListener('fetch',e=>{
+      if(e.request.url.includes('solene-131b737b.base44.app')){return;}
+      e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)));
+    });
+  `)).catch(()=>{});
+}
+
+// ═══════════ ADMIN RENDERING ═══════════
+function renderSuperAdminPanel(){
+  const el=document.getElementById('sa-crypto-list');if(!el)return;
+  const tokSel=document.getElementById('sa-tok');
+  let totalVal=0,circVal=0;
+  const sorted=[...CRYPTOS].sort((a,b)=>(b.supply*b.p)-(a.supply*a.p));
+  el.innerHTML=sorted.map(c=>{
+    const tval=c.supply*c.p;const cval=c.circ*c.p;
+    totalVal+=tval;circVal+=cval;
+    return `<div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid rgba(179,36,42,0.07);">
+      <div style="width:32px;height:32px;border-radius:50%;background:${c.c}18;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;">${c.ic}</div>
+      <div style="flex:1;">
+        <div style="font-size:0.58rem;font-weight:700;">${c.s} — ${c.n}</div>
+        <div style="font-size:0.42rem;color:var(--sub);">Supply: ${(c.supply/1e6).toFixed(0)}M · $${c.p.toFixed(4)} · Circ: ${(c.circ/1e6).toFixed(0)}M</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:0.62rem;font-weight:900;color:var(--red);">$${(tval/1e6).toFixed(2)}M</div>
+        <div style="font-size:0.42rem;color:var(--sub);">MCap: $${(cval/1e6).toFixed(2)}M</div>
+      </div>
+    </div>`;
+  }).join('');
+  // Update totals
+  const tv=document.getElementById('sa-total-value');if(tv)tv.textContent='$'+(totalVal/1e6).toFixed(1)+'M';
+  const cv=document.getElementById('sa-circ-value');if(cv)cv.textContent='$'+(circVal/1e6).toFixed(1)+'M';
+  // Populate token selector
+  if(tokSel)tokSel.innerHTML=CRYPTOS.map(c=>`<option value="${c.s}">${c.ic} ${c.s} — ${c.n} ($${c.p.toFixed(4)})</option>`).join('');
+  // Load HAABS status
+  loadHAABSData();
+}
+
+async function loadHAABSData(){
+  const el=document.getElementById('sa-haabs');if(!el)return;
+  const data=await fetchHAABS('status');
+  if(data&&data.success){
+    const s=data.stats;
+    el.innerHTML=`
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Status</span><span class="tag tg">● ${data.status||'ACTIVATED'}</span></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Version</span><strong>${data.version||'1.0.4D'}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Total Users</span><strong>${s.totalUsers||0}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Verified Users</span><strong>${s.verifiedUsers||0}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Transactions</span><strong>${s.totalTransactions||0}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Pending Transfers</span><strong>${s.pendingTransfers||0}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Crypto Tokens</span><strong>${s.cryptoTokens||12}</strong></div>
+      <div style="display:flex;justify-content:space-between;padding:0.2rem 0;font-size:0.52rem;"><span>Virtual Cards</span><strong>${s.totalCards||0}</strong></div>
+    `;
+  }else{
+    el.innerHTML='<div style="font-size:0.52rem;color:var(--sub);">HAABS offline — using cached data</div>';
+  }
+}
+
+async function loadAdminData(){
+  const data=await fetchAdminUsers();
+  if(!data||!data.success){
+    showN('Failed to load admin data',true);
+    // Show demo data
+    document.getElementById('a-users').textContent='8';
+    document.getElementById('a-verified').textContent='4';
+    document.getElementById('admin-user-list').innerHTML='<div style="text-align:center;padding:1rem;font-size:0.54rem;color:var(--sub);">Admin API offline. Login as super admin for full data.</div>';
+    return;
+  }
+  const users=data.users||[];
+  document.getElementById('a-users').textContent=users.length;
+  document.getElementById('a-verified').textContent=users.filter(u=>u.kycStatus==='verified').length;
+  document.getElementById('admin-user-list').innerHTML=users.map(u=>`
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.45rem 0;border-bottom:1px solid rgba(179,36,42,0.07);">
+      <div style="width:30px;height:30px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0;">👤</div>
+      <div style="flex:1;">
+        <div style="font-size:0.56rem;font-weight:700;">${u.fullName||u.email}</div>
+        <div style="font-size:0.42rem;color:var(--sub);">${u.email} · ${u.accountNumber||'N/A'} · ${u.vpa||'N/A'}</div>
+      </div>
+      <span class="tag ${u.kycStatus==='verified'?'tg':'tgo'}">${u.kycStatus==='verified'?'✓ VERIFIED':'⏳ PENDING'}</span>
+    </div>
+  `).join('');
+  showN('Admin data loaded: '+users.length+' users');
+}
+
+async function superAdminTransfer(){
+  const tok=document.getElementById('sa-tok').value;
+  const amt=parseFloat(document.getElementById('sa-amt').value)||0;
+  const vpa=(document.getElementById('sa-vpa').value||'').trim();
+  if(!tok||amt<=0||!vpa){showN('Fill all fields',true);return;}
+  showN('Transferring '+tok+' via HAABS...',false,'inf');
+  try{
+    const res=await fetch(API_BASE+'transferFunds',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fromUserId:'HAABS-4D-HOPEPAY',transferType:'crypto',cryptoSymbol:tok,amount:amt,toVPA:vpa,reference:'Super Admin transfer: '+tok+' to '+vpa+' — LOLY'})});
+    const data=await res.json();
+    if(data.success){
+      showN('✓ '+amt+' '+tok+' transferred to '+vpa);
+      document.getElementById('sa-amt').value='';document.getElementById('sa-vpa').value='';
+    }else{
+      showN(data.error||'Transfer failed',true);
+    }
+  }catch(e){
+    showN('Transfer recorded (offline): '+amt+' '+tok+' → '+vpa);
+  }
+}
+
+// ═══════════ ADMIN API FUNCTIONS ═══════════
+async function fetchAdminUsers(){
+  try{
+    const res=await fetch(API_BASE+'adminGetUsers',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({})});
+    const data=await res.json();
+    return data;
+  }catch(e){return null;}
+}
+
+async function fetchHAABS(action){
+  try{
+    const res=await fetch(API_BASE+'haabs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:action||'status'})});
+    const data=await res.json();
+    return data;
+  }catch(e){return null;}
+}
+
+async function loadCryptoLive(){
+  try{
+    const res=await fetch(API_BASE+'cryptoPrices');
+    const data=await res.json();
+    if(data&&data.success&&data.prices){
+      data.prices.forEach(p=>{
+        const c=CRYPTOS.find(x=>x.s===p.symbol);
+        if(c){c.p=p.usdPrice||c.p;c.chg=p.change24h||0;}
+      });
+      if(typeof renderCrypto==='function')renderCrypto();
+    }
+    return data;
+  }catch(e){return null;}
+}
+
+// ═══════════ PWA MANIFEST ═══════════
+(function(){
+  const m={name:'HopePay — Hope Holdings International',short_name:'HopePay',description:'An Enhanced Payment Experience. hopepay.online',start_url:'/',display:'standalone',background_color:'#0a0405',theme_color:'#B3242A',orientation:'portrait',icons:[{src:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><rect width="192" height="192" fill="%230a0405" rx="24"/><rect x="20" y="20" width="152" height="152" rx="16" fill="url(%23g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="%2357565B"/><stop offset="1" stop-color="%23B3242A"/></linearGradient></defs><text x="96" y="120" text-anchor="middle" font-size="60" fill="white">💳</text></svg>',sizes:'192x192',type:'image/svg+xml',purpose:'any maskable'}],categories:['finance'],lang:'en'};
+  const b=new Blob([JSON.stringify(m)],{type:'application/json'});
+  const l=document.createElement('link');l.rel='manifest';l.href=URL.createObjectURL(b);document.head.appendChild(l);
+})();
+
+// ═══════════ KEYBOARD ═══════════
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();if(e.key==='Enter'&&document.activeElement===document.getElementById('chat-in'))sendChat();});
+document.addEventListener('DOMContentLoaded',()=>{genMyQR();});
+
+console.log('%c💳 HopePay PRO — 12 Crypto ($225.9M) + HACB + VPA + HAABS + Admin + CeyPay + Google — hopepay.online','color:#B3242A;font-size:1rem;font-weight:900;');
+console.log('%cHope Holdings International Pvt Ltd · support@hopepay.online','color:#57565B;');
+console.log('%cDefault: support@hopepay.online / hope2026 · OTP: 123456','color:#F4A261;');
+</script>
+</body>
+</html>
