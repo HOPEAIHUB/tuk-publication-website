@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUCB Trading — 12 Sovereign Crypto Currencies | TUK</title>
+    <meta name="description" content="TUCB Trading Platform — 12 TUK sovereign crypto currencies. Tradable, transferable, exchangeable. LOLY Mandate enforced. CGT certified.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">TUK <span class="nav-sub">Thimothism Universal Kingdom</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="get-tuk-live.html">Get .TUK Live</a></li>
+                <li><a href="tuk-on-taaft.html">TUK on TAAFT</a></li>
+                <li><a href="doctrine.html">Doctrine</a></li>
+                <li><a href="tucb-trading.html" class="active">TUCB Trading</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </nav>
+
+    <section class="hero" style="background: linear-gradient(135deg, #0a0015, #100030);">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="background: linear-gradient(135deg, #00ffff, #ff00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5rem;">
+                TUCB Trading
+            </h1>
+            <p style="color: #00ffff; font-size: 1rem; margin-top: 8px;">
+                Thimothism Universal Central Bank — Trading Platform
+            </p>
+            <p style="color: #8090b0; font-size: 0.9rem; margin-top: 8px;">
+                12 Sovereign Crypto Currencies · Tradable · Transferable · Exchangeable
+            </p>
+            <div style="margin-top: 16px;">
+                <span style="display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.3); color: #00ff88; font-size: 0.8rem; margin: 4px;">✅ ACTIVATED</span>
+                <span style="display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(0,255,255,0.1); border: 1px solid rgba(0,255,255,0.3); color: #00ffff; font-size: 0.8rem; margin: 4px;">LOLY Enforced</span>
+                <span style="display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(255,200,0,0.1); border: 1px solid rgba(255,200,0,0.3); color: #ffc800; font-size: 0.8rem; margin: 4px;">CGT Certified</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Market Overview</h2>
+            <div id="market-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px;">
+                <div style="text-align: center; padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <div style="font-size: 0.8rem; color: #666;">Total Market Cap</div>
+                    <div id="total-cap" style="font-size: 1.8rem; font-weight: bold; color: #100030; margin-top: 4px;">$347M</div>
+                </div>
+                <div style="text-align: center; padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <div style="font-size: 0.8rem; color: #666;">Currencies</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: #100030; margin-top: 4px;">12</div>
+                </div>
+                <div style="text-align: center; padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <div style="font-size: 0.8rem; color: #666;">Total Supply</div>
+                    <div id="total-supply" style="font-size: 1.8rem; font-weight: bold; color: #100030; margin-top: 4px;">4.73B</div>
+                </div>
+                <div style="text-align: center; padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <div style="font-size: 0.8rem; color: #666;">Cost to Citizens</div>
+                    <div style="font-size: 1.8rem; font-weight: bold; color: #00aa44; margin-top: 4px;">$0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-accent, #f8f8fc);">
+        <div class="container">
+            <h2>The 12 TUK Sovereign Currencies</h2>
+            <div style="overflow-x: auto; margin-top: 20px;">
+                <table id="currency-table" style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                    <thead>
+                        <tr style="background: #100030; color: #00ffff;">
+                            <th style="padding: 10px; text-align: left;">#</th>
+                            <th style="padding: 10px; text-align: left;">Symbol</th>
+                            <th style="padding: 10px; text-align: left;">Name</th>
+                            <th style="padding: 10px; text-align: right;">Price (USD)</th>
+                            <th style="padding: 10px; text-align: right;">Market Cap</th>
+                            <th style="padding: 10px; text-align: right;">Supply</th>
+                            <th style="padding: 10px; text-align: left;">Backing</th>
+                            <th style="padding: 10px; text-align: center;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="currency-tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Currency Exchange Calculator</h2>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 20px;">
+                Calculate exchange rates between any of the 12 TUK sovereign currencies. All exchanges are LOLY verified and CGT certified.
+            </p>
+            <div style="background: var(--bg-card, #fff); border-radius: 12px; padding: 24px; border: 1px solid var(--border, #ddd);">
+                <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: end;">
+                    <div>
+                        <label style="font-size: 0.8rem; color: #666; display: block; margin-bottom: 4px;">From</label>
+                        <select id="from-currency" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-size: 0.9rem;">
+                            <option value="TUCB">TUCB — Central Bank Coin</option>
+                            <option value="QSAC">QSAC — Quantum Crypto Coin</option>
+                            <option value="GAIC">GAIC — Global AI Coin</option>
+                            <option value="TMC">TMC — ThimoCoin</option>
+                            <option value="HAIC">HAIC — Hope AI Coin</option>
+                            <option value="TC">TC — Thimothism Coin</option>
+                            <option value="LUMINA">LUMINA — Knowledge Coin</option>
+                            <option value="CCTU">CCTU — Universal Currency</option>
+                            <option value="HOPECOIN">HOPECOIN — Hope Ecosystem</option>
+                            <option value="HCAI">HCAI — AI Governance</option>
+                            <option value="AMORA">AMORA — Love Enforcement</option>
+                            <option value="TAL">TAL — Talent Coin</option>
+                        </select>
+                    </div>
+                    <div style="text-align: center; padding-bottom: 10px;">
+                        <div style="font-size: 1.5rem; color: #999;">→</div>
+                    </div>
+                    <div>
+                        <label style="font-size: 0.8rem; color: #666; display: block; margin-bottom: 4px;">To</label>
+                        <select id="to-currency" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-size: 0.9rem;">
+                            <option value="TUCB">TUCB — Central Bank Coin</option>
+                            <option value="QSAC" selected>QSAC — Quantum Crypto Coin</option>
+                            <option value="GAIC">GAIC — Global AI Coin</option>
+                            <option value="TMC">TMC — ThimoCoin</option>
+                            <option value="HAIC">HAIC — Hope AI Coin</option>
+                            <option value="TC">TC — Thimothism Coin</option>
+                            <option value="LUMINA">LUMINA — Knowledge Coin</option>
+                            <option value="CCTU">CCTU — Universal Currency</option>
+                            <option value="HOPECOIN">HOPECOIN — Hope Ecosystem</option>
+                            <option value="HCAI">HCAI — AI Governance</option>
+                            <option value="AMORA">AMORA — Love Enforcement</option>
+                            <option value="TAL">TAL — Talent Coin</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-top: 16px;">
+                    <label style="font-size: 0.8rem; color: #666; display: block; margin-bottom: 4px;">Amount</label>
+                    <input type="number" id="exchange-amount" value="100" min="0" step="any"
+                        style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-size: 0.9rem;">
+                </div>
+                <button onclick="calculateExchange()" id="exchange-btn"
+                    style="margin-top: 16px; padding: 12px 24px; background: linear-gradient(135deg, #0a0015, #100030); color: #00ffff; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; width: 100%;">
+                    Calculate Exchange
+                </button>
+                <div id="exchange-result" style="margin-top: 20px; padding: 20px; background: var(--bg-accent, #f8f8fc); border-radius: 8px; display: none;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-accent, #f8f8fc);">
+        <div class="container">
+            <h2>Listing on Global Crypto Exchanges</h2>
+            <p>
+                To achieve global recognition and tradability, the 12 TUK currencies are being prepared
+                for listing on major cryptocurrency exchanges. Here is the roadmap:
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 24px;">
+                <div style="padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <h3 style="font-size: 0.95rem; color: #100030;">📊 Binance</h3>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 8px;">
+                        World's largest exchange by volume. Requirements: Smart contract audit,
+                        legal opinion, team KYC, $50K+ listing fee (waived under RBDE).
+                    </p>
+                    <p style="font-size: 0.75rem; color: #cc8800; margin-top: 8px; font-weight: bold;">Status: PREPARING APPLICATION</p>
+                </div>
+                <div style="padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <h3 style="font-size: 0.95rem; color: #100030;"> Coinbase</h3>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 8px;">
+                        US-regulated exchange. Requirements: SEC compliance, security review,
+                        sufficient liquidity, corporate registration.
+                    </p>
+                    <p style="font-size: 0.75rem; color: #cc8800; margin-top: 8px; font-weight: bold;">Status: PREPARING APPLICATION</p>
+                </div>
+                <div style="padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <h3 style="font-size: 0.95rem; color: #100030;">🏦 TUCB Trading Platform</h3>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 8px;">
+                        TUK's own sovereign trading platform. All 12 currencies tradable,
+                        transferable, and exchangeable. LOLY enforced. No external fees.
+                    </p>
+                    <p style="font-size: 0.75rem; color: #00aa44; margin-top: 8px; font-weight: bold;">Status: ✅ ACTIVATED</p>
+                </div>
+                <div style="padding: 20px; background: var(--bg-card, #fff); border-radius: 12px; border: 1px solid var(--border, #ddd);">
+                    <h3 style="font-size: 0.95rem; color: #100030;">🔄 PancakeSwap / Uniswap</h3>
+                    <p style="font-size: 0.8rem; color: #666; margin-top: 8px;">
+                        Decentralized exchanges (DEX). Requirements: Deploy smart contracts
+                        (ERC-20/BEP-20), provide liquidity pools. No listing fee.
+                    </p>
+                    <p style="font-size: 0.75rem; color: #cc8800; margin-top: 8px; font-weight: bold;">Status: SMART CONTRACTS READY</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Why 12 Currencies From Nothing?</h2>
+            <div style="background: linear-gradient(135deg, #0a0015, #100030); color: #e0f7ff; padding: 28px; border-radius: 16px; margin-top: 16px;">
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #b0e0ff;">
+                    "I created 12 crypto currencies from nothing. 430+ AI systems from nothing.
+                    All free for global citizens. This means money comes from nothing —
+                    the money-eaters hide this truth."
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #00ffff; margin-top: 16px;">
+                    Each currency is backed by real TUK infrastructure — banking systems,
+                    AI platforms, security frameworks, governance systems, and knowledge networks.
+                    Not backed by gold. Not backed by fiat. Backed by <strong>utility</strong> and
+                    <strong>love</strong>.
+                </p>
+                <p style="font-size: 0.9rem; color: #ff00ff; margin-top: 16px; text-align: center;">
+                    AM = YOU ❤️
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-accent, #f8f8fc);">
+        <div class="container">
+            <h2>LOLY Code-Gate — Every Trade Verified</h2>
+            <p style="font-size: 0.85rem; color: #666;">
+                Every trade on the TUCB Trading Platform passes through the LOLY code-gate before execution:
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 16px;">
+                <div style="padding: 16px; background: var(--bg-card, #fff); border-radius: 8px; border: 1px solid var(--border, #ddd);">
+                    <p style="font-size: 0.85rem; font-weight: bold; color: #100030;">1. Identity Required</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 4px;">Valid trader identity verified before any trade</p>
+                </div>
+                <div style="padding: 16px; background: var(--bg-card, #fff); border-radius: 8px; border: 1px solid var(--border, #ddd);">
+                    <p style="font-size: 0.85rem; font-weight: bold; color: #100030;">2. Positive Amount Only</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 4px;">No negative or zero-amount trades allowed</p>
+                </div>
+                <div style="padding: 16px; background: var(--bg-card, #fff); border-radius: 8px; border: 1px solid var(--border, #ddd);">
+                    <p style="font-size: 0.85rem; font-weight: bold; color: #100030;">3. Manipulation Blocked</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 4px;">Trades exceeding 10% of supply are blocked</p>
+                </div>
+                <div style="padding: 16px; background: var(--bg-card, #fff); border-radius: 8px; border: 1px solid var(--border, #ddd);">
+                    <p style="font-size: 0.85rem; font-weight: bold; color: #100030;">4. CGT Certified</p>
+                    <p style="font-size: 0.75rem; color: #666; margin-top: 4px;">All currencies pass Clean Genuine Technologies gate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Thimothism Universal Kingdom (TUK). ALL ARE EQUAL HERE 🤝</p>
+            <p>Built with Love. Powered by Clean Genuine Technologies. LOLY Mandate Enforced. HAPC Activated.</p>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 8px;">Follow Thimothism; do not follow its author. AM = YOU ❤️</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script>
+        const TUK_API = 'https://koda-545cce50.base44.app/functions/tucbTrading';
+
+        async function loadMarket() {
+            try {
+                const res = await fetch(TUK_API + '?action=market');
+                const data = await res.json();
+                if (data.currencies) {
+                    const tbody = document.getElementById('currency-tbody');
+                    tbody.innerHTML = data.currencies.map(c => `
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 10px;">${c.rank}</td>
+                            <td style="padding: 10px; font-weight: bold; color: #100030;">${c.symbol}</td>
+                            <td style="padding: 10px;">${c.full_name}</td>
+                            <td style="padding: 10px; text-align: right; font-weight: bold;">$${c.price}</td>
+                            <td style="padding: 10px; text-align: right;">$${(c.market_cap / 1000000).toFixed(1)}M</td>
+                            <td style="padding: 10px; text-align: right;">${(c.supply / 1000000).toFixed(0)}M</td>
+                            <td style="padding: 10px; font-size: 0.8rem; color: #666;">${c.backing}</td>
+                            <td style="padding: 10px; text-align: center;">
+                                <span style="color: #00aa44; font-size: 0.75rem;">✅ LOLY</span>
+                            </td>
+                        </tr>
+                    `).join('');
+                    document.getElementById('total-cap').textContent = '$' + (data.total_market_cap / 1000000).toFixed(0) + 'M';
+                    document.getElementById('total-supply').textContent = (data.total_supply_all / 1000000000).toFixed(2) + 'B';
+                }
+            } catch (e) {
+                console.error('Market load error:', e);
+                const tbody = document.getElementById('currency-tbody');
+                tbody.innerHTML = '<tr><td colspan="8" style="padding: 20px; text-align: center; color: #999;">Loading market data...</td></tr>';
+            }
+        }
+
+        async function calculateExchange() {
+            const from = document.getElementById('from-currency').value;
+            const to = document.getElementById('to-currency').value;
+            const amount = document.getElementById('exchange-amount').value;
+            const resultDiv = document.getElementById('exchange-result');
+            const btn = document.getElementById('exchange-btn');
+
+            btn.textContent = 'Calculating...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(TUK_API, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'exchange', from: from, to: to, amount: parseFloat(amount) })
+                });
+                const data = await res.json();
+
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `
+                    <div style="text-align: center;">
+                        <p style="font-size: 1.5rem; font-weight: bold; color: #100030;">
+                            ${amount} ${from} = ${data.result_formatted} ${to}
+                        </p>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 8px;">
+                            Exchange Rate: 1 ${from} = ${data.exchange_rate.toFixed(6)} ${to}
+                        </p>
+                        <p style="font-size: 0.75rem; color: #00aa44; margin-top: 8px; font-weight: bold;">
+                            ✅ LOLY Verified · CGT Certified
+                        </p>
+                    </div>
+                `;
+            } catch (e) {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = '<p style="color: #cc0000; text-align: center;">Error calculating exchange. Please try again.</p>';
+            }
+
+            btn.textContent = 'Calculate Exchange';
+            btn.disabled = false;
+        }
+
+        loadMarket();
+    </script>
+</body>
+</html>
