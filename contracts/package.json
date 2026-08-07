@@ -1,0 +1,19 @@
+{
+  "name": "TUCB TRC20 Deployment",
+  "version": "1.0.0",
+  "description": "Thimothism Universal Central Bank — 12 Sovereign Crypto Currencies on TRON (TRC20)",
+  "scripts": {
+    "deploy:testnet": "node deploy-trc20.js",
+    "deploy:mainnet": "TRON_NETWORK=mainnet node deploy-trc20.js",
+    "test:transfer": "bash test-transfer.sh",
+    "compile": "echo 'Use https://remix.ethereum.org or Tron IDE to compile contracts'"
+  },
+  "dependencies": {
+    "tronweb": "^5.3.0"
+  },
+  "keywords": ["TUCB", "TRC20", "TRON", "Thimothism", "TUK", "LOLY", "CGT"],
+  "author": "Thimothy Abraham (T-DRIVEN)",
+  "license": "MIT",
+  "loly_verified": true,
+  "cgt_certified": true
+}
