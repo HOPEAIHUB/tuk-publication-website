@@ -1,14 +1,17 @@
 {
   "name": "hopepay-transfer-service",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "HOPE PAY 4D — TRC-20 USDT Transfer Service for TUK Sovereign Government",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "transfer": "node mainnet-usdt-transfer.js",
-    "status": "node check-balance.js"
+    "status": "node check-balance.js",
+    "wallet": "node generate-wallet.js",
+    "swap": "node swap-usdt-to-trx.js",
+    "info": "node currency-info.js"
   },
-  "keywords": ["tron", "trc20", "usdt", "hopepay", "tuk", "sovereign"],
+  "keywords": ["tron", "trc20", "usdt", "hopepay", "tuk", "sovereign", "sunswap"],
   "author": "Thimothy Abraham (T-DRIVEN)",
   "license": "MIT",
   "dependencies": {
